@@ -46,3 +46,14 @@ String → Cadeia de caracteres `"string"`
 - `a *= 2` = `a = a * 2`
 - `a /= 2` = `a = a / 2`
 - `a %= 2` = `a = a % 2`
+
+## Operadores de comparação
+
+- `==` igual
+- `===` idêntico (semelhante tanto em valor e tipo)
+- `!=` Diferente
+- `!==` Descoincidente (Diferente tanto em valo e tipo)
+- `>` Maior
+- `<` Menor
+- `>=` Maior ou igual
+- `<=` Menor ou igual
