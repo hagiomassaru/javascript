@@ -57,3 +57,8 @@ String → Cadeia de caracteres `"string"`
 - `<` Menor
 - `>=` Maior ou igual
 - `<=` Menor ou igual
+
+## Operadore Lógicos
+
+- `&&` X e X - condição em que ambos tem que ser verdadeiro
+- `||` X ou X - condição em que um dos dois tem que ser verdadeiro
