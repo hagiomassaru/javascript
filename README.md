@@ -61,4 +61,5 @@ String → Cadeia de caracteres `"string"`
 ## Operadore Lógicos
 
 - `&&` X e X - condição em que ambos tem que ser verdadeiro
-- `||` X ou X - condição em que um dos dois tem que ser verdadeiro
+- `||` X ou X - condição em que um dos dois tem que ser verdadeiro]
+- `!` !X - condição que nega a operação booleana.
