@@ -1,0 +1,7 @@
+module.exports = {
+    "trailingComma": "es5",
+    "tabWidth": 4, // Espaçamento
+    "semi": true, // ponto e virgula no final
+    "singleQuote": true, // Sempre com aspas simples
+    "printWidth": 80 // Limite de pagina
+  }

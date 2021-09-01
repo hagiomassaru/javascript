@@ -6,6 +6,10 @@
 
 `console.log(str)` → imprimir no console do navegador.
 
+`parseInt(str)` → converter valor em inteiro
+
+`parseFloat(str)` → converter valor em real (ponto flutuante)
+
 `//` → Comentar uma linha
 
 `/* alguma coisa */` → Comentar um paragrafo
