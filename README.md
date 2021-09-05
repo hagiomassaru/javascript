@@ -2,7 +2,9 @@
 
 ## Funções/Sinais Uteis
 
-`alert(str)` → mensagem de alerta
+`alert(str)` → mensagem de alerta no navegador.
+
+`prompt(str)` → mensagem de alerta com entrada de dados.
 
 `console.log(str)` → imprimir no console do navegador.
 
@@ -18,7 +20,6 @@
 
 ```js
 var nome = valor;
-
 ```
 
 ## Tipos de dados
@@ -29,7 +30,7 @@ Null → Nulo/Nenhum
 
 Undefined → Indefinido
 
-Number → Números racionais e irracionais 
+Number → Números racionais e irracionais
 
 String → Cadeia de caracteres `"string"`
 
@@ -37,7 +38,7 @@ String → Cadeia de caracteres `"string"`
 
 - Adição +
 - Subtração -
-- Multiplicação *
+- Multiplicação \*
 - Divisão /
 - Modulo %
 - Incremento ++
@@ -56,7 +57,7 @@ String → Cadeia de caracteres `"string"`
 - `==` igual
 - `===` idêntico (semelhante tanto em valor e tipo)
 - `!=` Diferente
-- `!==` Descoincidente (Diferente tanto em valo e tipo)
+- `!==` Descoincidência (Diferente tanto em valo e tipo)
 - `>` Maior
 - `<` Menor
 - `>=` Maior ou igual
