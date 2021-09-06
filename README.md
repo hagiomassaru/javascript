@@ -38,7 +38,7 @@ String → Cadeia de caracteres `"string"`
 
 - Adição +
 - Subtração -
-- Multiplicação \*
+- Multiplicação *
 - Divisão /
 - Modulo %
 - Incremento ++
@@ -63,8 +63,29 @@ String → Cadeia de caracteres `"string"`
 - `>=` Maior ou igual
 - `<=` Menor ou igual
 
-## Operadore Lógicos
+## Operadores Lógicos
 
 - `&&` X e X - condição em que ambos tem que ser verdadeiro
 - `||` X ou X - condição em que um dos dois tem que ser verdadeiro
 - `!` !X - condição que nega a operação booleana.
+
+## Estrutura condicional
+
+
+```JS
+if (condicao) /* Condicao */
+    bloco de codigo
+else if (segunda condicao)/* segunda condicao*/
+    bloco de codigo
+else /* senao */
+    bloco de codigo
+```
+
+- Quando se usa mais de uma linha nas condicoes devemos usar `{}` 
+
+```JS
+if (condicao){
+    bloco de comando
+    bloco de comando 2
+}
+```

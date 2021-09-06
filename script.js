@@ -1,3 +1,6 @@
-var nome = prompt("Digite um numero");
-var dobro = nome * 2;
-alert("O dobro do numero e " + dobro);
+var idade = 19;
+if (idade > 18) {
+    console.log("passou");
+} else {
+    console.log("nao passou");
+}
