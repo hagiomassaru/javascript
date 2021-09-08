@@ -89,3 +89,27 @@ if (condicao){
     bloco de comando 2
 }
 ```
+
+## Operador ternario
+
+Operadores para realizar condicoes
+
+```JS
+
+condicao ? instrucao1 : instrucao2 ;
+
+```
+
+## Estrutura condicional com swich
+
+```JS
+var valor = "valorASerComparado";
+switch(valor){
+    case "valorASerComparado":
+        Bloco de codigo
+    case "valorASerComparado2":
+        Bloco de codigo
+}
+```
+
+Essa expressão e muito usada quando temos muitos `if`
