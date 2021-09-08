@@ -106,9 +106,14 @@ condicao ? instrucao1 : instrucao2 ;
 var valor = "valorASerComparado";
 switch(valor){
     case "valorASerComparado":
-        Bloco de codigo
+        Bloco de codigo;
+        break;/*break encerra bloco*/
     case "valorASerComparado2":
         Bloco de codigo
+        // sem o break o bloco de codigo nao se encerra, e continua o fluxo pulando para o proximo 'case'
+    default:
+        Bloco de codigo
+        // default e o case padrao caso nenhum atenda condicao do switch
 }
 ```
 
