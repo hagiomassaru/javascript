@@ -1,5 +1,11 @@
 # Aprendendo javascript
 
+## Navegacao para outros linguagens relacionadas
+
+* [CSS3](css.md)
+* [HTML5](html.md)
+
+
 ## Funções/Sinais Uteis
 
 `alert(str)` → mensagem de alerta no navegador.
