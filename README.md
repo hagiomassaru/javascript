@@ -124,3 +124,52 @@ switch(valor){
 ```
 
 Essa expressão e muito usada quando temos muitos `if`
+
+## Lacos de repeticao `for`
+
+Sintax abaixo:
+
+```JS
+var numero = 5;
+// estrutura
+// for ( variavel ; condicao ; contagem)
+for (var variavel; variavel < numero; variavel++){
+    bloco de codigo
+}
+```
+
+Este laco de repeticao nos permite controlar melhor as repeticoes
+
+## Lacos de repeticao `while`
+
+Sintax abaixo:
+
+```JS
+var numero = 0;
+// estrutura
+// while ( condicao )
+while (numero < 5) {
+    numero++
+    bloco de codigo
+}
+```
+Este laco de repeticao executa enquanto a condicao nao e atendida, facilita lacos infinitos.
+
+## Listas (Array) em javascript
+
+```JS
+var lista = ["1","2","3"];
+// primeira forma de declaracao
+var lista2 = new Array("1","2","3");
+// segunda forma de declaracao
+
+// utilizando "for" e "in" para varrer o array
+for (var i in lista){// "in" coloca o numero do index na "var i"
+    console.log(list[i]);
+};
+// utilizando "for" e "of" para varrer o array
+for (var i of lista){// "of" coloca o elemento do index na "var i"
+    console.log(i)
+}
+
+```

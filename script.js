@@ -1,8 +1,10 @@
-var nota1 = prompt("Nota 1");
-var nota2 = prompt("Nota 2");
-var media = (parseInt(nota1) + parseInt(nota2)) / 2;
-if (media > 7) {
-    console.log("Aprovado, sua nota e " + media);
-} else {
-    console.log("Reprovado, sua nota e " + media);
+var numero = 5;
+var vez2 = 0;
+for (var vez = 0; vez < numero; vez++) {
+    console.log("executando for " + vez);
 }
+while (vez2 < 5) {
+    console.log("executando while " + vez2);
+    vez2++;
+}
+console.log("Acabou");
