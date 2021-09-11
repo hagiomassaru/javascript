@@ -235,3 +235,15 @@ objeto["nome"] = "nome";
 
 
 ```
+
+Objetos aceito funcoes como valores de elementos de objetos
+
+```JS
+var objeto = {
+    nota = [1,2];
+    valor = [this.nota[0], this.nota[1]] // 'this' e usado quando precisamos referir a propria objeto ao utilizar nas propriedades dela mesma
+    funcao = function (n1,n2){
+        return n1, n2
+    } // funcao dentro de uma propriedade
+}
+```
