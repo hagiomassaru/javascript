@@ -46,6 +46,7 @@ Obs: `<extag>meu titulo</extag>` → os dois juntos formam um elemento html comp
 
 </html>
 ```
+
 * `<img>` → tag de imagem. Indicados o fonte da imagem pelo parâmetro `src` e o `alt` para caso a imagem não seja carregada haja uma alternativa. Ex:
 ```html
 <!DOCTYPE html>
