@@ -173,3 +173,35 @@ for (var i of lista){// "of" coloca o elemento do index na "var i"
 }
 
 ```
+
+## Declaracao de funcao
+
+```JS
+function funcao (argumento1,argumento2)/* os argumento nao tem limete mas devemos seguir a mesma ordem */ {
+    // bloco de codigo
+    var arg1 = argumento1;
+    var arg1 = argumento2;
+    return arg1, arg2; // retornar valor 
+}
+
+funcao(8,7) // chamando funcao
+```
+
+- funcao anonima
+
+
+```JS
+var funcao = function teste(argumento) {
+    return argumento;
+} // variaveis pode receber funcoes inteiras e virarem outra funcao
+
+var anonimo = function /*podemos omitir o nome da funcao*/(argumento){
+    return argumento;
+}//isso e uma funcao anonima
+
+// temos outra maneira de se criar funcao anonimas
+var anonimo2 = (argumento) => {
+    return argumento;
+}// tambem chamadas de funcoes setas
+
+```
