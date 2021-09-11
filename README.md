@@ -230,5 +230,8 @@ objeto["nome"]
 
 var objeto = new Object(); // maneira alterativa de construir um objeto, so que vazio.
 
+objeto.nome = "nome"; // maneiras de adicionar propriedades ao objeto
+objeto["nome"] = "nome";
+
 
 ```
