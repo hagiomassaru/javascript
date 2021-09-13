@@ -278,7 +278,8 @@ new Date("DataString"); // utilizar string para modificar data -> Ex: '10/14/199
 
 Date.getFullYear() -> // retorna o ano do objeto
 Date.getDate() -> // Retorna o dia
-Date.getDay() -> // Retorna o nome do dia da semana
+Date.getDay() -> // Retorna o dia da semana -> numerico
 Date.getMonth() -> // Retorna o mes.
+Date.getTime() -> // Retorna a data convertida em milissegundos
 
 ```
