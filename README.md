@@ -228,7 +228,7 @@ objeto.nome()
 // ou
 objeto["nome"]
 
-var objeto = new Object(); // maneira alterativa de construir um objeto, so que vazio.
+var objeto = new Object(); // maneira alterativa de construir um objeto, nesse momento esta vazio.
 
 objeto.nome = "nome"; // maneiras de adicionar propriedades ao objeto
 objeto["nome"] = "nome";
@@ -241,9 +241,36 @@ Objetos aceito funcoes como valores de elementos de objetos
 ```JS
 var objeto = {
     nota = [1,2];
-    valor = [this.nota[0], this.nota[1]] // 'this' e usado quando precisamos referir a propria objeto ao utilizar nas propriedades dela mesma
+    valor = [this.nota[0], this.nota[1]] // 'this' e usado quando precisamos referir ao proprio objeto e utilizar nas propriedades dela mesma
     funcao = function (n1,n2){
         return n1, n2
     } // funcao dentro de uma propriedade
 }
+```
+
+### Construtores
+
+```JS
+// construtor e uma funcao que cria objetos
+function construtor(parametro){
+    return {
+        parametro: parametro
+    }
+}
+
+// temos tambem outro maneira de se criar uma construtor
+function construtor(parametro){
+    this.parametro = parametro;
+    return this.parametro * 2
+}
+
+var objeto = new construtor(8);
+
+```
+
+## Datas
+
+```JS
+
+
 ```
