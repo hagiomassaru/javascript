@@ -271,6 +271,14 @@ var objeto = new construtor(8);
 ## Datas
 
 ```JS
+var data = new Date(); // Cria um objeto com a tada de hoje
+new Date(year, month, day, hours, minutes, seconds, milliseconds); // ingles
+new Date(ano, mês, dia, hora, minuto, segundo, milissegundo); // Portugues
+new Date("DataString"); // utilizar string para modificar data -> Ex: '10/14/1994' ou '10-14-1994' oe 'Oct 14 1994' entre outros.
 
+Date.getFullYear() -> // retorna o ano do objeto
+Date.getDate() -> // Retorna o dia
+Date.getDay() -> // Retorna o nome do dia da semana
+Date.getMonth() -> // Retorna o mes.
 
 ```
