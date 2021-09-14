@@ -4,6 +4,7 @@
 
 * [CSS3](css.md)
 * [HTML5](html.md)
+* [Javascrip POO](javascript_poo.md)
 
 
 ## Funções/Sinais Uteis
@@ -281,5 +282,14 @@ Date.getDate() -> // Retorna o dia
 Date.getDay() -> // Retorna o dia da semana -> numerico
 Date.getMonth() -> // Retorna o mes.
 Date.getTime() -> // Retorna a data convertida em milissegundos
+
+```
+
+## Var,Const e Let
+
+```JS
+var coisa = "coisa"; // Variavel Global
+const coisa = "coisa"; // Constante -> Igual a variavel local, so nao pode ser reatribuida (mas pode ser modificada).
+let coisa = "coisa"; // Variavel Local
 
 ```

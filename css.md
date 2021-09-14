@@ -299,7 +299,7 @@ transform: translate(-50%, -50%);
     color: white;
     width: 70%;
     height: 70%;
-    background-color: rgb(34, 37, 228);
+    background-color: #fff;
 
     top: 50%;
     left: 50%;
