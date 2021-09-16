@@ -9,3 +9,4 @@
 - `document` -> Metodo que extrai o documento html em que o script se encontra.
 - `documento.body` -> Podemos puxar tags especificas como o `body` nesse caso
 - `document.body.innerHTML` -> Converte o conteudo dentro do `body` em string.
+- `document.getElementById("item1")` -> Puxar conteudo de uma tag usando seu id.
