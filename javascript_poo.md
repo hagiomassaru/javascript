@@ -3,7 +3,7 @@
 [Voltar ao arquivo Javascrip](README.md)
 
 
-Quase todos os objetos que extraem um conteudo que um objeto, pode ser modificado e afetar o conteudo do html onde foi declarado o script.
+Quase todos as propriedades de um objeto que extraem um conteudo do mesmo, pode ser modificado e afetar o conteudo do html onde foi declarado o script.
 
 Para modificarmos apenas precisamos atribuir um valor ao objeto/elemento.
 
@@ -32,5 +32,7 @@ document.body.innerHTML = "alteracao"
 OBS: normalmente o resultado dos objetos `document.getElementsBy...` sao arrays (listas)
 - `algumaCoisa.className` -> Extrai/Recebe nome da class da tag e possibilita modificacao atribuindo um outro valor.
 - `algumaCoisa.style` -> Extrai/Recebe um conteudo html/tag e modifica/extrai o atributo `style`.
+- `algumaCoisa.style.backgroundColor` -> Extrai/Recebe um atributo css e modifica/extrai o atributo `backgroudColor`.
+OBS: `algumaCoisa.style` tem vario atributos que podemos mudar colocando `.algumacoisa`, colsulte documentacao ou use o intellisense com `ctrl + espaco`
 - `algumaCoisa.getAttribute('nomeAtributo')` -> Extrai (apenas) o conteudo do atributo indicado no `valorAtributo`.
-- `algumaCoisa.setAttribute('nomeAtributo', 'valorAtributo')` -> Modifica (apenas) o conteudo do atributo indicado no `valorAtributo`.
+- `algumaCoisa.setAttribute('nomeAtributo', 'valorAtributo')` -> Modifica(caso exista)/Cria(caso nao exista) o conteudo do atributo indicado no `valorAtributo`.
