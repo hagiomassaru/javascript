@@ -141,6 +141,20 @@ for (var variavel; variavel < numero; variavel++){
 
 Este laco de repeticao nos permite controlar melhor as repeticoes
 
+# Diferenca de `of` para `in`
+
+```JS
+var arr = ["gato", "cachorro", "macaco"];
+for (var i in arr) {
+    console.log(i); // Imprime "0", "1", "2"
+}
+
+for (var i of arr) {
+    console.log(i); // Imprime "gato", "cachorro", "macaco"
+}
+```
+Se por ventura você estiver usando um obj o for in iria retornar o nome das chaves.
+
 ## Lacos de repeticao `while`
 
 Sintax abaixo:
@@ -293,3 +307,6 @@ const coisa = "coisa"; // Constante -> Igual a variavel local, so nao pode ser r
 let coisa = "coisa"; // Variavel Local
 
 ```
+
+
+
