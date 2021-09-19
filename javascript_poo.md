@@ -29,13 +29,16 @@ document.body.innerHTML = "alteracao"
 
 - `document.getElementsByClassName("par")` -> Puxar conteudo de uma tag (ou varias) usando sua class.
 - `document.getElementsByTagName("p")` -> Puxar o conteudo pelo nome de uma (ou varias) tag(s).
+- `document.getElementsById("id")` -> Puxar o conteudo pelo nome de um `id`.
+
 OBS: normalmente o resultado dos objetos `document.getElementsBy...` sao arrays (listas)
-- `algumaCoisa.className` -> Extrai/Recebe nome da class da tag e possibilita modificacao atribuindo um outro valor.
-- `algumaCoisa.style` -> Extrai/Recebe um conteudo html/tag e modifica/extrai o atributo `style`.
-- `algumaCoisa.style.backgroundColor` -> Extrai/Recebe um atributo css e modifica/extrai o atributo `backgroudColor`.
-OBS: `algumaCoisa.style` tem vario atributos que podemos mudar colocando `.algumacoisa`, colsulte documentacao ou use o intellisense com `ctrl + espaco`
-- `algumaCoisa.getAttribute('nomeAtributo')` -> Extrai (apenas) o conteudo do atributo indicado no `valorAtributo`.
-- `algumaCoisa.setAttribute('nomeAtributo', 'valorAtributo')` -> Modifica(caso exista)/Cria(caso nao exista) o conteudo do atributo indicado no `valorAtributo`.
+
+- `document.body.className` -> Extrai/Recebe nome da class da tag e possibilita modificacao atribuindo um outro valor.
+- `document.body.style` -> Extrai/Recebe um conteudo html/tag e modifica/extrai o atributo `style`.
+- `document.body.style.backgroundColor` -> Extrai/Recebe um atributo css e modifica/extrai o atributo `backgroudColor`.
+OBS: `document.body.style` tem vario atributos que podemos mudar colocando `.document.body`, colsulte documentacao ou use o intellisense com `ctrl + espaco`
+- `document.body.getAttribute('nomeAtributo')` -> Extrai (apenas) o conteudo do atributo indicado no `valorAtributo`.
+- `document.body.setAttribute('nomeAtributo', 'valorAtributo')` -> Modifica(caso exista)/Cria(caso nao exista) o conteudo do atributo indicado no `valorAtributo`.
 
 ## Eventos HTML
 
@@ -46,3 +49,16 @@ OBS: `algumaCoisa.style` tem vario atributos que podemos mudar colocando `.algum
 * `<tag onmouseover="codigoJS">` -> atributo que executa o `"codigoJS"` quando o mouse passa em cima.
 * `<tag onmouseout="codigoJS">` -> atributo que executa o `"codigoJS"` quando o mouse passa em cima.
 * [Mais eventos](https://www.w3schools.com/jsref/dom_obj_event.asp)
+
+## Editando Eventos direto do javascrip
+
+```JS
+documentoOuTag = document.getElementById("id");
+documentoOuTag.onclick = codigoOuFuncaoJS;// onclick mesma coisa que onclick so que direto no JS
+documentoOuTag.addEventListener("EventoHTML", codigoOuFuncaoJS); /* "EventoHTML" podemos usar os eventos do HTML como : 
+* "click" = onclick
+* "mouseover" = onmouseover
+* "mouseout" = onmouseout
+*/
+
+```
