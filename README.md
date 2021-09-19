@@ -233,6 +233,13 @@ var anonimo2 = (argumento) => {
 
 ```
 
+ **OBS: Quando eu executo uma funcao declarando sem o parenteses, eu nao executo de fato e so referencio o conteudo contido no mesmo. ja se usarmos o parenteses no final executaremos a funcao na hora que a declaramos.**
+
+ ```JS
+ var a = funcaoDeclarada; //! acabamos de atribuir o conteudo da 'funcaoDeclarada' na variavel 'a'
+ var b = funcaoDeclarada(); //! agora atribuimos o resultado da funcao 'funcaoDeclarada' a variavel 'b'. Isso acontece que ja que usamos parenteses, a funcao e executada imediatamente como descrita acima.
+ ```
+
 ## Declarando Objetos
 
 ```JS
