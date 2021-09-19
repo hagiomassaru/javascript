@@ -36,3 +36,13 @@ OBS: normalmente o resultado dos objetos `document.getElementsBy...` sao arrays 
 OBS: `algumaCoisa.style` tem vario atributos que podemos mudar colocando `.algumacoisa`, colsulte documentacao ou use o intellisense com `ctrl + espaco`
 - `algumaCoisa.getAttribute('nomeAtributo')` -> Extrai (apenas) o conteudo do atributo indicado no `valorAtributo`.
 - `algumaCoisa.setAttribute('nomeAtributo', 'valorAtributo')` -> Modifica(caso exista)/Cria(caso nao exista) o conteudo do atributo indicado no `valorAtributo`.
+
+## Eventos HTML
+
+* `<tag onclick="codigoJS">` -> atributo que quando ao clicar executa o codigo no valor do atributo.
+* `<tagDeEntradaDeTexto oncharge="codigoJS">` -> atributo que quando ao sair do foco executa o `"codigoJS"`.
+* `<tagDeEntradaDeTexto oninput="codigoJS">` -> atributo que a cada letra digitada executa o `"codigoJS"`.
+* `<tag onload="codigoJS">` -> atributo que executa o `"codigoJS"` apos a pagina HTML carregar.
+* `<tag onmouseover="codigoJS">` -> atributo que executa o `"codigoJS"` quando o mouse passa em cima.
+* `<tag onmouseout="codigoJS">` -> atributo que executa o `"codigoJS"` quando o mouse passa em cima.
+* [Mais eventos](https://www.w3schools.com/jsref/dom_obj_event.asp)

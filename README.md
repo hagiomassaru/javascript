@@ -64,7 +64,7 @@ String → Cadeia de caracteres `"string"`
 - `==` igual
 - `===` idêntico (semelhante tanto em valor e tipo)
 - `!=` Diferente
-- `!==` Descoincidência (Diferente tanto em valo e tipo)
+- `!==` Descoincidência (Diferente tanto em valor e tipo)
 - `>` Maior
 - `<` Menor
 - `>=` Maior ou igual
