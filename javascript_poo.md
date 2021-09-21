@@ -1,4 +1,4 @@
-# Javascript Orientado a objeto
+# Javascript Orientado a Objeto
 
 [Voltar ao arquivo Javascrip](README.md)
 
@@ -25,24 +25,34 @@ document.body.innerHTML = "alteracao"
 - `document.body.textContent` -> Extrai/Recebe um valor qualquer e Modificara o conteudo da tag do html referente oa objeto.
 - `document.body.innerText` -> Extrai/Recebe um valor qualquer e Modificara o conteudo que e exibido na pagina/tela.
 
-## Modificando Atributos e extraindo conteudo
+## Extraindo conteudo
 
 - `document.getElementsByClassName("par")` -> Puxar conteudo de uma tag (ou varias) usando sua class.
 - `document.getElementsByTagName("p")` -> Puxar o conteudo pelo nome de uma (ou varias) tag(s).
 - `document.getElementsById("id")` -> Puxar o conteudo pelo nome de um `id`.
+
 
 OBS: normalmente o resultado dos objetos `document.getElementsBy...` sao arrays (listas) e para estrair o html puro devemos fazer assim:
 
 ```JS
 document.body.getElementsByTagName("nomeDaTag")[0]; // caso aja mais tag h1 pode verificar o array para ver qua e o que voce quer e indicar o indice.
 ```
+Para realizarmos modificacoes no HTML via CSS3 temos que usar os elementos acima e atribuir a variaveis (e um dos jeitos)
 
-- `document.body.className` -> Extrai/Recebe nome da class da tag e possibilita modificacao atribuindo um outro valor.
-- `document.body.style` -> Extrai/Recebe um conteudo html/tag e modifica/extrai o atributo `style`.
-- `document.body.style.backgroundColor` -> Extrai/Recebe um atributo css e modifica/extrai o atributo `backgroudColor`.
-OBS: `document.body.style` tem vario atributos que podemos mudar colocando `.document.body`, colsulte documentacao ou use o intellisense com `ctrl + espaco`
-- `document.body.getAttribute('nomeAtributo')` -> Extrai (apenas) o conteudo do atributo indicado no `valorAtributo`.
-- `document.body.setAttribute('nomeAtributo', 'valorAtributo')` -> Modifica(caso exista)/Cria(caso nao exista) o conteudo do atributo indicado no `valorAtributo`.
+```JS
+p = document.getElementsById("id")[0];
+
+```
+## Modificando conteuro
+
+A variavel `p` ao HTML estraido no ultimo topico, com ele extraido podemos realizar as modificacoes
+
+- `p.className` -> Extrai/Recebe nome da class da tag e possibilita modificacao atribuindo um outro valor.
+- `p.style` -> Extrai/Recebe um conteudo html/tag e modifica/extrai o atributo `style`.
+- `p.style.backgroundColor` -> Extrai/Recebe um atributo css e modifica/extrai o atributo `backgroudColor`.
+OBS: `p.style` tem vario atributos que podemos mudar colocando na varivel`p`, colsulte documentacao ou use o intellisense com `ctrl + espaco`
+- `p.getAttribute('nomeAtributo')` -> Extrai (apenas) o conteudo do atributo indicado no `valorAtributo`.
+- `p.setAttribute('nomeAtributo', 'valorAtributo')` -> Modifica(caso exista)/Cria(caso nao exista) o conteudo do atributo indicado no `valorAtributo`.
 
 ## Eventos HTML
 
@@ -64,5 +74,6 @@ documentoOuTag.addEventListener("EventoHTML", codigoOuFuncaoJS); /* "EventoHTML"
 * "mouseover" = onmouseover
 * "mouseout" = onmouseout
 */
-
+window.onload = FuncaoOuQualquerCoisa // Executa uma funcao ao carregar a pagina
 ```
+
