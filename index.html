@@ -2,22 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="style.css">
     <title>Document</title>
     <script>
-        function OverMouse(elemento){
-            elemento.style.backgroundColor = "red"
-        }
-        function OutMouse(elemento){
-            elemento.style.backgroundColor = "blue"
+        function f(){
+            let ts1 = document.body.getElementsByTagName("h1")[0];
+
+            ts1.style.backgroundColor = "red"
+            
         }
     </script>
-
 </head>
-<body onload="console.log('Pagina carregada com sucesso!')">
-    <img src="https://media.kasperskydaily.com/wp-content/uploads/sites/92/2020/02/17105257/game-ratings-featured.jpg" alt="Joystick">
-    <br>
-    <p onmouseover="OverMouse(this)" onmouseout="OutMouse(this)">click aqui</p>
+<body>
+    
+    <h1 onclick="f()">teste</h1>
 </body>
 </html>

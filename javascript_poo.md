@@ -31,7 +31,11 @@ document.body.innerHTML = "alteracao"
 - `document.getElementsByTagName("p")` -> Puxar o conteudo pelo nome de uma (ou varias) tag(s).
 - `document.getElementsById("id")` -> Puxar o conteudo pelo nome de um `id`.
 
-OBS: normalmente o resultado dos objetos `document.getElementsBy...` sao arrays (listas)
+OBS: normalmente o resultado dos objetos `document.getElementsBy...` sao arrays (listas) e para estrair o html puro devemos fazer assim:
+
+```JS
+document.body.getElementsByTagName("nomeDaTag")[0]; // caso aja mais tag h1 pode verificar o array para ver qua e o que voce quer e indicar o indice.
+```
 
 - `document.body.className` -> Extrai/Recebe nome da class da tag e possibilita modificacao atribuindo um outro valor.
 - `document.body.style` -> Extrai/Recebe um conteudo html/tag e modifica/extrai o atributo `style`.
