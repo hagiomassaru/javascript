@@ -94,3 +94,7 @@ OBS: usaremos a variavel `p`
 * `p.childrem` -> Extrai a tag filha do elemento HTML
 * `p.parentElement` -> Extrai a tag pai do elemento HTML
 
+## Biblioteca Math
+
+* `Math.pi` -> Exibe o valor de PI
+* `Math.sqrt(BaseDaRaiz)` -> Calcula raiz quadrada
