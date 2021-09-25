@@ -98,3 +98,6 @@ OBS: usaremos a variavel `p`
 
 * `Math.pi` -> Exibe o valor de PI
 * `Math.sqrt(BaseDaRaiz)` -> Calcula raiz quadrada
+* `Math.pow(Base, Expoente)` -> Calculo de potencia
+* `Math.random` -> Gera um numero aleatorio entre 0 e 0.999
+* `Math.round(Numero)` -> Arredonda um numero

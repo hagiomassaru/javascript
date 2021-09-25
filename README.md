@@ -5,7 +5,20 @@
 * [CSS3](css.md)
 * [HTML5](html.md)
 * [Javascrip POO](javascript_poo.md)
+* [Markdown](markdown.md)
 
+## Maneiras de se usar script.js em um arquivo HTML
+
+Escrevendo no proprio HTML usando a tag `<script>`
+
+```JS
+<script>
+
+    Conteudo do codigo JS
+
+</script>
+
+```
 
 ## Funções/Sinais Uteis
 
