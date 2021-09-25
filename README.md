@@ -5,6 +5,7 @@
 * [CSS3](css.md)
 * [HTML5](html.md)
 * [Javascrip POO](javascript_poo.md)
+* [Git](git.md)
 * [Markdown](markdown.md)
 
 ## Maneiras de se usar script.js em um arquivo HTML
