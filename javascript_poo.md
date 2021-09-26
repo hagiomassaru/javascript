@@ -103,3 +103,13 @@ OBS: usaremos a variavel `p`
 * `Math.round(Numero)` -> Arredonda um numero
 * `Math.floor(Numero)` -> Arredondamento em piso (arredondar sempre para baixo)
 * `Math.ceil(Numero)` -> Arredondar sempre para baixo
+[mais](java_math.md)
+
+## JSON - Javascript Object Notation
+
+`JSON` e um representacao de um objeto, nem sempre podemos trabalhar com um objeto 'puro' (principalmente se quisermos mandar para um servidor ou para outra linguagem) entao esse representacao permite que possamos 'converter' o objeto de `string` para um objeto. Eles seriam:
+
+* `JSON.parse(string)` -> converte `string` para `objeto`
+* `JSON.stringify(objeto)` -> converte `objeto` para `string`
+
+OBS: padra para string JSON -> `'{"nome":"fabio","idade":26}'` Aspas simples para construcao da string(lado de fora) e aspas duplas para o interior. E todas as palavras inclusive as alfanumericas devem ter aspas duplas e os numeros nao.

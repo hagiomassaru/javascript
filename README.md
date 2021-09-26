@@ -304,6 +304,8 @@ var objeto = new construtor(8);
 
 ```
 
+* [Continua em Javascrip POO - Click Aqui](javascript_poo.md)
+
 ## Datas
 
 ```JS
@@ -319,7 +321,6 @@ Date.getMonth() -> // Retorna o mes.
 Date.getTime() -> // Retorna a data convertida em milissegundos
 
 ```
-
 ## Var,Const e Let
 
 ```JS
