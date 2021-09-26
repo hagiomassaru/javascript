@@ -96,8 +96,10 @@ OBS: usaremos a variavel `p`
 
 ## Biblioteca Math
 
-* `Math.pi` -> Exibe o valor de PI
+* `Math.pi()` -> Exibe o valor de PI
 * `Math.sqrt(BaseDaRaiz)` -> Calcula raiz quadrada
 * `Math.pow(Base, Expoente)` -> Calculo de potencia
-* `Math.random` -> Gera um numero aleatorio entre 0 e 0.999
+* `Math.random()` -> Gera um numero aleatorio entre 0 e 0.999
 * `Math.round(Numero)` -> Arredonda um numero
+* `Math.floor(Numero)` -> Arredondamento em piso (arredondar sempre para baixo)
+* `Math.ceil(Numero)` -> Arredondar sempre para baixo
