@@ -32,7 +32,7 @@ document.body.innerHTML = "alteracao"
 - `document.getElementsById("id")` -> Puxar o conteudo pelo nome de um `id`.
 
 
-OBS: normalmente o resultado dos objetos `document.getElementsBy...` sao arrays (listas) e para estrair o html puro devemos fazer assim:
+OBS: normalmente o resultado dos objetos `document.getElementsBy...` sao arrays (listas) e para extrair o html puro devemos fazer assim:
 
 ```JS
 document.body.getElementsByTagName("nomeDaTag")[0]; // caso aja mais tag h1 pode verificar o array para ver qua e o que voce quer e indicar o indice.
@@ -113,3 +113,11 @@ OBS: usaremos a variavel `p`
 * `JSON.stringify(objeto)` -> converte `objeto` para `string`
 
 OBS: padra para string JSON -> `'{"nome":"fabio","idade":26}'` Aspas simples para construcao da string(lado de fora) e aspas duplas para o interior. E todas as palavras inclusive as alfanumericas devem ter aspas duplas e os numeros nao.
+
+## Local Storage - Armazenamento de dados local
+
+* `window.localStorage` -> propriedade padrao, lembrando que o objeto `window` pode ser omitido.
+* `localStorage.setItem(StringChave, String)` -> Grava um dado na memoria do navegador 
+* `localStorage.getItem(StringChave)` -> Extrai o dado gravado no navegador
+* `localStorage.removeItem()` -> Remove o dado gravado no navegador
+* `localStorage.clear()` -> Limpa todo(s) o(s) dado(s) gravado(s) no navegador.
