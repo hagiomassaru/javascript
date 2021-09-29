@@ -193,6 +193,8 @@ var lista2 = new Array("1","2","3");
 // segunda forma de declaracao
 lista.push("4");
 // adicionar um elemento
+lista.sort()
+// organiza elemento em ordem crescente ou alfabetica
 lista.unshift("4", "5");
 // adicionar um ou mais elementos
 lista.shift();

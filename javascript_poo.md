@@ -21,9 +21,9 @@ document.body.innerHTML = "alteracao"
 
 ## Alternativas de alteracao de conteudo
 
-- `document.body.innerHTML` -> Extrai/Recebe um html e Modificara o conteudo html do objeto respeitando as tags caso seja inseridas.
-- `document.body.textContent` -> Extrai/Recebe um valor qualquer e Modificara o conteudo da tag do html referente oa objeto.
-- `document.body.innerText` -> Extrai/Recebe um valor qualquer e Modificara o conteudo que e exibido na pagina/tela.
+- `document.body.innerHTML = conteudo` -> Extrai/Recebe um html e Modificara o conteudo html do objeto respeitando as tags caso seja inseridas.
+- `document.body.textContent = conteudo` -> Extrai/Recebe um valor qualquer e Modificara o conteudo da tag do html referente oa objeto.
+- `document.body.innerText = conteudo` -> Extrai/Recebe um valor qualquer e Modificara o conteudo que e exibido na pagina/tela.
 
 ## Extraindo conteudo
 
@@ -42,6 +42,15 @@ Para realizarmos modificacoes no HTML via CSS3 temos que usar os elementos acima
 ```JS
 p = document.getElementsById("id")[0];
 
+```
+## Estraindo valores de tags
+
+Para realizarmos isso devemos usar a propriedade `.value` no objeto ou funcao com a tag.
+EX:
+```JS
+let tag = document.getElementById("idDatag");// estou extraindo tag do documento html
+console.log(tag.value); // podemos ver que para extrair o valor tive que usar a propriedade `.value`, se for um input sera o 
+// valor digitado e se for uma tag com valor determinado sera o valor da tag.
 ```
 ## Modificando conteudo
 

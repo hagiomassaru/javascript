@@ -68,6 +68,13 @@ Obs: `<extag>meu titulo</extag>` → os dois juntos formam um elemento html comp
 </html>
 ```
 
+## Comentario em html
+
+```HTML
+<!-- comentario -->
+
+```
+
 ## Identificadores
 
 `<tag id="nome">` → identificador de tag. so pode ser usada uma vez. Para link'ar se usa o `#`
