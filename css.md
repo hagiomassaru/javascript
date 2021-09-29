@@ -308,6 +308,12 @@ transform: translate(-50%, -50%);
 }
  
  ```
+
+## Centralizando elementos
+
+[Videos de referencia](https://www.youtube.com/watch?v=Cu-HP-gvggg)
+
+[Praticar o funcionamento de flexbox](https://flexboxfroggy.com)
 ## Responsividade
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

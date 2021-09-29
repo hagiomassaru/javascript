@@ -130,3 +130,7 @@ OBS: padra para string JSON -> `'{"nome":"fabio","idade":26}'` Aspas simples par
 * `localStorage.getItem(StringChave)` -> Extrai o dado gravado no navegador
 * `localStorage.removeItem()` -> Remove o dado gravado no navegador
 * `localStorage.clear()` -> Limpa todo(s) o(s) dado(s) gravado(s) no navegador.
+
+## Recarregar pagina
+
+* `location.reload()` -> recarrega pagina.
