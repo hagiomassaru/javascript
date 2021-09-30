@@ -187,24 +187,15 @@ Este laco de repeticao executa enquanto a condicao nao e atendida, facilita laco
 ## Listas (Array) em javascript
 
 ```JS
-var lista = ["1","2","3"];
-// primeira forma de declaracao
-var lista2 = new Array("1","2","3");
-// segunda forma de declaracao
-lista.push("4");
-// adicionar um elemento
-lista.sort()
-// organiza elemento em ordem crescente ou alfabetica
-lista.unshift("4", "5");
-// adicionar um ou mais elementos
-lista.shift();
-// exclui o primeiro elemento (com indice 0)
-lista.splice("IndiceDoelemento","quantidadeDeElementos")
-// exclui elementos seguindo condenadas
-lista.splice(2, 1)
-// ex: (indice 2, quantidade 1)
-lista.splice("IndiceDoelemento","quantidadeDeElementos","valor")
-// subistitua o valor no indice indicado ex: (indice,quantidade,valor)
+var lista = ["1","2","3"];// primeira forma de declaracao
+var lista2 = new Array("1","2","3");// segunda forma de declaracao
+lista.push("4");// adicionar um elemento
+lista.sort();// organiza elemento em ordem crescente ou alfabetica
+lista.unshift("4", "5");// adicionar um ou mais elementos
+lista.shift();// exclui o primeiro elemento (com indice 0)
+lista.splice("IndiceDoelemento","quantidadeDeElementos");// exclui elementos seguindo condenadas
+lista.splice(2, 1);// ex: (indice 2, quantidade 1)
+lista.splice("IndiceDoelemento","quantidadeDeElementos","valor");// subistitua o valor no indice indicado ex: (indice,quantidade,valor)
 
 // utilizando "for" e "in" para varrer o array
 for (var i in lista){// "in" coloca o numero do index na "var i"

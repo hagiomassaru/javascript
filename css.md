@@ -3,7 +3,7 @@
 
 ## [voltar para o javascript](README.md)
 
-## declaração
+## Tipos de declaração em CSS
 
 * CSS inline - declaração de css na tag utilizando propriedade `style`
 ```html
@@ -24,39 +24,76 @@
 <link href="arquivo_com_css.css" rel="stylesheet">
 ```
 
-## Elementos background
+## Trocando a cor e modificando o plano de fundo de um Elemento HTML - background
 
 ```css
-    /* adicionar imagem de funto */
-    background-image: url(./images/rock-texture.jpg);
-    /* definir repetição */
-    background-repeat: no-repeat;
-    /* definir tamanho */
-    background-size: cover;
-    /* comportamento de rolamento */
-    background-attachment: fixed;
+    background-image: url('URL')|none|initial|inherit;/* adicionar imagem de funto // 
+    * url ('URL') -> O URL da imagem. Para especificar mais de uma imagem, separe os URLs com uma vírgula
+    * none -> Nenhuma imagem de plano de fundo será exibida. Isso é padrão
+    * initial -> Define essa propriedade para o seu valor padrão https://www.w3schools.com/cssref/css_initial.asp
+    * inherit -> Herdará essa propriedade do seu elemento pai https://www.w3schools.com/cssref/css_inherit.asp    
+    */    
+    background-repeat: no-repeat;/* definir repetição */
+    
+    background-size: cover;/* definir tamanho */
+    
+    background-attachment: fixed;/* comportamento de rolamento */
     
 ```
-## Margem, preenchimento e borda
+## Margem - margin
 ```css
     /* definir margem do elemento */
-    margin: 10px; /* pode usar margin-top entre outros */
+    margin: 10px (comprimento)|auto|initial|inherit; /* pode usar margin-top entre outros
+    * auto -> O navegador calcula uma margem
+    * initial -> Define essa propriedade para o seu valor padrão https://www.w3schools.com/cssref/css_initial.asp
+    * inherit -> Herdará essa propriedade do seu elemento pai https://www.w3schools.com/cssref/css_inherit.asp    
+    * Todos os elementos margin usam as propriedades acima.
+    */
+    margin-bottom: initial; /* Define a margem inferior de um elemento */
+    margin-left: inherit; /* Define a margem esquerda de um elemento */
+    margin-right: auto; /* Define a margem direita de um elemento */
+    margin-top: 20px; /* Define a margem superior de um elemento */
+    
+    
+```
+## Preenchimento - padding
+```css
     /* definir o preenchimento do elemento */
-    padding: 10px 10px; /* largura altura / pode usar padding-top entre outros */
+    padding: 10px 5px 15px 20px; /* Se a propriedade de padding tiver quatro valores
+    * O preenchimento superior é 10px
+    * O preenchimento direito é 5px
+    * O preenchimento inferior é de 15px
+    * O preenchimento esquerdo é de 20px
+    */
+    padding: 10px 5px 15px;/* Se a propriedade de padding tiver três valores
+    * O preenchimento superior é 10px
+    * O preenchimento direito e esquerdo são 5px
+    * O preenchimento inferior é de 15px
+    */
+    padding: 10px 5px 15px;/* Se a propriedade de padding tiver dois valores
+    * O preenchimento superior e inferior são 10px
+    * O preenchimento direito e esquerdo são 5px
+    */
+    padding: 10px; /* Se a propriedade de padding tiver um valor
+    * todos os quatro preenchimento são 10px
+    */
+    padding-bottom: length(comprimento)|initial|inherit; /* essas propriedades sao bem parecidas com margin */
+    padding-left: length(comprimento)|initial|inherit;
+    padding-right: length(comprimento)|initial|inherit;
+    padding-top: length(comprimento)|initial|inherit;    
+
+```
+## Borda - border
+
+```css
     /* arredondamento dos cantos da borda */
-    border-radius: 5px;
-    /* borda  pontilhada*/
-    border-style: dotted;
-    /* borda tracejado */
-    border-style: dashed;
-    /* borda continua */
-    border-style: solid;
-    /* borda inexistente */
-    border-style: none;
-    /* borda invisível */
-    border-style: hidden;
-    /* definição de borda em uma linha só */
-    border: 1px solid gray; /* tamanho / style / cor */
+    border-radius: 5px; /* borda  pontilhada*/
+    border-style: dotted;/* borda tracejado */
+    border-style: dashed;/* borda continua */
+    border-style: solid;/* borda inexistente */
+    border-style: none;/* borda invisível */
+    border-style: hidden;/* definição de borda em uma linha só */
+    border: 1px solid gray;/* tamanho / style / cor */
 
 ```
 ![exemplo](images/exemplo.png)
@@ -217,15 +254,18 @@ div.ex4 {
 
 ```
 
-# Position
+## Position
 
 A propriedade `position` especifica o tipo de método de posicionamento usado para um elemento (static, relative, absolute, fixed, ou sticky).
 
-## CSS Syntax
+### CSS Syntax
 ```css
 position: static|absolute|fixed|relative|sticky|initial|inherit;
 ```
-## Valores de propriedade
+### Valores de propriedade
+
+![Exemplo de position](images/css-positioning.png)
+![Exemplo2 de position](images/css-positioning2.png)
 
 ```css
 div#myDIV {
@@ -253,7 +293,7 @@ div#myDIV {
 }
 ```
 
-## Metodos para alteração de `position`
+### Metodos para alteração de `position`
 
 ```css
 div#myDIV {
@@ -309,16 +349,66 @@ transform: translate(-50%, -50%);
  
  ```
 
-## Centralizando elementos
+## Alinhando elementos
 
 [Videos de referencia](https://www.youtube.com/watch?v=Cu-HP-gvggg)
 
 [Praticar o funcionamento de flexbox](https://flexboxfroggy.com)
+
+Para centralizar ou alinhar elementos existem varios metodos. Um deles e :
+
+```css
+div#myDIV {
+    margin: auto; /* para definir 'div' podemos usar 'margin' com proprieda 'auto' assim deixando centralizado */
+}
+div#myDIV {
+    margin-left: auto; /* dessa maneira alinhamos a `div` a direita */
+    /* ja podemos imaginar como alinhar elemento para esquerda nao e ?*/
+}
+img#myImg {
+    /* Para imagens o metodo acima nao funciona, para contornar isso mudamos o 'display' para 'block' */
+    display: block;
+    margin: auto; 
+}
+```
+OBS: O metodo acima so funciona se o elemento for `display: block;`
+
+podemos tambem alinhar uma `img` colocando dentro de uma `div`
+
+### * HTML
+```html
+<div id='myImg'>
+    <img src='imagem' alt='imagem'>
+<div>
+```
+### * CSS
+```css
+#myImg {
+    text-align: center; /* assim a imagem ficara alinhada */
+}
+```
+como podemos ver se uma imagem estivem dentro de uma `div` podemos alinhar usando `text-align:` no CSS
+
 ## Responsividade
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Adicionando a meta tag acima, a pagina fica responsiva -->
 
-
 ```
+
+## Media Queries
+
+Sintax:
+```css
+@media screen and (max-width: 400px/* A largura máxima da área de exibição, como uma janela do navegador */) {
+    /* alguma coisa */
+    /*caso ultrapasse o valor 'max-width' esse bloco de codigo e executado*/
+}
+@media screen and (min-width: 400px/* A largura mínima da área de exibição, como uma janela do navegador */) {
+    
+    /* alguma coisa */
+    /*caso nao ultrapasse o valor 'min-width' este bloco de codigo e executado*/
+}
+```
+para mais informacoes [Click aqui](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp)
