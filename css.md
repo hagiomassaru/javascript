@@ -130,24 +130,70 @@ link:visited{
 ## Ajustes no texto
 
 ```css
-/* Cor de fonte */
-color: red;
-/* alinhamento de texto/elemento */
-text-align: justify;
-/* transformação de texto/elemento */
-text-transform: capitalize;
-/* Indentação do texto/elemento */
-text-indent: 50px;
-/* Decoração de texto8/elemento */
-text-decoration: overline;
-/* Espaço entre as letras */
-letter-spacing: 2px;
-/* Espaço entre as palavras */
-word-spacing: 5px;
-/* Espaço entre as linhas */
-line-height: 2px;
-/* Sombra do texto/elemento */
-text-shadow: 1px 1px gray;
+
+color: red;/* Cor de fonte */
+
+text-align: auto|left|right|center|justify|start|end|initial|inherit;/* alinhamento de texto/elemento
+* auto -> Valor padrão. A última linha é justificada e alinhada à esquerda	
+* left -> A última linha está alinhada à esquerda	
+* right -> A última linha está alinhada à direita	
+* center -> A última linha está alinhada no centro	
+* justify -> A última linha é justificada como o resto das linhas	
+* start -> A última linha está alinhada no início da linha (esquerda se a direção do texto for esquerda para direita e direita a direção do texto for direita para esquerda)	
+* end -> A última linha está alinhada no final da linha (à direita, se a direção do texto for da esquerda para a direita e a esquerda for a direção do texto da direita para a esquerda)	
+* initial -> Define essa propriedade para o seu valor padrão.	
+* inherit -> Herdará essa propriedade do seu elemento pai.
+*/
+
+text-transform: none|capitalize|uppercase|lowercase|initial|inherit;/* transformação de texto/elemento 
+* none -> Sem capitalização. O texto é renderizado como está. Isso é padrão	
+* capitalize -> Transforma o primeiro caractere de cada palavra para maiúsculas	
+* uppercase -> Transforma todos os caracteres para maiúsculas	
+* lowercase -> Transforma todos os caracteres para minúsculas	
+* initial -> Define essa propriedade para o seu valor padrão.	
+* inherit -> Herdeira essa propriedade do seu elemento pai.
+*/
+
+text-indent: 50px;/* Indentação do texto/elemento */
+
+text-decoration: text-decoration-line text-decoration-color text-decoration-style|initial|inherit;/* Decoração de texto/elemento */
+
+text-decoration-line: none|underline|overline|line-through|initial|inherit;/* 
+O text-decoration-line propriedade define o tipo de decoração de texto a ser usada
+
+* none -> Valor padrão. Não especifica nenhuma linha para a decoração do texto	
+* underline -> Especifica que uma linha será exibida no texto	
+* overline -> Especifica que uma linha será exibida sobre o texto	
+* line-through -> Especifica que uma linha será exibida através do texto	
+* initial -> Define essa propriedade para o seu valor padrão.
+* inherit -> Herdará essa propriedade do seu elemento pai.
+
+*/
+
+text-decoration-color: color|initial|inherit;/*
+A propriedade text-decoration-color especifica a cor da decoração do texto
+*/
+
+text-decoration-style: solid|double|dotted|dashed|wavy|initial|inherit;/*
+A propriedade text-decoration-style define o estilo da decoração do texto
+
+* solid -> Valor padrão. A linha será exibida como uma única linha	
+* double -> A linha será exibida como uma linha dupla	
+* dotted -> A linha será exibida como uma linha pontilhada	
+* dashed -> A linha será exibida como uma linha tracejada	
+* wavy -> A linha será exibida como uma linha ondulada	
+* initial -> Define essa propriedade para o seu valor padrão. Leia sobre inicial	
+* inherit -> Herdará essa propriedade do seu elemento pai. Leia sobre herdar
+
+*/
+
+letter-spacing: 2px;/* Espaço entre as letras */
+
+word-spacing: 5px;/* Espaço entre as palavras */
+
+line-height: 2px;/* Espaço entre as linhas */
+
+text-shadow: 1px 1px gray;/* Sombra do texto/elemento */
 ```
 
 ## Unidades medida fixas

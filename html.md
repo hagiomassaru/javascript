@@ -165,6 +165,8 @@ Ps: de preferência para tags semânticas por terem utilidade para os navegadore
  -->
 <input name="text">
 <!-- O atributo name especifica o nome de um elemento <input>. -->
+<input type="text" placeholder="">
+<!-- O atributo placeholder junto com type="text" mostra o valor dentro de "" na barra de texto enquanto esta em desfoque -->
 
 
 ```
