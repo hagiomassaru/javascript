@@ -1,8 +1,21 @@
-var nomes = ["massaru", "yuuko", "rogerio", "matias", "mario"];
+var numero = 0;
+var intervalo;
+function mudarCor() {
+    let h = document.getElementsByTagName("h1")[0];
+    h.style.color = "blue";
+}
+function mudarTexto() {
+    let h = document.getElementsByTagName("h1")[0];
+    h.innerHTML += " " + numero;
+    numero++;
+}
+function parar() {
+    clearInterval(intervalo);
+}
 
-function sortear() {
-    let ns = nomes.length;
-    let nst = Math.floor(Math.random() * ns);
-    console.log(nst);
-    document.getElementById("d").innerHTML = nomes[nst];
+function mudar() {
+    // let h = document.getElementsByTagName("h1")[0];
+    // h.innerHTML = "Novo titulo";
+    // setTimeout(mudarCor, 1000);
+    intervalo = setInterval(mudarTexto, 1000);
 }

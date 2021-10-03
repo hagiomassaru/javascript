@@ -134,3 +134,10 @@ OBS: padra para string JSON -> `'{"nome":"fabio","idade":26}'` Aspas simples par
 ## Recarregar pagina
 
 * `location.reload()` -> recarrega pagina.
+
+## Temporizador
+
+* `window.setTimeout(codigoJS, TempoEmMilissegundos)` -> Depois que o tempo no parametro `TempoEmMilissegundos` passar, o parametro `codigoJS` e executado.
+* `window.setInterval(codigoJS, TempoEmMilissegundos)` -> Depois que o tempo no parametro `TempoEmMilissegundos` passar, o parametro `codigoJS` e executado e logo depois retornando a contagem (ciclo infinito).
+* `window.clearInterval(VariavelArmazenaSetInterval)` -> Essa funcao para o `setInterval` armazenado em uma variavel.
+* `window.clearTimeout(VariavelArmazenasetTimeout)` -> Essa funcao para o `setTimeout` armazenado em uma variavel.
