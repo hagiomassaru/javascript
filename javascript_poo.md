@@ -65,13 +65,13 @@ OBS: `p.style` tem vario atributos que podemos mudar colocando na variavel `p`, 
 
 ## Eventos HTML
 
-* `<tag onclick="codigoJS">` -> atributo que quando ao clicar executa o codigo no valor do atributo.
-* `<tagDeEntradaDeTexto oncharge="codigoJS">` -> atributo que quando ao sair do foco executa o `"codigoJS"`.
-* `<tagDeEntradaDeTexto oninput="codigoJS">` -> atributo que a cada letra digitada executa o `"codigoJS"`.
-* `<tag onload="codigoJS">` -> atributo que executa o `"codigoJS"` apos a pagina HTML carregar.
-* `<tag onmouseover="codigoJS">` -> atributo que executa o `"codigoJS"` quando o mouse passa em cima.
-* `<tag onmouseout="codigoJS">` -> atributo que executa o `"codigoJS"` quando o mouse passa em cima.
-* [Mais eventos](https://www.w3schools.com/jsref/dom_obj_event.asp)
+- `<tag onclick="codigoJS">` -> atributo que quando ao clicar executa o codigo no valor do atributo.
+- `<tagDeEntradaDeTexto oncharge="codigoJS">` -> atributo que quando ao sair do foco executa o `"codigoJS"`.
+- `<tagDeEntradaDeTexto oninput="codigoJS">` -> atributo que a cada letra digitada executa o `"codigoJS"`.
+- `<tag onload="codigoJS">` -> atributo que executa o `"codigoJS"` apos a pagina HTML carregar.
+- `<tag onmouseover="codigoJS">` -> atributo que executa o `"codigoJS"` quando o mouse passa em cima.
+- `<tag onmouseout="codigoJS">` -> atributo que executa o `"codigoJS"` quando o mouse passa em cima.
+- [Mais eventos](https://www.w3schools.com/jsref/dom_obj_event.asp)
 
 ## Editando Eventos direto do javascrip
 
@@ -100,44 +100,44 @@ window.onload = FuncaoOuQualquerCoisa // Executa uma funcao ao carregar a pagina
 
 OBS: usaremos a variavel `p`
 
-* `p.childrem` -> Extrai a tag filha do elemento HTML
-* `p.parentElement` -> Extrai a tag pai do elemento HTML
+- `p.childrem` -> Extrai a tag filha do elemento HTML
+- `p.parentElement` -> Extrai a tag pai do elemento HTML
 
 ## Biblioteca Math
 
-* `Math.pi()` -> Exibe o valor de PI
-* `Math.sqrt(BaseDaRaiz)` -> Calcula raiz quadrada
-* `Math.pow(Base, Expoente)` -> Calculo de potencia
-* `Math.random()` -> Gera um numero aleatorio entre 0 e 0.999
-* `Math.round(Numero)` -> Arredonda um numero
-* `Math.floor(Numero)` -> Arredondamento em piso (arredondar sempre para baixo)
-* `Math.ceil(Numero)` -> Arredondar sempre para baixo
+- `Math.pi()` -> Exibe o valor de PI
+- `Math.sqrt(BaseDaRaiz)` -> Calcula raiz quadrada
+- `Math.pow(Base, Expoente)` -> Calculo de potencia
+- `Math.random()` -> Gera um numero aleatorio entre 0 e 0.999
+- `Math.round(Numero)` -> Arredonda um numero
+- `Math.floor(Numero)` -> Arredondamento em piso (arredondar sempre para baixo)
+- `Math.ceil(Numero)` -> Arredondar sempre para baixo
 [mais](java_math.md)
 
 ## JSON - Javascript Object Notation
 
 `JSON` e um representacao de um objeto, nem sempre podemos trabalhar com um objeto 'puro' (principalmente se quisermos mandar para um servidor ou para outra linguagem) entao esse representacao permite que possamos 'converter' o objeto de `string` para um objeto. Eles seriam:
 
-* `JSON.parse(string)` -> converte `string` para `objeto`
-* `JSON.stringify(objeto)` -> converte `objeto` para `string`
+- `JSON.parse(string)` -> converte `string` para `objeto`
+- `JSON.stringify(objeto)` -> converte `objeto` para `string`
 
 OBS: padra para string JSON -> `'{"nome":"fabio","idade":26}'` Aspas simples para construcao da string(lado de fora) e aspas duplas para o interior. E todas as palavras inclusive as alfanumericas devem ter aspas duplas e os numeros nao.
 
 ## Local Storage - Armazenamento de dados local
 
-* `window.localStorage` -> propriedade padrao, lembrando que o objeto `window` pode ser omitido.
-* `localStorage.setItem(StringChave, String)` -> Grava um dado na memoria do navegador 
-* `localStorage.getItem(StringChave)` -> Extrai o dado gravado no navegador
-* `localStorage.removeItem()` -> Remove o dado gravado no navegador
-* `localStorage.clear()` -> Limpa todo(s) o(s) dado(s) gravado(s) no navegador.
+- `window.localStorage` -> propriedade padrao, lembrando que o objeto `window` pode ser omitido.
+- `localStorage.setItem(StringChave, String)` -> Grava um dado na memoria do navegador 
+- `localStorage.getItem(StringChave)` -> Extrai o dado gravado no navegador
+- `localStorage.removeItem()` -> Remove o dado gravado no navegador
+- `localStorage.clear()` -> Limpa todo(s) o(s) dado(s) gravado(s) no navegador.
 
 ## Recarregar pagina
 
-* `location.reload()` -> recarrega pagina.
+- `location.reload()` -> recarrega pagina.
 
 ## Temporizador
 
-* `window.setTimeout(codigoJS, TempoEmMilissegundos)` -> Depois que o tempo no parametro `TempoEmMilissegundos` passar, o parametro `codigoJS` e executado.
-* `window.setInterval(codigoJS, TempoEmMilissegundos)` -> Depois que o tempo no parametro `TempoEmMilissegundos` passar, o parametro `codigoJS` e executado e logo depois retornando a contagem (ciclo infinito).
-* `window.clearInterval(VariavelArmazenaSetInterval)` -> Essa funcao para o `setInterval` armazenado em uma variavel.
-* `window.clearTimeout(VariavelArmazenasetTimeout)` -> Essa funcao para o `setTimeout` armazenado em uma variavel.
+- `window.setTimeout(codigoJS, TempoEmMilissegundos)` -> Depois que o tempo no parametro `TempoEmMilissegundos` passar, o parametro `codigoJS` e executado.
+- `window.setInterval(codigoJS, TempoEmMilissegundos)` -> Depois que o tempo no parametro `TempoEmMilissegundos` passar, o parametro `codigoJS` e executado e logo depois retornando a contagem (ciclo infinito).
+- `window.clearInterval(VariavelArmazenaSetInterval)` -> Essa funcao para o `setInterval` armazenado em uma variavel.
+- `window.clearTimeout(VariavelArmazenaSetTimeout)` -> Essa funcao para o `setTimeout` armazenado em uma variavel.
