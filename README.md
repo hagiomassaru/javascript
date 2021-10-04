@@ -1,4 +1,4 @@
-# Aprendendo javascript
+# Anotações front-end - Aprendendo javascript
 
 ## Navegacao para outros linguagens relacionadas
 
