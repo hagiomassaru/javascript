@@ -458,3 +458,20 @@ Sintax:
 }
 ```
 para mais informacoes [Click aqui](https://www.w3schools.com/cssref/css3_pr_mediaquery.asp)
+
+## Box-sizing
+
+`box-sizing: content-box|border-box|initial|inherit;` -> A propriedade define como a largura e a altura de um elemento são calculadas: elas devem incluir preenchimento e bordas ou não. OBS: Util tambem para usar em `<input>` e elementos do `<form>`.
+- Valores de propriedade
+    * `content-box`	-> Padrão. As propriedades de largura e altura (e propriedades min / max) incluem apenas o conteúdo. Bordas e estofamento não estão incluídos
+    * `border-box` -> As propriedades de largura e altura (e propriedades min / max) incluem conteúdo, preenchimento e borda
+    * `initial` -> Define essa propriedade para o seu valor padrão. Leia sobre inicial
+    * `inherit` -> Herdará essa propriedade do seu elemento pai.
+
+### Exemplo
+
+```css
+#example1 input {
+  box-sizing: border-box; /* Assim o box do Input vai ocupar o elemento inteiro */
+}
+```

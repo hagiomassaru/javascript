@@ -149,7 +149,32 @@ Ps: de preferência para tags semânticas por terem utilidade para os navegadore
 ## Formulários
 ### Syntax
 
+![Criacao de formularios](https://www.w3schools.com/tags/tag_form.asp)
+
 ```html
+<!-- Exemplo -->
+<form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<!-- Tipos de tags para formularios -->
+<input> <!-- entrada de dados -->
+<textarea> <!-- tag define um controle de entrada de texto com várias linhas. -->
+<button> <!-- tag define um botão clicável. -->
+<select> <!-- O elemento é usado para criar uma lista suspensa. -->
+<option> <!-- tag define uma opção em uma lista de seleção. -->
+<optgroup> <!-- tag é usado para agrupar opções relacionadas em um elemento <select> -->
+<fieldset> <!-- tag é usado para agrupar elementos relacionados em um formulário. -->
+<label> <!-- tag define um rótulo para vários elementos -->
+<output> <!-- tag é usado para representar o resultado de um cálculo (como um realizado por um script). -->
+
+
+
+
 <form method="get|post">
 <!-- GET → Padrão. Acrescenta os dados do formulário ao URL em pares nome / valor: URL? Nome = valor & nome = valor -->
 <!-- POST → Envia os dados do formulário como uma transação HTTP post -->
@@ -168,5 +193,29 @@ Ps: de preferência para tags semânticas por terem utilidade para os navegadore
 <input type="text" placeholder="">
 <!-- O atributo placeholder junto com type="text" mostra o valor dentro de "" na barra de texto enquanto esta em desfoque -->
 
+<!-- Os diferentes tipos de entrada são os seguintes: -->
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text"> <!-- (default value) -->
+<input type="time">
+<input type="url">
+<input type="week">
+<!-- mais informacoes https://www.w3schools.com/tags/tag_input.asp -->
 
 ```
