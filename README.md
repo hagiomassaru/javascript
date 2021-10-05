@@ -161,7 +161,7 @@ for (var variavel; variavel < numero; variavel++){
 
 Este laco de repeticao nos permite controlar melhor as repeticoes
 
-# Diferenca de `of` para `in`
+## Diferenca de `of` para `in`
 
 ```JS
 var arr = ["gato", "cachorro", "macaco"];

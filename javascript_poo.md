@@ -52,7 +52,7 @@ let tag = document.getElementById("idDatag");// estou extraindo tag do documento
 console.log(tag.value); // podemos ver que para extrair o valor tive que usar a propriedade `.value`, se for um input sera o 
 // valor digitado e se for uma tag com valor determinado sera o valor da tag.
 ```
-## Modificando conteudo
+## Modificando conteudo e atributos
 
 A variavel `p` ao HTML extraido no ultimo topico, com ele extraido podemos realizar as modificacoes
 
@@ -78,7 +78,7 @@ OBS: `p.style` tem vario atributos que podemos mudar colocando na variavel `p`, 
 ```JS
 documentoOuTag = document.getElementById("id");
 documentoOuTag.onclick = codigoOuFuncaoJS;// onclick mesma coisa que onclick so que direto no JS
-documentoOuTag.addEventListener("EventoHTML", codigoOuFuncaoJS); /* "EventoHTML" podemos usar os eventos do HTML como : 
+documentoOuTag.addEventListener("EventoHTML", codigoOuFuncaoJS); /* Serve para cria/alterar "EventoHTML" como : 
 * "click" = onclick
 * "mouseover" = onmouseover
 * "mouseout" = onmouseout
@@ -141,3 +141,15 @@ OBS: padra para string JSON -> `'{"nome":"fabio","idade":26}'` Aspas simples par
 - `window.setInterval(codigoJS, TempoEmMilissegundos)` -> Depois que o tempo no parametro `TempoEmMilissegundos` passar, o parametro `codigoJS` e executado e logo depois retornando a contagem (ciclo infinito).
 - `window.clearInterval(VariavelArmazenaSetInterval)` -> Essa funcao para o `setInterval` armazenado em uma variavel.
 - `window.clearTimeout(VariavelArmazenaSetTimeout)` -> Essa funcao para o `setTimeout` armazenado em uma variavel.
+
+# Alterando atributos HTML com javascript
+
+Esse comando ja foram mostrados antes mas nesse topico iremos mostrar de novo.
+
+- `documentoOuTag.getAttribute('nomeAtributo')` -> Extrai (apenas) o conteudo do atributo indicado no `valorAtributo`.
+- `documentoOuTag.setAttribute('nomeAtributo', 'valorAtributo')` -> Modifica(caso exista)/Cria(caso nao exista) o conteudo do atributo indicado no `valorAtributo`.
+- `documentoOuTag.addEventListener("nomeAtributo", codigoOuFuncaoJS);` -> Serve para cria/alterar Eventos HTML. [Lista de eventos HTML](https://www.w3schools.com/tags/ref_eventattributes.asp)
+OBS: Para referenciarmos um Evento omitirmos o 'on'
+    * "click" = onclick
+    * "mouseover" = onmouseover
+    * "mouseout" = onmouseout
