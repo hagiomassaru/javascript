@@ -43,6 +43,12 @@ Escrevendo no proprio HTML usando a tag `<script>`
 var nome = valor;
 ```
 
+Declaracao dentro de `string`
+
+```JS
+var nome = `${conteudoJS} loreipsum`
+```
+
 ## Tipos de dados
 
 Boolean → `True` ou `False`
