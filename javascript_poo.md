@@ -54,7 +54,7 @@ console.log(tag.value); // podemos ver que para extrair o valor tive que usar a 
 ```
 ## Modificando conteudo e atributos
 
-A variavel `p` ao HTML extraido no ultimo topico, com ele extraido podemos realizar as modificacoes
+A variavel `p` e o HTML extraido no ultimo topico, assim podemos realizar as modificacoes
 
 - `p.className` -> Extrai/Recebe nome da class da tag e possibilita modificacao atribuindo um outro valor.
 - `p.style` -> Extrai/Recebe um conteudo html/tag e modifica/extrai o atributo `style`.
@@ -62,7 +62,19 @@ A variavel `p` ao HTML extraido no ultimo topico, com ele extraido podemos reali
 OBS: `p.style` tem vario atributos que podemos mudar colocando na variavel `p`, consulte documentacao ou use o intellisense com `ctrl + espaco`
 - `p.getAttribute('nomeAtributo')` -> Extrai (apenas) o conteudo do atributo indicado no `valorAtributo`.
 - `p.setAttribute('nomeAtributo', 'valorAtributo')` -> Modifica(caso exista)/Cria(caso nao exista) o conteudo do atributo indicado no `valorAtributo`.
+obs: Podemos acessar os atributos como objetos EX: `p.src` acessa o atributo `src` e assim vale para qualquer tipo de atributo em HTML
+[Mais informacors sobre modificao de atributos](https://www.w3schools.com/jsref/dom_obj_attributes.asp)
+- `p.attr.name` -> Retorna o nome de um atributo
+EX: 
+```JS
+var x = document.getElementsByTagName("BUTTON")[0].attributes[0].name;// lembrando que o `.attributes` retorna uma lista, por isso indicar o indice `[0]`
+```
+- `p.attr.value` -> Define ou retorna o valor do atributo
+EX:
+```JS
+var x = document.getElementsByTagName("BUTTON")[0].attributes[0].value; 
 
+```
 ## Eventos HTML
 
 - `<tag onclick="codigoJS">` -> atributo que quando ao clicar executa o codigo no valor do atributo.
