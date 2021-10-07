@@ -154,7 +154,7 @@ OBS: padra para string JSON -> `'{"nome":"fabio","idade":26}'` Aspas simples par
 - `window.clearInterval(VariavelArmazenaSetInterval)` -> Essa funcao para o `setInterval` armazenado em uma variavel.
 - `window.clearTimeout(VariavelArmazenaSetTimeout)` -> Essa funcao para o `setTimeout` armazenado em uma variavel.
 
-# Alterando atributos HTML com javascript
+## Alterando atributos HTML com javascript
 
 Esse comando ja foram mostrados antes mas nesse topico iremos mostrar de novo.
 
@@ -165,3 +165,15 @@ OBS: Para referenciarmos um Evento omitirmos o 'on'
     * "click" = onclick
     * "mouseover" = onmouseover
     * "mouseout" = onmouseout
+
+## Alterando atributos usando `dataset`
+
+Uma maneira de alterarmos dados em atribuntos em HTML e utilizando o prefixo `data` nos atributos (criados e nao nativos).
+
+EX:
+
+- `<tag data-numero='numero'>` -> declaramos esses atributos criados com o prefixo `data-` e depois o nome do atributo, ficando `data-algumacoisa`.
+
+Declatando os atributos HTML desta maneira, podemos extrair seus valores no `javascript` utilizando a propriedade `.dataset.atributo`.
+
+- `p.dataset.numero` -> O objeto `p` e a tag que HTML que extraimos, sendo o `dataset` a propriedade para estracao dos atributos `data-####`, seguido do nome do atributo sem o `data-`. Assim extraimos o valor. 
