@@ -219,3 +219,18 @@ Ps: de preferência para tags semânticas por terem utilidade para os navegadore
 <!-- mais informacoes https://www.w3schools.com/tags/tag_input.asp -->
 
 ```
+## Tag `<video>`
+
+A tag `<video>` serve para anexas no documento HTML um arquivo de video. Declaramos o mesmo como qualquer tag, mas o que importa sao seus atributos.
+
+- `<video src='url'>` -> O atributo `src` serve para indicarmos o arquivo de video que sera carregado.
+- `<video width='LarguraEmPixel'>` -> Podemos tambem definir o tamanho usando `width` ou `heigth` para definir largura e altura do video.
+- `<video controls>` -> Ao declarar na tag (sem atribuir um valor) ativamos os controles como play/pause, controle de volume que nem o youtube (so e parecido mas nao igual).
+- `<video autoplay>` -> Ao carregar a pagina o video inicia sozinho. OBS: Em alguns navegadores esse atributo so funciona se o mesmo esta mutado declarando o atributo `muted`.
+- `<video muted>` -> Deixa o video sem som.
+- `<video loop>` -> Deixa o video em loop.
+- `<video poster='URLdaImagem'>` -> Definimos uma tumbmail para o video.
+- `<video preload='auto|metadata|none'>` -> Defini como o video deve ser carregado
+    * `auto` -> Quando a pagina HTML for carregado, o video ja sera carregado na memoria no computador.
+    * `metadata` -> Quando a pagina HTML for carregado, o video apenas carregara os metadados (os dados do video como o nome, tamanho e etc...).
+    * `none` -> A pagina HTML **NÃO** sera carregara o vídeo. Apenas comecara esse processo quando o usuario der play no video.
