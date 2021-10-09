@@ -194,6 +194,20 @@ word-spacing: 5px;/* Espaço entre as palavras */
 line-height: 2px;/* Espaço entre as linhas */
 
 text-shadow: 1px 1px gray;/* Sombra do texto/elemento */
+
+box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; /* Sombra do elemento */
+/*
+* none -> Valor padrão. Nenhuma sombra é exibida	
+* h-offset -> Necessário. O deslocamento horizontal da sombra. Um valor positivo coloca a sombra no lado direito da caixa, um valor negativo coloca a sombra no lado esquerdo da caixa	
+* v-offset -> Necessário. O deslocamento vertical da sombra. Um valor positivo coloca a sombra abaixo da caixa, um valor negativo coloca a sombra acima da caixa	
+* blur -> Opcional. O raio de desfoque. Quanto maior o número, mais turva será a sombra	
+* spread -> Opcional. O raio de propagação. Um valor positivo aumenta o tamanho da sombra, um valor negativo diminui o tamanho da sombra	
+* color -> Opcional. A cor da sombra. O valor padrão é a cor do texto. Olhe para Valores de cores CSS para uma lista completa dos possíveis valores de cores. Nota: No Safari (no PC), o parâmetro color é necessário. Se você não especificar a cor, a sombra não será exibida.	
+* inset -> Opcional. Muda a sombra de uma sombra externa (saída) para uma sombra interna	
+* inicial -> Define essa propriedade para o seu valor padrão. Leia sobre inicial	
+* herdar -> Herdará essa propriedade do seu elemento pai. Leia sobre herdar
+*/
+
 ```
 
 ## Unidades medida fixas
@@ -338,7 +352,7 @@ div#myDIV {
 }
 ```
 
-### Metodos para alteração de `position`
+## Metodos para alteração de `position`
 
 ```css
 div#myDIV {
@@ -358,7 +372,7 @@ div#myDIV {
 ## Metodo Float
 
 ```css
-div#myDIV {
+div#myDIV {/* #teste */
     /* A propriedade float especifica se um elemento deve flutuar para a esquerda, direita ou não flutuar. */
     float: none|left|right|initial|inherit;
     /* A propriedade 'clear' controla o fluxo próximo aos elementos flutuantes. A propriedade 'clear' especifica o que deve acontecer com o elemento que está próximo a um elemento flutuante. Dica: Observe também a propriedade float. */
@@ -436,35 +450,42 @@ div#myDiv{
 }
 
 ```
-- A segunda maneira que podemos usar e usando o atributo `position: absolute` (lembrando que esse atributo so funciona se o seu elemento pai nao for `position: static`) e utilizarmos [metodos para alteração de `position`](#Metodos-para-alteração-de-`position`)
+- A segunda maneira que podemos usar e usando o atributo `position: absolute` (lembrando que esse atributo so funciona se o seu elemento pai nao for `position: static`) e utilizarmos o metodos para alteração de `position`.
 
-
-
- ```css
-transform: translate(-50%, -50%);
-/* comando acima deixa a div alinhada verticalmente com a div pai */
-/* exemplo abaixo */
-.header{
-    position: relative;
-    margin: auto;
-    width: 80%;
-    height: 100px;
-    background-color: gray;
+```css
+divPai#Pai{
+    position: relative; /* aqui nos mudamos o elemento pai para 'relative' para nao dar conflito no 'position' filho  */
 }
-.text{
-    position: absolute;
-    color: white;
-    width: 70%;
-    height: 70%;
-    background-color: #fff;
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%,-50%);
+divFilho#Filho{
+    position: absolute;/* usando o atributo `position: absolute` para centralizar verticalmente */
+    top: 50%; /* centralizando */
 }
  
- ```
+```
+
+Quando usamos o codigo acima, normalmente perdemos o alinhamento horizontal, entao podemos tambem utilizar o atributo `transform: translateY(medida)` para centralizar verticalmente e `transform: translateX(medida)` para o horizontalmente.
+
+```css
+divPai#Pai{
+    position: relative; /* aqui nos mudamos o elemento pai para 'relative' para nao dar conflito no 'position' filho  */
+}
+divFilho#Filho{
+    position: absolute;/* usando o atributo `position: absolute` para centralizar verticalmente */
+    top: 50%; /* centralizando verticalmente */
+    left: 50%; /* centralizando horizontalmente */
+    transform: translateY(-50%); /* Ajustando a centralizacao vertical */
+    transform: translateX(-50%); /* Ajustando a centralizacao horizontalmente */
+    /* Sendo que valores positivos move para baixo e negativo para cima */
+}
+
+#alternativa{
+    transform: translate(-50%, -50%);
+
+}
+ 
+```
+
+
 
 ## Videos uteis para Alinhamento de elementos
 
