@@ -463,7 +463,7 @@ divFilho#Filho{
  
 ```
 
-Quando usamos o codigo acima, normalmente perdemos o alinhamento horizontal, entao podemos tambem utilizar o atributo `transform: translateY(medida)` para centralizar verticalmente e `transform: translateX(medida)` para o horizontalmente.
+Quando usamos o codigo acima, normalmente perdemos o alinhamento horizontal, entao podemos tambem utilizar o atributo `transform: translateY(medida)` para ajustar centralizar verticalmente e `left` (pois o top ja foi declarado) junto com `transform: translateX(medida)` para ajustar horizontalmente.
 
 ```css
 divPai#Pai{
