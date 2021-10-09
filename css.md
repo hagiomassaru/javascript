@@ -477,7 +477,9 @@ divFilho#Filho{
     transform: translateX(-50%); /* Ajustando a centralizacao horizontalmente */
     /* Sendo que valores positivos move para baixo e negativo para cima */
 }
-
+```
+normalmente quando usamos um `transform: translateY(medida)` ou `transform: translateX(medida)` os dois conflitam (valendo apenas o ultimo), para alterarmos os eixo X e Y ao mesmo tempo usamos o `transform: translate(eixoX,eixoY)`
+```css
 #alternativa{
     transform: translate(-50%, -50%);
 
