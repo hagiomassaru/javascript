@@ -258,7 +258,6 @@ list-style-type: lower-alpha;/* numero alfa numérico minúsculo */
 list-style-type: upper-roman;/* numero romanos maiúsculo */
 list-style-type: upper-alpha;/* numero alfa numérico maiúsculo */
 ```
-
 ## Display
 
 ```css
@@ -367,11 +366,83 @@ div#myDIV {
 }
 
 ```
-## Alinhamento de texto entre duas div's
+
+## Alinhamento Horizontal
+
+Podemos utilizar os seguintes exemplos:
+
+- Para definir `div` podemos usar `margin-right` e `margin-left` com propriedade `auto` assim deixando o elemento centralizado. Lembrando de se usarmos `margin-right` e `margin-left` individualmente iremos colocar nos estremos tando da direita quanto da esquerda.
+```css
+div#myDIV {
+    margin-left: auto; /* Elemento fica na estrema esquerda */
+    margin-right: auto; /* Elemento fica na estrema direita */
+    /* Estando os dois com a propriedade 'auto' o elemento fica centralizado */
+        
+}
+div#myDIV {
+    margin-right: auto; /* Elemento fica na estrema direita */
+}
+div#myDIV {
+    margin-left: auto; /* Elemento fica na estrema esquerda */
+}
+```
+- Podemos tambem utilizar so o `margin` com propriedade `auto`, sendo que assim o elemento ficara au centro do elemento para tanto verticalmente quanto horizontalmente.
+
+```css
+div#myDIV {
+    margin: auto; /* Elemento fica centralizado */
+        
+}
+```
+- Os metodos acima so funciona em elementos que tem sua priedade `display` como `block`, imagens por exemplo nao sao afetados pela propriedade `margin`. Temos que declarar a propriedade `display` como `block` para que passe a ser afetada.
+OBS: Isso se aplica a qualquer elemento que por padrao nao tem a propriedade `display` como `block`.
+
+```css
+img#myImg {
+    display: block;
+    margin: auto; 
+}
+```
+- Caso queira centralizar um elemento `display` que nao seja `block` (como `inline` ou `inline-block`) voce pode usar o `text-align` em seu elemento pai para que possa manipular tando para centro quanto para outras posicoes.
+```css
+divPai#Pai{
+    text-align: center; /* ou `left` ou `right` */
+}
+div#myDiv{
+    display: inline; /* pode ser `inline-block` tambem */
+}
+```
+
+Exemplo em HTML de uma tag pai
+
+```html
+<div id='pai'> <!--tag pai -->
+    <img src='imagem' alt='imagem'> <!-- tag filha -->
+<div>
+```
+## Alinhamento Vertical
+
+Para alinharmos elemento verticalmente depende de cada caso, por exemplo:
+
+- Se o elemento for `display: inline | inline-block` podemos utilizar o `line-height: valor;`.
+OBS: Valor de `line-height` deve ser a altura do pai caso queira ele centralizado. E nao podemos utilizar `%` ja que quando o elemento e `display; inline | inline-block` ele nao tem essa relacao de medida, dando conflito.
+```css
+divPai#Pai{
+    text-align: center; /* ou `left` ou `right` */
+}
+div#myDiv{
+    display: inline;
+    line-height: 200px; /* valor deve ser a altura do pai caso queira ele centralizado*/
+}
+
+```
+- A segunda maneira que podemos usar e usando o atributo `position: absolute` (lembrando que esse atributo so funciona se o seu elemento pai nao for `position: static`) e utilizarmos [metodos para alteração de `position`](#Metodos-para-alteração-de-`position`)
+
+
 
  ```css
 transform: translate(-50%, -50%);
-/* comando acima deixa a div alinhada com a div pai */
+/* comando acima deixa a div alinhada verticalmente com a div pai */
 /* exemplo abaixo */
 .header{
     position: relative;
@@ -395,45 +466,13 @@ transform: translate(-50%, -50%);
  
  ```
 
-## Alinhando elementos
+## Videos uteis para Alinhamento de elementos
 
 [Videos de referencia](https://www.youtube.com/watch?v=Cu-HP-gvggg)
 
 [Praticar o funcionamento de flexbox](https://flexboxfroggy.com)
 
-Para centralizar ou alinhar elementos existem varios metodos. Um deles e :
 
-```css
-div#myDIV {
-    margin: auto; /* para definir 'div' podemos usar 'margin' com proprieda 'auto' assim deixando centralizado */
-}
-div#myDIV {
-    margin-left: auto; /* dessa maneira alinhamos a `div` a direita */
-    /* ja podemos imaginar como alinhar elemento para esquerda nao e ?*/
-}
-img#myImg {
-    /* Para imagens o metodo acima nao funciona, para contornar isso mudamos o 'display' para 'block' */
-    display: block;
-    margin: auto; 
-}
-```
-OBS: O metodo acima so funciona se o elemento for `display: block;`
-
-podemos tambem alinhar uma `img` colocando dentro de uma `div`
-
-### * HTML
-```html
-<div id='myImg'>
-    <img src='imagem' alt='imagem'>
-<div>
-```
-### * CSS
-```css
-#myImg {
-    text-align: center; /* assim a imagem ficara alinhada */
-}
-```
-como podemos ver se uma imagem estivem dentro de uma `div` podemos alinhar usando `text-align:` no CSS
 
 ## Responsividade
 ```html
