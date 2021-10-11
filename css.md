@@ -537,3 +537,26 @@ para mais informacoes [Click aqui](https://www.w3schools.com/cssref/css3_pr_medi
   box-sizing: border-box; /* Assim o box do Input vai ocupar o elemento inteiro */
 }
 ```
+
+## Deixando elemento invisivel
+
+Para desaparecer com elemento podemos usar `display: none` ou `visibility: hidden`
+
+```css
+div#primeiraManeira{
+    display: none;
+}
+div#primeiraManeira{
+    visibility: hidden; /* para voltar a aparecer so usar a propriedade */
+}
+
+```
+
+### Deceicao da propriedade `visibility`
+
+- `visibility: visible|hidden|collapse|initial|inherit;` -> A propriedade de `visibility` especifica se um elemento está ou não visível.
+    * visible -> Valor padrão. O elemento é visível	
+    * hidden -> O elemento está oculto (mas ainda ocupa espaço)	
+    * collapse -> Somente para linhas de tabela (<tr>), grupos de linhas (<tbody>), colunas (<col>), grupos de colunas (<colgroup>). Esse valor remove uma linha ou coluna, mas não afeta o layout da tabela. O espaço ocupado pela linha ou coluna estará disponível para outro conteúdo. Se o colapso for usado em outros elementos, ele será considerado "oculto"
+    * initial -> Define essa propriedade para o seu valor padrão. Leia sobre inicial	
+    * inherit -> Herdará essa propriedade do seu elemento pai.

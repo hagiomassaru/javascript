@@ -177,3 +177,13 @@ EX:
 Declatando os atributos HTML desta maneira, podemos extrair seus valores no `javascript` utilizando a propriedade `.dataset.atributo`.
 
 - `p.dataset.numero` -> O objeto `p` e a tag que HTML que extraimos, sendo o `dataset` a propriedade para estracao dos atributos `data-####`, seguido do nome do atributo sem o `data-`. Assim extraimos o valor. 
+
+## Alterando `<video>` no javascript
+
+OBS: `video` e igual a `document.getElementsById("id")` sendo o `id` o nome da tag de video
+
+- `video.play()` -> Executar o video
+- `video.pause()` -> Para o video
+- `video.currentTime()` -> Exibe o Tempo do video
+- `video.currentTime = tempo` -> Altera o tempo do video.
+- `video.playbackRate = tempo` -> Manipula a velocidade do video

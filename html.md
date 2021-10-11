@@ -67,7 +67,11 @@ Obs: `<extag>meu titulo</extag>` → os dois juntos formam um elemento html comp
 
 </html>
 ```
+## Criando favicom (icone na bara do navegador)
 
+```html
+<link rel="nomeOuDescrisao" href="Referencia da imagem" type="image/x-icon">
+```
 ## Comentario em html
 
 ```HTML
