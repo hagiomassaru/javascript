@@ -551,8 +551,19 @@ div#primeiraManeira{
 }
 
 ```
+Caso voce queira manter o elemento invisivel porem que possa ter interacoes, pode usar `opacity`
+```css
+div#myDiv{
+    opacity: 0; /* 0 - invisivel e 1 - visivel */
+}
+div#myDiv:hover{
+    opacity: 1;
+}
+/* assim o elemento pode receber eventos como 'click' ou 'mouseover' normalmente.*/
+```
+[Saiba mais](https://www.w3schools.com/cssref/css3_pr_opacity.asp)
 
-### Deceicao da propriedade `visibility`
+### Descricao da propriedade `visibility`
 
 - `visibility: visible|hidden|collapse|initial|inherit;` -> A propriedade de `visibility` especifica se um elemento está ou não visível.
     * visible -> Valor padrão. O elemento é visível	
@@ -560,3 +571,21 @@ div#primeiraManeira{
     * collapse -> Somente para linhas de tabela (<tr>), grupos de linhas (<tbody>), colunas (<col>), grupos de colunas (<colgroup>). Esse valor remove uma linha ou coluna, mas não afeta o layout da tabela. O espaço ocupado pela linha ou coluna estará disponível para outro conteúdo. Se o colapso for usado em outros elementos, ele será considerado "oculto"
     * initial -> Define essa propriedade para o seu valor padrão. Leia sobre inicial	
     * inherit -> Herdará essa propriedade do seu elemento pai.
+
+## Usando `:hover`, `::after` e `::before`
+
+- `elemento:hover` -> O seletor `:hover` é usado para definir eventos em elementos quando você passa o mouse por cima deles.
+- `elemento::after` -> o seletor insere algo após o conteúdo de cada elemento (s) selecionado (s).
+- `elemento::before` -> o seletor insere algo antes do conteúdo de cada elemento (s) selecionado (s).
+EX:
+```css
+elemento::after {
+    content: "texto";
+    css declarations;
+}
+elemento::before {
+  content: "texto";
+    css declarations;
+}
+```
+
