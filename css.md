@@ -285,7 +285,7 @@ display: inline-block;
 display: none;
 ```
 
-## Overflow
+## Overflow - Conteudo transbordado
 
 Esta propriedade especifica se é necessário cortar o conteúdo ou adicionar barras de rolarem quando o conteúdo de um elemento é muito grande para caber em uma área especificada.
 Nota: a `overflow` propriedade só funciona para elementos de bloco com uma altura especificada.
