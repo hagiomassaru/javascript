@@ -26,77 +26,97 @@
 
 ## Trocando a cor e modificando o plano de fundo de um Elemento HTML - background
 
-```css
-    background-image: url('URL')|none|initial|inherit;/* adicionar imagem de funto // 
-    * url ('URL') -> O URL da imagem. Para especificar mais de uma imagem, separe os URLs com uma vírgula
-    * none -> Nenhuma imagem de plano de fundo será exibida. Isso é padrão
-    * initial -> Define essa propriedade para o seu valor padrão https://www.w3schools.com/cssref/css_initial.asp
-    * inherit -> Herdará essa propriedade do seu elemento pai https://www.w3schools.com/cssref/css_inherit.asp    
-    */    
-    background-repeat: no-repeat;/* definir repetição */
+### Adicionar imagem de fundo
+- `background-image: url('URL')|none|initial|inherit;`
+    * `url ('URL')` -> O URL da imagem. Para especificar mais de uma imagem, separe os URLs com uma vírgula
+    * `none` -> Nenhuma imagem de plano de fundo será exibida. Isso é padrão
+    * `initial` -> Define essa propriedade para o seu valor padrão https://www.w3schools.com/cssref/css_initial.asp
+    * `inherit` -> Herdará essa propriedade do seu elemento pai https://www.w3schools.com/cssref/css_inherit.asp   
+
+### Definir repetição 
+- `background-repeat: repeat|repeat-x|repeat-y|no-repeat|initial|inherit;`
+    * `repeat` -> A imagem de fundo é repetida na vertical e na horizontal.  A última imagem será cortada se não couber. Este é o padrão
+    * `repeat-`x` -> A imagem de plano de fundo é repetida apenas horizontalmente
+    * `repeat-y` -> A imagem de plano de fundo é repetida apenas verticalmente
+    * `no-repeat` -> A imagem de fundo não se repete. A imagem será exibida apenas uma vez
+    * `space` -> A imagem de fundo é repetida o máximo possível sem recorte. A primeira e a última imagem são fixadas em ambos os lados do elemento, e o espaço em branco é distribuído uniformemente entre as imagens
+    * `round` -> A imagem de fundo é repetida e esmagada ou esticada para preencher o espaço (sem lacunas)
+    * `initial` -> Define essa propriedade para o valor padrão.
+    * `inherit` -> Herda essa propriedade do seu elemento pai.
+
+### Propriedade que especifica o tamanho das imagens de fundo.
+- `background-size: auto|length|cover|contain|initial|inherit;`
+    * `auto` -> valor padrão. A imagem de plano de fundo é exibida em seu tamanho original    
+    * `length` -> Define a largura e a altura da imagem de plano de fundo. O primeiro valor define a largura, o segundo valor define a altura. Se apenas um valor for fornecido, o segundo será definido como "automático". Leia sobre unidades de comprimento
+    * `percentage` -> Define a largura e a altura da imagem de plano de fundo em porcentagem do elemento pai. O primeiro valor define a largura, o segundo valor define a altura. Se apenas um valor for fornecido, o segundo será definido como "auto"
+    * `cover` -> Redimensione a imagem de plano de fundo para cobrir todo o contêiner, mesmo que precise esticar a imagem ou cortar um pouco uma das bordas
+    * `contain` -> Redimensione a imagem de plano de fundo para garantir que a imagem esteja totalmente visível
+    * `initial` -> Define essa propriedade para o valor padrão.
+    * `inherit` -> Herda essa propriedade do seu elemento pai.
     
-    background-size: cover;/* definir tamanho */
+### Comportamento de rolamento
+- `background-attachment: scroll|fixed|local|initial|inherit;`
+    * `scroll` -> A imagem de plano de fundo rolará com a página. Isso é padrão
+    * `fixed` -> A imagem de plano de fundo não rola com a página
+    * `local` -> A imagem de plano de fundo rolará com o conteúdo do elemento
+    * `initial` -> Define essa propriedade para o valor padrão.
+    * `inherit` -> Herda essa propriedade do seu elemento pai.
     
-    background-attachment: fixed;/* comportamento de rolamento */
-    
-```
 ## Margem - margin
-```css
-    /* definir margem do elemento */
-    margin: 10px (comprimento)|auto|initial|inherit; /* pode usar margin-top entre outros
+### Definir margem do elemento
+- `margin: 10px (comprimento)|auto|initial|inherit;` -> pode usar margin-top entre outros
     * auto -> O navegador calcula uma margem
     * initial -> Define essa propriedade para o seu valor padrão https://www.w3schools.com/cssref/css_initial.asp
     * inherit -> Herdará essa propriedade do seu elemento pai https://www.w3schools.com/cssref/css_inherit.asp    
     * Todos os elementos margin usam as propriedades acima.
-    */
-    margin-bottom: initial; /* Define a margem inferior de um elemento */
-    margin-left: inherit; /* Define a margem esquerda de um elemento */
-    margin-right: auto; /* Define a margem direita de um elemento */
-    margin-top: 20px; /* Define a margem superior de um elemento */
+- `margin-bottom: (comprimento)|auto|initial|inherit;` -> Define a margem inferior de um elemento
+- `margin-left: (comprimento)|auto|initial|inherit;` -> Define a margem esquerda de um elemento
+- `margin-right: (comprimento)|auto|initial|inherit;` -> Define a margem direita de um elemento
+- `margin-top: (comprimento)|auto|initial|inherit;` -> Define a margem superior de um elemento
     
-    
-```
 ## Preenchimento - padding
-```css
-    /* definir o preenchimento do elemento */
-    padding: 10px 5px 15px 20px; /* Se a propriedade de padding tiver quatro valores
+
+### Definir o preenchimento do elemento
+- `padding: 10px 5px 15px 20px;` -> Se a propriedade de padding tiver quatro valores
     * O preenchimento superior é 10px
     * O preenchimento direito é 5px
     * O preenchimento inferior é de 15px
     * O preenchimento esquerdo é de 20px
-    */
-    padding: 10px 5px 15px;/* Se a propriedade de padding tiver três valores
+- `padding: 10px 5px 15px;` -> Se a propriedade de padding tiver três valores
     * O preenchimento superior é 10px
     * O preenchimento direito e esquerdo são 5px
-    * O preenchimento inferior é de 15px
-    */
-    padding: 10px 5px 15px;/* Se a propriedade de padding tiver dois valores
+    * O preenchimento inferior é de 15px    
+- `padding: 10px 5px 15px;` -> Se a propriedade de padding tiver dois valores
     * O preenchimento superior e inferior são 10px
     * O preenchimento direito e esquerdo são 5px
-    */
-    padding: 10px; /* Se a propriedade de padding tiver um valor
-    * todos os quatro preenchimento são 10px
-    */
-    padding-bottom: length(comprimento)|initial|inherit; /* essas propriedades sao bem parecidas com margin */
-    padding-left: length(comprimento)|initial|inherit;
-    padding-right: length(comprimento)|initial|inherit;
-    padding-top: length(comprimento)|initial|inherit;    
+- `padding: 10px;` -> Se a propriedade de padding tiver um valor
+    * todos os quatro preenchimento são 10px    
+- `padding-bottom: length(comprimento)|initial|inherit;` /* essas propriedades sao bem parecidas com margin */
+- `padding-left: length(comprimento)|initial|inherit;`
+- `padding-right: length(comprimento)|initial|inherit;`
+- `padding-top: length(comprimento)|initial|inherit;`    
 
-```
+
 ## Borda - border
+### Arredondamento dos cantos da borda
+- `border-radius: 5px;`
+### Estilo de borda
+- `border-style: dotted|dashed|solid|none|hidden;`
+    * `dotted` -> borda  pontilhada
+    * `dashed` -> borda continua
+    * `solid` -> borda inexistente
+    * `none` -> borda invisível
+    * `hidden` -> definição de borda em uma linha só
 
-```css
-    /* arredondamento dos cantos da borda */
-    border-radius: 5px; /* borda  pontilhada*/
-    border-style: dotted;/* borda tracejado */
-    border-style: dashed;/* borda continua */
-    border-style: solid;/* borda inexistente */
-    border-style: none;/* borda invisível */
-    border-style: hidden;/* definição de borda em uma linha só */
-    border: 1px solid gray;/* tamanho / style / cor */
+### Cor de borda
+- `border-color: color|transparent|initial|inherit;`
+    * `color` -> Especifica a cor da borda. Consulte os valores de cores CSS para obter uma lista completa dos possíveis valores de cores. A cor padrão é a cor atual do elemento
+    * `transparent` -> Especifica que a cor da borda deve ser transparente
+### Uma propriedade de taquigrafia para largura de borda, estilo de borda e cor de borda
+- `border: 1px solid gray;`/* tamanho / style / cor */
 
-```
-![exemplo](images/exemplo.png)
+
+<img src="images/exemplo.png" style="width:700px;">
 
 ## Id e classes
 ```css
@@ -129,86 +149,110 @@ link:visited{
 ```
 ## Ajustes no texto
 
+### Cor de fonte
+- `color: color|initial|inherit;`
+#### Tipos de cores
+- Hexadecimal Colors
+    * Uma cor hexadecimal é especificada com: #RRGGBB, onde os números inteiros hexadecimais RR (vermelho), GG (verde) e BB (azul) especificam os componentes da cor. Todos os valores devem estar entre 00 e FF
 ```css
-
-color: red;/* Cor de fonte */
-
-text-align: auto|left|right|center|justify|start|end|initial|inherit;/* alinhamento de texto/elemento
-* auto -> Valor padrão. A última linha é justificada e alinhada à esquerda	
-* left -> A última linha está alinhada à esquerda	
-* right -> A última linha está alinhada à direita	
-* center -> A última linha está alinhada no centro	
-* justify -> A última linha é justificada como o resto das linhas	
-* start -> A última linha está alinhada no início da linha (esquerda se a direção do texto for esquerda para direita e direita a direção do texto for direita para esquerda)	
-* end -> A última linha está alinhada no final da linha (à direita, se a direção do texto for da esquerda para a direita e a esquerda for a direção do texto da direita para a esquerda)	
-* initial -> Define essa propriedade para o seu valor padrão.	
-* inherit -> Herdará essa propriedade do seu elemento pai.
-*/
-
-text-transform: none|capitalize|uppercase|lowercase|initial|inherit;/* transformação de texto/elemento 
-* none -> Sem capitalização. O texto é renderizado como está. Isso é padrão	
-* capitalize -> Transforma o primeiro caractere de cada palavra para maiúsculas	
-* uppercase -> Transforma todos os caracteres para maiúsculas	
-* lowercase -> Transforma todos os caracteres para minúsculas	
-* initial -> Define essa propriedade para o seu valor padrão.	
-* inherit -> Herdeira essa propriedade do seu elemento pai.
-*/
-
-text-indent: 50px;/* Indentação do texto/elemento */
-
-text-decoration: text-decoration-line text-decoration-color text-decoration-style|initial|inherit;/* Decoração de texto/elemento */
-
-text-decoration-line: none|underline|overline|line-through|initial|inherit;/* 
-O text-decoration-line propriedade define o tipo de decoração de texto a ser usada
-
-* none -> Valor padrão. Não especifica nenhuma linha para a decoração do texto	
-* underline -> Especifica que uma linha será exibida no texto	
-* overline -> Especifica que uma linha será exibida sobre o texto	
-* line-through -> Especifica que uma linha será exibida através do texto	
-* initial -> Define essa propriedade para o seu valor padrão.
-* inherit -> Herdará essa propriedade do seu elemento pai.
-
-*/
-
-text-decoration-color: color|initial|inherit;/*
-A propriedade text-decoration-color especifica a cor da decoração do texto
-*/
-
-text-decoration-style: solid|double|dotted|dashed|wavy|initial|inherit;/*
-A propriedade text-decoration-style define o estilo da decoração do texto
-
-* solid -> Valor padrão. A linha será exibida como uma única linha	
-* double -> A linha será exibida como uma linha dupla	
-* dotted -> A linha será exibida como uma linha pontilhada	
-* dashed -> A linha será exibida como uma linha tracejada	
-* wavy -> A linha será exibida como uma linha ondulada	
-* initial -> Define essa propriedade para o seu valor padrão. Leia sobre inicial	
-* inherit -> Herdará essa propriedade do seu elemento pai. Leia sobre herdar
-
-*/
-
-letter-spacing: 2px;/* Espaço entre as letras */
-
-word-spacing: 5px;/* Espaço entre as palavras */
-
-line-height: 2px;/* Espaço entre as linhas */
-
-text-shadow: 1px 1px gray;/* Sombra do texto/elemento */
-
-box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; /* Sombra do elemento */
-/*
-* none -> Valor padrão. Nenhuma sombra é exibida	
-* h-offset -> Necessário. O deslocamento horizontal da sombra. Um valor positivo coloca a sombra no lado direito da caixa, um valor negativo coloca a sombra no lado esquerdo da caixa	
-* v-offset -> Necessário. O deslocamento vertical da sombra. Um valor positivo coloca a sombra abaixo da caixa, um valor negativo coloca a sombra acima da caixa	
-* blur -> Opcional. O raio de desfoque. Quanto maior o número, mais turva será a sombra	
-* spread -> Opcional. O raio de propagação. Um valor positivo aumenta o tamanho da sombra, um valor negativo diminui o tamanho da sombra	
-* color -> Opcional. A cor da sombra. O valor padrão é a cor do texto. Olhe para Valores de cores CSS para uma lista completa dos possíveis valores de cores. Nota: No Safari (no PC), o parâmetro color é necessário. Se você não especificar a cor, a sombra não será exibida.	
-* inset -> Opcional. Muda a sombra de uma sombra externa (saída) para uma sombra interna	
-* inicial -> Define essa propriedade para o seu valor padrão. Leia sobre inicial	
-* herdar -> Herdará essa propriedade do seu elemento pai. Leia sobre herdar
-*/
-
+#p1 {background-color: #ff0000;}   /* red */
+#p2 {background-color: #00ff00;}   /* green */
+#p3 {background-color: #0000ff;}   /* blue */
 ```
+- Hexadecimal colors com transparencia
+    * Uma cor hexadecimal é especificada com: #RRGGBB. Para adicionar transparência, adicione dois dígitos adicionais entre 00 e FF
+```css
+#p1a {background-color: #ff000080;}   /* red transparency */
+#p2a {background-color: #00ff0080;}   /* green transparency */
+#p3a {background-color: #0000ff80;}   /* blue transparency */
+```
+- RGB Colors
+    * Um valor de cor RGB é especificado com a função rgb (), que possui a seguinte sintaxe : `rgb(vermelho, verde, azul)`
+```css
+#p1 {background-color: rgb(255, 0, 0);}   /* red */
+#p2 {background-color: rgb(0, 255, 0);}   /* green */
+#p3 {background-color: rgb(0, 0, 255);}   /* blue */
+```
+- RGBA Colors (RGB com transparencia)
+    * Os valores de cores RGBA são uma extensão dos valores de cores RGB com um canal alfa - que especifica a opacidade do objeto. Uma cor RGBA é especificada com a função rgba(), que possui a seguinte sintaxe : `rgba(vermelho, verde, azul, alfa)`
+```css
+#p1 {background-color: rgba(255, 0, 0, 0.3);}   /* red with opacity */
+#p2 {background-color: rgba(0, 255, 0, 0.3);}   /* green with opacity */
+#p3 {background-color: rgba(0, 0, 255, 0.3);}   /* blue with opacity */
+```
+
+### alinhamento de texto/elemento
+- `text-align: auto|left|right|center|justify|start|end|initial|inherit;`
+    * `auto` -> Valor padrão. A última linha é justificada e alinhada à esquerda	
+    * `left` -> A última linha está alinhada à esquerda	
+    * `right` -> A última linha está alinhada à direita	
+    * `center` -> A última linha está alinhada no centro	
+    * `justify` -> A última linha é justificada como o resto das linhas	
+    * `start` -> A última linha está alinhada no início da linha (esquerda se a direção do texto for esquerda para direita e direita a direção do texto for direita para esquerda)	
+    * `end` -> A última linha está alinhada no final da linha (à direita, se a direção do texto for da esquerda para a direita e a esquerda for a direção do texto da direita para a esquerda)	
+    * `initial` -> Define essa propriedade para o seu valor padrão.	
+    * `inherit` -> Herdará essa propriedade do seu elemento pai.
+### transformação de texto/elemento
+- `text-transform: none|capitalize|uppercase|lowercase|initial|inherit;`
+    * `none` -> Sem capitalização. O texto é renderizado como está. Isso é padrão	
+    * `capitalize` -> Transforma o primeiro caractere de cada palavra para maiúsculas	
+    * `uppercase` -> Transforma todos os caracteres para maiúsculas	
+    * `lowercase` -> Transforma todos os caracteres para minúsculas	
+    * `initial` -> Define essa propriedade para o seu valor padrão.	
+    * `inherit` -> Herdeira essa propriedade do seu elemento pai.
+### Indentação do texto/elemento
+- `text-indent: 50px;`
+### Decoração de texto/elemento
+- `text-decoration: text-decoration-line text-decoration-color text-decoration-style|initial|inherit;`
+
+- `text-decoration-line: none|underline|overline|line-through|initial|inherit;` -> O text-decoration-line propriedade define o tipo de decoração de texto a ser usada
+    * `none` -> Valor padrão. Não especifica nenhuma linha para a decoração do texto	
+    * `underline` -> Especifica que uma linha será exibida no texto	
+    * `overline` -> Especifica que uma linha será exibida sobre o texto	
+    * `line-through` -> Especifica que uma linha será exibida através do texto	
+    * `initial` -> Define essa propriedade para o seu valor padrão.
+    * `inherit` -> Herdará essa propriedade do seu elemento pai.
+- `text-decoration-color: color|initial|inherit;` -> A propriedade text-decoration-color especifica a cor da decoração do texto
+- `text-decoration-style: solid|double|dotted|dashed|wavy|initial|inherit;` -> A propriedade text-decoration-style define o estilo da decoração do texto
+    * `solid` -> Valor padrão. A linha será exibida como uma única linha	
+    * `double` -> A linha será exibida como uma linha dupla	
+    * `dotted` -> A linha será exibida como uma linha pontilhada	
+    * `dashed` -> A linha será exibida como uma linha tracejada	
+    * `wavy` -> A linha será exibida como uma linha ondulada	
+    * `initial` -> Define essa propriedade para o seu valor padrão.	
+    * `inherit` -> Herdará essa propriedade do seu elemento pai.
+###  Espaço entre as letras 
+- `letter-spacing: normal|length|initial|inherit;`
+    * `normal` -> Não há espaço extra entre os personagens. Este é o padrão
+    * `length` -> Define um espaço extra entre os caracteres (valores negativos são permitidos).
+###  Espaço entre as palavras 
+- `word-spacing: normal|length|initial|inherit;`
+    * `normal` -> Não há espaço extra entre os personagens. Este é o padrão
+    * `length` -> Define um espaço extra entre os caracteres (valores negativos são permitidos).
+###  Espaço entre as linhas 
+- `line-height: normal|number|length|initial|inherit;`
+    * `normal` -> Não há espaço extra entre os personagens. Este é o padrão
+    * `number` -> Um número que será multiplicado pelo tamanho da fonte atual para definir a altura da linha
+    * `length` -> Define um espaço extra entre os caracteres (valores negativos são permitidos).
+### Sombra do texto/elemento
+- `text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;` 
+    * `h-shadow` -> necessária. A posição da sombra horizontal. Valores negativos são permitidos
+    * `v-shadow` -> Required. A posição da sombra vertical. Valores negativos são permitidos
+    * `blur-radius` -> opcional. O raio de desfoque. O valor padrão é 0
+    * `color` -> opcional. A cor da sombra. Veja os valores de cores CSS para obter uma lista completa dos possíveis valores de cores
+    * `none` -> valor padrão. Sem sombra
+### Sombra do elemento
+- `box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;`
+    * `none` -> Valor padrão. Nenhuma sombra é exibida	
+    * `h-offset` -> Necessário. O deslocamento horizontal da sombra. Um valor positivo coloca a sombra no lado direito da caixa, um valor negativo coloca a sombra no lado esquerdo da caixa	
+    * `v-offset` -> Necessário. O deslocamento vertical da sombra. Um valor positivo coloca a sombra abaixo da caixa, um valor negativo coloca a sombra acima da caixa	
+    * `blur` -> Opcional. O raio de desfoque. Quanto maior o número, mais turva será a sombra	
+    * `spread` -> Opcional. O raio de propagação. Um valor positivo aumenta o tamanho da sombra, um valor negativo diminui o tamanho da sombra	
+    * `color` -> Opcional. A cor da sombra. O valor padrão é a cor do texto. Olhe para Valores de cores CSS para uma lista completa dos possíveis valores de cores. Nota: No Safari (no PC), o parâmetro color é necessário. Se você não especificar a cor, a sombra não será exibida.	
+    * `inset` -> Opcional. Muda a sombra de uma sombra externa (saída) para uma sombra interna	
+    * `initial` -> Define essa propriedade para o seu valor padrão.
+    * `inherit` -> Herdará essa propriedade do seu elemento pai.
+
 
 ## Unidades medida fixas
 
@@ -231,47 +275,72 @@ box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; /* 
 
 ## Elementos de fontes
 
-```css
-/* Familia fonte  */
-font-family: 'Times New Roman', Times, serif;
-/* Tipo de fonte */
-font-style: italic;
-/* Largura da Linha */
-font-weight: 100;
-/* Variante de fonte */
-font-variant: small-caps;
-/* tamanho da fonte */
-font-size: 1.2rem;
 
-```
+### Familia fonte 
+- `font-family: family-name|generic-family|initial|inherit;` -> Uma lista priorizada de nomes de família de fontes e / ou nomes de família genéricos
+    * Ex: `font-family: "Times New Roman", Times, serif;`
+### Tipo de fonte
+- `font-style: normal|italic|oblique|initial|inherit;`
+    * `normal` -> O navegador exibe um estilo de fonte normal. Este é o padrão
+    * `italic` -> O navegador exibe um estilo de fonte itálico
+    * `oblique` -> O navegador exibe um estilo de fonte oblíquo
 
-### Fontes com serifa e sem serifa
+### Largura da Linha
+- `font-weight: normal|bold|bolder|lighter|number|initial|inherit;`
+    * `normal` -> Define caracteres normais. Este é o padrão
+    * `bold` -> Define caracteres grossos
+    * `bolder` -> Define caracteres mais espessos
+    * `lighter` -> Define caracteres mais leves
+    * `number` / `100` ate `900` -> Define de caracteres finos a grossos. 400 é o mesmo que o normal e 700 é o mesmo que negrito
+### Variante de fonte
+- `font-variant: normal|small-caps|initial|inherit;`
+    * `normal` -> O navegador exibe uma fonte normal. Isso é padrão	
+    * `small-caps` -> O navegador exibe uma fonte de letras pequenas
+### tamanho da fonte
+- `font-size:medium|xx-small|x-small|small|large|x-large|xx-large|smaller|larger|length|initial|inherit;`
+    * `medium` -> Define o tamanho da fonte para um tamanho médio. Este é o padrão
+    * `xx-small` -> Define o tamanho da fonte para um tamanho xx-small
+    * `x-small` -> Define o tamanho da fonte para um tamanho extra pequeno
+    * `small` -> Define o tamanho da fonte para um tamanho pequeno
+    * `large` -> Define o tamanho da fonte para um tamanho grande
+    * `x-large` -> Define o tamanho da fonte para um tamanho extra grande
+    * `xx-large` -> Define o tamanho da fonte para um tamanho xx-largo
+    * `smaller` -> Define o tamanho da fonte para um tamanho menor que o elemento pai
+    * `larger` -> Define o tamanho da fonte para um tamanho maior que o elemento pai
+    * `length` -> Define o tamanho da fonte para um tamanho fixo em px, cm, etc. Leia sobre unidades de comprimento
 
-![Com e Sem Serifa](images/com-sem-serifa.png)
 
-### Fonte Monospace
+## Fontes com serifa e sem serifa / Fonte Monospace
 
-![MonoSpace](images/mono_space.png)
+<img src="images/com-sem-serifa.png" alt="Com e Sem Serifa" style="width:300px"><img src="images/mono_space.png" alt="MonoSpace" style="width:300px">
 
 ## Elementos Lista
 
-```css
-/* Formatação dos pinos da lista (não ordenadas) */
-list-style-type: none;/* Nenhum */
-list-style-type: disk;/* Disco */   
-list-style-type: circle;/* Circulo */
-list-style-type: square;/* Quadrado */
-/* Possição da pinagem */
-list-style-position: inside; /* inside = dentro outside = fora*/
-/* Definir imagem como pinagem */
-list-style-image: url(./images/certo.png);
+### Formatação dos pinos da lista (não ordenadas)
+- `list-style-type: value;`
+    * `none` -> Nenhum
+    * `disk` -> Disco 
+    * `circle` -> Circulo
+    * `square` -> Quadrado
+### Possição da pinagem
+- `list-style-position: inside|outside|initial|inherit;`
+    * `inside` -> Os pontos de marcador estarão dentro do item de lista
+    * `outside` -> Os pontos de marcador estarão fora do item da lista. Isso é padrão
+    * `initial` -> Define essa propriedade para o seu valor padrão.
+    * `inherit` -> Herdará essa propriedade do seu elemento pai.
 
-/* Formatação de pinos da lista (Ordenada) */
-list-style-type: lower-roman;/* numero romanos minúsculo */
-list-style-type: lower-alpha;/* numero alfa numérico minúsculo */
-list-style-type: upper-roman;/* numero romanos maiúsculo */
-list-style-type: upper-alpha;/* numero alfa numérico maiúsculo */
-```
+### Definir imagem como pinagem
+- `list-style-image: none|url|initial|inherit;` Ex: `list-style-image: url(./images/certo.png);`
+    * `none` -> Nenhuma imagem será exibida. Em vez disso, a propriedade `list-style-type` definirá que tipo de marcador de lista será renderizado. Este é o padrão
+    * `url` -> O caminho para a imagem a ser usada como marcador de item de lista
+
+### Formatação de pinos da lista (Ordenada) 
+- `list-style-type: value|lower-roman|lower-alpha|upper-roman|upper-alpha;`
+    * `lower-roman` -> numero romanos minúsculo */
+    * `lower-alpha` -> numero alfa numérico minúsculo */
+    * `upper-roman` -> numero romanos maiúsculo */
+    * `upper-alpha` -> numero alfa numérico maiúsculo */
+
 ## Display
 
 ```css
@@ -323,8 +392,8 @@ position: static|absolute|fixed|relative|sticky|initial|inherit;
 ```
 ### Valores de propriedade
 
-![Exemplo de position](images/css-positioning.png)
-![Exemplo2 de position](images/css-positioning2.png)
+<img src="images/css-positioning.png" alt="Exemplo de position" style="width:700px;">
+<img src="images/css-positioning2.png" alt="Exemplo2 de position" style="width:700px;">
 
 ```css
 div#myDIV {
@@ -527,7 +596,7 @@ para mais informacoes [Click aqui](https://www.w3schools.com/cssref/css3_pr_medi
 - Valores de propriedade
     * `content-box`	-> Padrão. As propriedades de largura e altura (e propriedades min / max) incluem apenas o conteúdo. Bordas e estofamento não estão incluídos
     * `border-box` -> As propriedades de largura e altura (e propriedades min / max) incluem conteúdo, preenchimento e borda
-    * `initial` -> Define essa propriedade para o seu valor padrão. Leia sobre inicial
+    * `initial` -> Define essa propriedade para o seu valor padrão. 
     * `inherit` -> Herdará essa propriedade do seu elemento pai.
 
 ### Exemplo
@@ -569,7 +638,7 @@ div#myDiv:hover{
     * visible -> Valor padrão. O elemento é visível	
     * hidden -> O elemento está oculto (mas ainda ocupa espaço)	
     * collapse -> Somente para linhas de tabela (<tr>), grupos de linhas (<tbody>), colunas (<col>), grupos de colunas (<colgroup>). Esse valor remove uma linha ou coluna, mas não afeta o layout da tabela. O espaço ocupado pela linha ou coluna estará disponível para outro conteúdo. Se o colapso for usado em outros elementos, ele será considerado "oculto"
-    * initial -> Define essa propriedade para o seu valor padrão. Leia sobre inicial	
+    * initial -> Define essa propriedade para o seu valor padrão. 	
     * inherit -> Herdará essa propriedade do seu elemento pai.
 
 ## Usando `:hover`, `::after` e `::before`
