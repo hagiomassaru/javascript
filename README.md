@@ -329,5 +329,14 @@ let coisa = "coisa"; // Variavel Local
 
 ```
 
+## Auternativas na contatenacao
 
+Normalmente quando queremos usar variaveis ou metodos dentro de strings usamos contatenacao.
+```javascript
+let variavel = 'Ola' + mundo
+```
+mas podemos substituir as aspas (`'` ou `"`) por crase e utilizar o `${variavelOuMetodo}` dentro
+```javascript
+let variavel = `Ola ${mundo}`
+```
 
