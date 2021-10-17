@@ -239,3 +239,21 @@ A tag `<video>` serve para anexas no documento HTML um arquivo de video. Declara
     - `auto` -> Quando a pagina HTML for carregado, o video ja sera carregado na memoria no computador.
     - `metadata` -> Quando a pagina HTML for carregado, o video apenas carregara os metadados (os dados do video como o nome, tamanho e etc...).
     - `none` -> A pagina HTML -NÃO- sera carregara o vídeo. Apenas comecara esse processo quando o usuario der play no video.
+
+## Tag `<iframe>`
+
+Essa tag serve para colocarmos um conteudo de alguma outro documento HTML, seja ele interno ou externo (podendo ser ate uma pagina da internet como [https://www.w3schools.com](https://www.w3schools.com)).
+
+### Syntax
+
+`<iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials"></iframe>` -> `src` a fonte do documento e `title` o titulo do elemento.
+
+### Mais exemplos
+
+```html
+    <iframe src="/default.asp" width="100%" height="300" style="border:1px solid black;"></iframe>
+
+    <iframe src="/default.asp" width="100%" height="300" style="border:none;"></iframe>
+```
+
+podemos modificar o estilo com tag de altura (`height`) e largura (`width`), e tanbem usar a tag `style` modificando com CSS, ou ate modificando no proprio CSS.
