@@ -30,6 +30,7 @@ document.body.innerHTML = "alteracao"
 - `document.getElementsByClassName("par")` -> Puxar conteudo de uma tag (ou varias) usando sua class.
 - `document.getElementsByTagName("p")` -> Puxar o conteudo pelo nome de uma (ou varias) tag(s).
 - `document.getElementsById("id")` -> Puxar o conteudo pelo nome de um `id`.
+- `document.querySelector(selectors)` -> Retorna o primeiro elemento dentro do documento (usando ordenação em profundidade, pré-ordenada e transversal dos nós do documento) que corresponde ao grupo especificado de seletores.
 
 
 OBS: normalmente o resultado dos objetos `document.getElementsBy...` sao arrays (listas) e para extrair o html puro devemos fazer assim:
@@ -85,7 +86,7 @@ var x = document.getElementsByTagName("BUTTON")[0].attributes[0].value;
 - `<tag onmouseout="codigoJS">` -> atributo que executa o `"codigoJS"` quando o mouse passa em cima.
 - [Mais eventos](https://www.w3schools.com/jsref/dom_obj_event.asp)
 
-## Editando Eventos direto do javascrip
+## Editando Eventos direto do javascript
 
 ```JS
 documentoOuTag = document.getElementById("id");
