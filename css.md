@@ -1,7 +1,7 @@
 
 # CSS
 
-## [voltar para o javascript](README.md)
+## [Voltar ao arquivo README.md](README.md)
 
 ## Tipos de declaração em CSS
 

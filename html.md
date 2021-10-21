@@ -1,6 +1,6 @@
 # Anotações do curso ProgramadorBR 09/06/2021
 
-## [voltar para o javascript](README.md)
+## [Voltar ao arquivo README.md](README.md)
 # HTML
 
 - `<extag>` - elemento html de abertura

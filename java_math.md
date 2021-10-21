@@ -1,5 +1,5 @@
 
-[voltar](javascrip_poo.md)
+[Voltar ao arquivo README.md](javascrip_poo.md)
 
 `Math.E` -> Retorna o número de Euler (aprox. 2.718)
 `Math.LN2` -> Retorna o logaritmo natural de 2 (aprox. 0,693)

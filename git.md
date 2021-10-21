@@ -1,6 +1,6 @@
 # GIT
 
--   [Vontando para Javacript](README.md)
+-   [Voltar ao arquivo README.md](README.md)
 
 ## Estados
 
