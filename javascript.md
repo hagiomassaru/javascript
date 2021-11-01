@@ -222,7 +222,7 @@ function funcao (argumento1,argumento2)/* os argumento nao tem limete mas devemo
 funcao(8,7) // chamando funcao
 ```
 
-- funcao anonima
+## Declaracao de funcao Anonima
 
 
 ```JS

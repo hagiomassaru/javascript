@@ -262,6 +262,11 @@ O elemento audio é utilizado para embutir conteúdo de som em um documento HTML
 ### Exemplos
 
 ```html
+<!-- Reprodução multi-audios em caso de incompatibilidade -->
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+</audio>
 <!-- Reprodução simples de áudio -->
 <audio src="https://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" autoplay>
   O seu navegador não suporta o elemento <code>audio</code>.
@@ -317,3 +322,17 @@ Essa tag serve para colocarmos um conteudo de alguma outro documento HTML, seja 
 ```
 
 podemos modificar o estilo com tag de altura (`height`) e largura (`width`), e tanbem usar a tag `style` modificando com CSS, ou ate modificando no proprio CSS.
+
+  ## Canvas
+
+A tag `<canvas>` é usada para desenhar gráficos, em tempo real, via script (geralmente JavaScript).
+
+Exemplo:
+```html
+<canvas id="canvas" width="300" height="300">
+    <!-- para que a tag funcione o width e height devem ser declarador -->
+  Desculpe-me, seu navegador não suporta o elemento &lt;canvas&gt;.
+</canvas>
+```
+
+[Continua no arquivo javascript_poo](./javascript_poo.md#Canvas)

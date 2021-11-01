@@ -189,3 +189,42 @@ OBS: `video` e igual a `document.getElementsById("id")` sendo o `id` o nome da t
 - `video.currentTime()` -> Exibe o Tempo do video
 - `video.currentTime = tempo` -> Altera o tempo do video.
 - `video.playbackRate = tempo` -> Manipula a velocidade do video
+
+## Alterando `<audio>` no javascript
+
+Exemplo do uso da tag `<audio>`
+```html
+<!-- Reprodução multi-audios em caso de incompatibilidade -->
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+</audio>
+<!-- Reprodução simples de áudio -->
+<audio src="https://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" autoplay>
+  O seu navegador não suporta o elemento <code>audio</code>.
+</audio>
+
+<!-- Reprodução de áudio com legendas -->
+<audio src="foo.ogg">
+  <track kind="captions" src="foo.en.vtt" srclang="en" label="English">
+  <track kind="captions" src="foo.sv.vtt" srclang="sv" label="Svenska">
+</audio>
+```
+- Atributos HTML
+    * `autoplay` -> Especifica que o áudio começará a ser reproduzido assim que estiver pronto
+    * `controls` -> Especifica que os controles de áudio devem ser exibidos (como um botão play / pause etc)
+    * `loop` -> Especifica que o áudio começará novamente, toda vez que terminar
+    * `muted` -> Especifica que a saída de áudio deve ser silenciada
+    * `preload` -> Especifica se e como o autor acha que o áudio deve ser carregado quando a página é carregada
+    * `src` -> Especifica o URL do arquivo de áudio
+
+- Atributos JS
+  * `audio.play()` -> Executar o video
+  * `audio.pause()` -> Para o video
+  * `audio.currentTime()` -> Exibe o Tempo do video
+  * `audio.currentTime = tempo` -> Altera o tempo do video.
+  * `audio.playbackRate = tempo` -> Manipula a velocidade do video
+
+
+## Canvas
+
