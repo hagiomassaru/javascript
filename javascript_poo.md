@@ -228,3 +228,85 @@ Exemplo do uso da tag `<audio>`
 
 ## Canvas
 
+Canvas e uma **API** que serve para realizarmos desenhos e animacoes graficas via `javascript` e via `HTML`. Com ela podemos criar tambem Jogos, visualizacao de dados, manipulacao de fotos e processamento de video em tempo real.
+
+Canvas foca amplamente em **2D** podendo usar **3D** atraves do **WebGl** que tambem trabalha tanto com **3D/2D**.
+
+### Como canvas funciona?
+
+primeiro nos declaramos uma tag `<canvas>` no HTML
+
+```html
+<canvas id="canvas" width='500' height='500'></canvas>
+<!-- e recomentado atribuir um id como feito acima e definir largura e altura com propriedade weidth e height-->
+```
+
+O codigo acima apenas cria uma espaco em branco invisivel, podemos definir um estilo atraves do **CSS** para definir um tamanho e ate uma cor.
+
+
+```html
+
+<style>
+  .canvas{
+    /* definindo cor */
+    background-color: green;
+    /* definindo largura e altura */
+    width: 500px;
+    height: 500px; /* Sendo que definir tamanho em css e diferente que definir usando as propriedades da tag <canvas> */
+  }
+</style>
+
+<canvas id="canvas" width='500' height='500'></canvas>
+
+```
+
+> **OBS:** Lembrando que podemos alterar o estilo pelo `javascript`.
+
+Agora entraremos na parte do `javascript` comecando extraindo a tag **HTML** e atribuindo a uma variavel.
+
+```javascript
+
+let variavelCanvas = document.getElementById("canvas");
+
+```
+
+depois iremos extrair o "contexto" do elemento **canvas** atribuido na variavel `variavelCanvas` que foi declarada e extraida no **HTML** para podermos efetuar manipulacao.
+
+```javascript
+let ctx = tela.getContext("2d");
+// O contexto foi colocado na variavel 'ctx'
+```
+ Como pode ver utilizamos o metodo `getContext` para realizarmos a extracao e tambem atribuimos string `"2d"` como propriedade, isso diz apenas que iremos realizar manipulacao graficas em **2D**, caso quisemos fazer mapulacaes em **3D** e so passar o memo como `"3d"`.
+
+### Metodos para desenhar linhas
+
+ Agora iremos apresentar alguns metodos para desenhar linhas.
+
+- `ctx.moveTo(x, y);` -> Move o ponto inicial da manipulacao para a coordenados dos parametros **x** e **y**
+- `ctx.lineTo(x, y);` -> Conecta o ultimo ponto declarado ate a coordenada declaradas nos parametro **x** e **y** criando uma linha.
+- `ctx.lineWidth = valor;` -> Define a tamanho do contorno que sera criado 
+- `ctx.fillStyle = 'green';` -> Define preencimento do desenho.
+- `ctx.strokeStyle = "black"` -> Define a cor do contorno.
+> OBS: Os metodos acima deve-se ser declarado antes do metodo `stroke`, caso contrario nao surtira efeito.
+- `ctx.stroke();` -> Contorna nos conjuntos de linhas criados.
+
+## Exemplo - Desenhando linhas
+
+ ```javascript
+let tela = document.getElementById("tela");
+
+let ctx = tela.getContext("2d");
+ctx.moveTo(0, 0);
+ctx.lineTo(250, 250);
+ctx.lineTo(500, 0);
+ctx.lineTo(0, 0);
+ctx.lineTo(0, 500);
+ctx.lineTo(500, 500);
+ctx.lineTo(500, 0);
+ctx.lineWidth = 5;
+ctx.stroke();
+ ```
+ ## Resultado
+
+<img src='./images/resultado_canvas1.png' style='width=500px;height:500px'>
+

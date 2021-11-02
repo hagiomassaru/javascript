@@ -335,4 +335,4 @@ Exemplo:
 </canvas>
 ```
 
-[Continua no arquivo javascript_poo](./javascript_poo.md#Canvas)
+[Continua no arquivo javascript_poo - Click aqui](./javascript_poo.md#Canvas)
