@@ -290,7 +290,7 @@ let ctx = tela.getContext("2d");
 > OBS: Os metodos acima deve-se ser declarado antes do metodo `stroke`, caso contrario nao surtira efeito.
 - `ctx.stroke();` -> Contorna nos conjuntos de linhas criados.
 
-## Exemplo - Desenhando linhas
+### Exemplo - Desenhando linhas
 
  ```javascript
 let tela = document.getElementById("tela");
@@ -306,7 +306,106 @@ ctx.lineTo(500, 0);
 ctx.lineWidth = 5;
 ctx.stroke();
  ```
- ## Resultado
+ ### Resultado
 
 <img src='./images/resultado_canvas1.png' style='width=500px;height:500px'>
+
+### Desenhando retangulo
+
+Os proximos metodos que iremos utilizar servem para criarmos um retangulo com preenchimento.
+
+Sendo esse metodos:
+
+- `ctx.fillStyle = 'blue' ` -> Metodo para escolher a cor do preenchimento 
+- `ctx.fillRect(x, y, width, height)` -> Metodo para definir o tamanho do preenchimento, sendo o `x` e `y` a margem desse preenchimento e `width` e `height` a largura e altura.
+- `ctx.strokeStyle = 'red' ` -> Metodo para escolher a cor do contorno
+- `ctx.strokeRect(x, y, width, height)` -> Metodo para definir as  do contorno, sendo o `x` e `y` a margem desse contorno e `width` e `height` a largura e altura
+- `ctx.rect(x, y, width, height)` -> Definir as coordenadas apenas sendo o `x` e `y` a margem desse contorno e `width` e `height` a largura e altura.
+- `ctx.clearRect(x, y, width, height)` -> Definir as coordenadas para limpeza apenas sendo o `x` e `y` a margem desse contorno e `width` e `height` a largura e altura.
+
+### Exemplo 1 - Desenhando retangulo preenchido
+
+```javascript
+let tela = document.getElementById("tela");
+
+let ctx = tela.getContext("2d");
+ctx.fillStyle = '#4d52ce';
+ctx.fillRect(20,20,400,400);
+```
+### Resultado - Exemplo 1
+
+<img src='./images/resultado_canvas3.png' style='width=500px;height=500px'>
+
+
+### Exemplo 2 - Desenhando retangulo somente com contorno
+
+```javascript
+let tela = document.getElementById("tela");
+
+let ctx = tela.getContext("2d");
+ctx.strokeStyle = '#4d52ce';
+ctx.strokeRect(20,20,400,200);
+```
+
+### Resultado - Exemplo 2
+
+<img src='./images/resultado_canvas4.png' style='width=500px;height=500px'>
+
+
+## Exemplo 3 - Desenhando contorno com preenchimento
+
+```javascript
+let tela = document.getElementById("tela");
+
+let ctx = tela.getContext("2d");
+// definindo coordenadas
+ctx.rect(10,10,400,200);
+// definindo cores do contorno e preenchimento
+ctx.strokeStyle = '#4d52ce';
+ctx.fillStyle = '#379494';
+// ativando contorno e preenchimento
+ctx.fill();
+ctx.stroke();
+```
+### Resultado - Exemplo 3
+
+<img src='./images/resultado_canvas5.png' style='width=500px;height=500px'>
+
+> **OBS: Caso queira aumentar o tamanho das linhas voce pode usar o metodo `ctx.lineWidth = 5;` antes do `ctx.fill();` e `ctx.stroke();`.**
+> **Deixando o codigo assim;**
+
+```javascript
+let tela = document.getElementById("tela");
+
+let ctx = tela.getContext("2d");
+ctx.rect(10,10,400,200);
+ctx.strokeStyle = '#4d52ce';
+ctx.fillStyle = '#379494';
+ctx.lineWidth = 5; // <- Aqui esta o metodo para aumentar o tamanho do contorno
+ctx.fill();
+ctx.stroke();
+```
+ > **Resultando em...**
+
+<img src='./images/resultado_canvas6.png' style='width=500px;height=500px'>
+
+### Exemplo 4 - Limpando desenho
+
+```javascript
+let tela = document.getElementById("tela");
+
+let ctx = tela.getContext("2d");
+ctx.rect(10,10,400,200);
+ctx.strokeStyle = '#4d52ce';
+ctx.fillStyle = '#379494';
+ctx.lineWidth = 5;
+ctx.fill();
+ctx.stroke();
+
+ctx.clearRect(20,20,40,20);
+```
+
+### Resultado - Exemplo 4
+
+<img src='./images/resultado_canvas7.png' style='width=500px;height=500px'>
 
