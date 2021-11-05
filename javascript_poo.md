@@ -352,7 +352,7 @@ ctx.strokeRect(20,20,400,200);
 <img src='./images/resultado_canvas4.png' style='width=500px;height=500px'>
 
 
-## Exemplo 3 - Desenhando contorno com preenchimento
+### Exemplo 3 - Desenhando contorno com preenchimento
 
 ```javascript
 let tela = document.getElementById("tela");
@@ -408,4 +408,64 @@ ctx.clearRect(20,20,40,20);
 ### Resultado - Exemplo 4
 
 <img src='./images/resultado_canvas7.png' style='width=500px;height=500px'>
+
+## Criando nova caminhos ou formas no Canvas
+
+Para iniciarmos uma nova linha/caminho ou adicionar formas, utilizarmos o metodo `ctx.beginPath`.
+
+### Exemplo 1 - Criando novas linhas/caminhos ou formas
+```javascript
+let tela = document.getElementById("tela");
+
+let ctx = tela.getContext("2d");
+ctx.lineWidth = 5;
+ctx.moveTo(10,10);
+ctx.strokeStyle = 'blue';
+ctx.lineTo(200,400);
+ctx.lineTo(200,200);
+ctx.stroke();
+
+ctx.beginPath(); // Criando nova linha
+
+ctx.lineWidth = 5;
+ctx.moveTo(10,10);
+ctx.strokeStyle = 'red';
+ctx.lineTo(100,400);
+ctx.lineTo(100,200);
+ctx.stroke();
+```
+
+### Resultado - Exemplo 1
+
+<img src='./images/resultado_canvas8.png' style='width=500px;height=500px'>
+
+Podemos tambem fechar automaticamente um conjunto de linhas que nao fecham um ciclo com o metodo `ctx.closePath();`
+### Exemplo 2
+
+```javascript
+let tela = document.getElementById("tela");
+
+let ctx = tela.getContext("2d");
+ctx.lineWidth = 5;
+ctx.moveTo(10,10);
+ctx.strokeStyle = 'blue';
+ctx.lineTo(200,400);
+ctx.lineTo(200,200);
+ctx.closePath(); // Fecha elemento
+ctx.stroke();
+
+ctx.beginPath();
+
+ctx.lineWidth = 5;
+ctx.moveTo(10,10);
+ctx.strokeStyle = 'red';
+ctx.lineTo(100,400);
+ctx.lineTo(100,200);
+ctx.closePath(); // Fecha elemento
+ctx.stroke();
+```
+
+### Resultado - Exemplo 2
+
+<img src='./images/resultado_canvas9.png' style='width=500px;height=500px'>
 
