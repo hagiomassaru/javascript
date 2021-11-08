@@ -196,18 +196,18 @@ Exemplo do uso da tag `<audio>`
 ```html
 <!-- Reprodução multi-audios em caso de incompatibilidade -->
 <audio controls>
-  <source src="horse.ogg" type="audio/ogg">
-  <source src="horse.mp3" type="audio/mpeg">
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg">
 </audio>
 <!-- Reprodução simples de áudio -->
 <audio src="https://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" autoplay>
-  O seu navegador não suporta o elemento <code>audio</code>.
+    O seu navegador não suporta o elemento <code>audio</code>.
 </audio>
 
 <!-- Reprodução de áudio com legendas -->
 <audio src="foo.ogg">
-  <track kind="captions" src="foo.en.vtt" srclang="en" label="English">
-  <track kind="captions" src="foo.sv.vtt" srclang="sv" label="Svenska">
+    <track kind="captions" src="foo.en.vtt" srclang="en" label="English">
+    <track kind="captions" src="foo.sv.vtt" srclang="sv" label="Svenska">
 </audio>
 ```
 - Atributos HTML
@@ -219,11 +219,11 @@ Exemplo do uso da tag `<audio>`
     * `src` -> Especifica o URL do arquivo de áudio
 
 - Atributos JS
-  * `audio.play()` -> Executar o video
-  * `audio.pause()` -> Para o video
-  * `audio.currentTime()` -> Exibe o Tempo do video
-  * `audio.currentTime = tempo` -> Altera o tempo do video.
-  * `audio.playbackRate = tempo` -> Manipula a velocidade do video
+    * `audio.play()` -> Executar o video
+    * `audio.pause()` -> Para o video
+    * `audio.currentTime()` -> Exibe o Tempo do video
+    * `audio.currentTime = tempo` -> Altera o tempo do video.
+    * `audio.playbackRate = tempo` -> Manipula a velocidade do video
 
 
 ## Canvas
@@ -247,13 +247,13 @@ O codigo acima apenas cria uma espaco em branco invisivel, podemos definir um es
 ```html
 
 <style>
-  .canvas{
+.canvas{
     /* definindo cor */
     background-color: green;
     /* definindo largura e altura */
     width: 500px;
     height: 500px; /* Sendo que definir tamanho em css e diferente que definir usando as propriedades da tag <canvas> */
-  }
+}
 </style>
 
 <canvas id="canvas" width='500' height='500'></canvas>
@@ -409,7 +409,7 @@ ctx.clearRect(20,20,40,20);
 
 <img src='./images/resultado_canvas7.png' style='width=500px;height=500px'>
 
-## Criando nova caminhos ou formas no Canvas
+## Criando novos caminhos ou formas no Canvas
 
 Para iniciarmos uma nova linha/caminho ou adicionar formas, utilizarmos o metodo `ctx.beginPath`.
 
@@ -468,4 +468,107 @@ ctx.stroke();
 ### Resultado - Exemplo 2
 
 <img src='./images/resultado_canvas9.png' style='width=500px;height=500px'>
+
+
+## Desenhando um circulo
+
+Para desenhar um circulo usamos o metodo `ctx.arc()` sendo seus parametros:
+- `ctx.arc(x, y, raio, anguloInicial, anguloFinal [, antiHorario])`
+    * **x** -> A coordenada horizontal do centro do arco.
+    * **y** -> A coordenada vertical do centro do arco.
+    * **raio** -> O raio do arco. Deve ser um valor positivo.
+    * **anguloInicial** -> O ângulo em radianos em que o arco começa medido a partir do eixo x positivo.
+    * **anguloFinal** -> O ângulo em que o arco finaliza medido a partir do eixo x positivo.
+    > OBS: O angulo e definito em PiRadiano (unidade de medida de angulo) e para converter um numero nessa medida usamos a formula `X * Pi`. Um circulo mede 2 PiRadianos. Usando a formula seria `2 * 3.14(Pi)`.
+    * **antiHorario** Optional -> Um Boolean opcional. Se verdadeiro, desenha o arco no sentido anti-horário entre os ângulos inicial e final. O padrão é falso (sentido horário).
+
+> OBS: **Sim, todos os circulos no funco sao arcos.
+
+### Exemplo 1 - Desenhando circulo
+```javascript
+let tela = document.getElementById("tela");
+
+// Essa parte definimos os dados do parametros do metodo arc.
+let x = 250;
+let y = 250;
+let raio = 100;
+let inicio = 0;
+let fim = 2 * Math.PI; // Utilizando Piradianos para podermos utilizar a medida
+// um circulo tem 2 PiRadianos
+
+let ctx = tela.getContext("2d");
+ctx.beginPath();
+ctx.lineWidth = 5;
+ctx.strokeStyle = 'red';
+ctx.fillStyle = 'blue';
+
+// Metodo para criar o circula
+ctx.arc(x,y,raio,inicio,fim);
+
+ctx.fill();
+ctx.stroke();
+```
+
+### Resultado - Exemplo 1
+
+<img src='./images/resultado_canvas10.png' style='width=500px;height=500px'>
+
+## Animacao com canvas
+
+Animacao nao ha uma regra, apenas temos que encontrar uma maneira de representar imagens em seguencia que dao a sensacao de animacao. Isso existe varias formas de ser feito, podemos usar lacos de repeticao, objetos ou metodos que possibilitem esse processo. No caso irei mostrar um exemplo que uma animacao de um circulo sendo criado em partes que ira representar exatamente o que estou falando.
+
+### Exemplo - Animacao Basica
+```javascript
+let tela = document.getElementById("tela");
+let ctx = tela.getContext("2d");
+
+// Criando um objeto para facilitar a utilizacao e manipulacao
+let circle = {
+    x: 250,
+    y: 250,
+    raio: 100,
+    inicio: 0,
+    fim: 0,
+};
+
+// Funcao responsavel para desenhar o circula
+function drawCircle(c) {
+    // Tudo nesse metodo esta nos topicos anteriores
+    // Esse bloclo de codigo serve para quando comecar um desenho, ele apaga o anterior. Isso ajuda pois na animacao sem isso ela fica com rastro.
+    ctx.beginPath();
+    ctx.rect(0,0,500,500);
+    ctx.fillStyle = "rgb(238, 240, 216)"
+    ctx.fill();
+
+    // Como podemos ver, mais uma linha criada no canvas.
+    // Desenhando circulo
+    ctx.beginPath();
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = "red";
+    ctx.fillStyle = "blue";
+
+    ctx.arc(c.x, c.y, c.raio, c.inicio, c.fim); // Utilizando o objeto `circle` para ter acesso as propriedades no mesmo e criar o circulo com o metodo `arc`
+
+    ctx.fill();
+    ctx.stroke();
+}
+
+// Ao inves de utilizar um laco de repeticao, preferi usar o metodo `setInterval` pois ela permite controlar o tempo dessa animacao
+setInterval(function () {
+    if (circle.fim < 2 * Math.PI) {
+        circle.fim += 0.3;
+        circle.x += 4;
+    }
+
+    drawCircle(circle);
+}, 40);
+```
+
+### Resultado - Exercicio 1
+
+<img src='./images/resultado_canvas11.gif' style='width=500px;height=500px'>
+
+
+
+
 
