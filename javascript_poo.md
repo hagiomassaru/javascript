@@ -515,7 +515,7 @@ ctx.stroke();
 
 ## Animacao com canvas
 
-Animacao nao ha uma regra, apenas temos que encontrar uma maneira de representar imagens em seguencia que dao a sensacao de animacao. Isso existe varias formas de ser feito, podemos usar lacos de repeticao, objetos ou metodos que possibilitem esse processo. No caso irei mostrar um exemplo que uma animacao de um circulo sendo criado em partes que ira representar exatamente o que estou falando.
+Animacao nao ha uma regra, mas o objetivo e o mesmo que seria que encontrar uma maneira de representar imagens em seguencia que dao a sensacao de animacao. As formar para chegar ao nosso objetivo podem ser lacos de repeticao, objetos ou metodos que possibilitem esse processo. No caso irei mostrar utilizando o metodo `setInterval` para representar exatamente o que estou falando.
 
 ### Exemplo - Animacao Basica
 ```javascript
@@ -567,6 +567,68 @@ setInterval(function () {
 ### Resultado - Exercicio 1
 
 <img src='./images/resultado_canvas11.gif' style='width=500px;height=500px'>
+
+## Colocando imagens no Canvas
+
+Para que possamos fazer esse feito (uma das formas e nao a unica) e preciso que a imagem esteja no documento **HTML** a puxemos no **Javascript**, assim podendo manusear essa imagem no **Canvas**. Para 'desenhar' a imagem utilizaremos o metodo abaixo:
+
+- `ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);` -> O método referido da API Canvas 2D fornece diferentes maneiras de desenhar uma imagem na tela.
+    * Parametros
+        1. `image` -> An element to draw into the context. The specification permits any canvas image source (CanvasImageSource), specifically, a CSSImageValue, an HTMLImageElement, an SVGImageElement, an HTMLVideoElement, an HTMLCanvasElement, an ImageBitmap, or an OffscreenCanvas.
+
+        2. `sx` **Optional** -> A coordenada do eixo x do canto superior esquerdo do sub-retângulo da imagem de origem para desenhar no contexto de destino. Use a sintaxe de 3 ou 5 argumentos para omitir esse argumento.
+
+        3. `sy` **Optional** -> A coordenada do eixo y do canto superior esquerdo do sub-retângulo da imagem de origem para desenhar no contexto de destino. Use a sintaxe de 3 ou 5 argumentos para omitir esse argumento.
+
+        4. `sWidth` **Optional** -> A largura do sub-retângulo da imagem de origem para desenhar no contexto de destino. Se não especificado, é usado o retângulo inteiro das coordenadas especificadas por sx e sy até o canto inferior direito da imagem. Use a sintaxe de 3 ou 5 argumentos para omitir esse argumento.
+
+        6. `sHeight` **Optional** -> A altura do sub-retângulo da imagem de origem para desenhar no contexto de destino. Use a sintaxe de 3 ou 5 argumentos para omitir esse argumento.
+
+        7. `dx` -> O eixo x coordena na tela de destino na qual colocar o canto superior esquerdo da imagem de origem.
+
+        8. `dy` -> O eixo y coordena na tela de destino na qual colocar o canto superior esquerdo da imagem de origem.
+
+        9. `dWidth` -> A largura para desenhar a imagem na tela de destino. Isso permite a escala da imagem desenhada. Se não especificado, a imagem não é dimensionada em largura quando desenhada. Observe que esse argumento não está incluído na sintaxe de 3 argumentos.
+
+        10. `dHeight` -> A altura para desenhar a imagem na tela de destino. Isso permite a escala da imagem desenhada. Se não especificado, a imagem não é dimensionada em altura quando desenhada. Observe que esse argumento não está incluído na sintaxe de 3 argumentos.    
+
+### Exemplo - Usando uma imagem no canvas
+
+Primeiro colocar a imagem no documento **HTML**
+
+```HTML
+<img id="imagem" src="./img/1001tracklists.svg" style="display: none;">
+<!-- Veja que apesar de declara ele e omitido com a propriedade 'display: none;' -->
+```
+
+Agora vamos para o **Javascript**
+
+```javascript
+let tela = document.getElementById("tela");
+let ctx = tela.getContext("2d");
+// puxemos a imagem no documento HTML pelo 'id' atribuido
+let imgcanvas = document.getElementById("imagem");
+// Metodo para aparecer a imagem no canvas
+ctx.drawImage(imgcanvas, 5, 5);
+```
+
+### Exemplo 2 - Usando uma imagem no canvas direto no javascript
+
+```javascript
+let tela = document.getElementById("tela");
+let ctx = tela.getContext("2d");
+
+let imgcanvas = new Image(); // Criando um objeto para receber imagem
+imgcanvas.src = "./img/1001tracklists.svg"; // Atribuindo o caminho da imagem
+
+imgcanvas.onload = desenhandoImagem(); // Metodo onload usado e para sabermos quando a imagem parou de carregar, no caso e quando a funcao `desenhandoImagem()` for executada
+
+function desenhandoImagem(){ // Criando o metodo que ira desenhar a imagem
+    ctx.drawImage(this/* O metodo 'this' esta se referindo a variavel 'imgcanvas'*/, 5, 5);
+}
+```
+
+
 
 
 
