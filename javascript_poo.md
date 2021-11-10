@@ -628,6 +628,13 @@ function desenhandoImagem(){ // Criando o metodo que ira desenhar a imagem
 }
 ```
 
+### Extra - utilizando objeto `Image()` no JS
+
+- `let img = new Image();` -> Criando um objeto para receber imagem
+- `img.src = 'picture.jpg';` -> Atribuindo o caminho da imagem
+- `img.naturalWidth` -> Retornar a largura original/natural da imagem
+- `img.naturalHegth` -> Retornar a altura original/natural da imagem
+
 
 
 

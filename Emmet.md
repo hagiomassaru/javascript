@@ -14,7 +14,7 @@ Podemos ativa-lo apenas digitando tags html apenas digitando sem os sinais de `<
 - `.algumacoisa` -> criar uma div (se omitirmos o emmet interpreta como div) com uma clas criado
 - `p[propriedade=prop]` -> criar uma tag `<p>` alterando sua propriedade
 - `p>p*item$` -> `$` deixa itens em ordem numerica
-- `$@2`-> de fine em qual numero comeca
+- `$@2`-> define em qual numero comeca
 - `h1{conteudo}` -> define conteudo da tag
 - `lorem` -> cria um texto lorem
 - `html:5` -> cria estrutura html5

@@ -705,3 +705,75 @@ elemento::before {
 }
 ```
 
+## Pseudo Elementos
+
+E um forma de podermos definir estilo de apenas uma parte do elemento.
+
+- **Sintax**
+
+```css
+elementoDiv::metodo{
+    estilo;
+}
+```
+## Pseudo Elementos - Metodos
+
+- `::firt-line` -> O pseudoelemento `::first-line` aplica estilos à primeira linha de um elemento no nível do bloco.
+    * Codigo
+        ```css
+        p::first-line{
+        color: red;
+        }
+        ```
+    * Resultado <br>
+        <img src='./images/css_avancado/css_result_1.png'>
+
+
+- `::firt-letter` -> O pseudoelemento `::firt-letter` aplica estilos à primeira letra de um elemento no nível do bloco.
+    * Codigo
+        ```css
+        p::first-letter{
+        color: red;
+        font-size: 40px;
+        }
+        ```
+    * Resultado <br>
+        <img src='./images/css_avancado/result_css_3.png'>
+
+
+- `::after` -> o seletor insere algo após o conteúdo de cada elemento (s) selecionado (s).
+    * Codigo
+        ```css
+        li::after{
+        content: "A";
+        color: blue;
+        font-size: 40px;
+
+        }
+        ```
+    * Resultado <br>
+        <img src='./images/css_avancado/result_css_4.png'>
+
+- `::before` -> o seletor insere algo antes do conteúdo de cada elemento (s) selecionado (s).
+    * Codigo
+        ```css
+        li::before{
+        content: "A";
+        color: blue;
+        font-size: 40px;
+
+        }
+        ```
+    * Resultado <br>
+        <img src='./images/css_avancado/css_result_2.png'>
+
+- `::selection` -> O pseudo-elemento CSS `::selection` aplica estilos para partes do documento que foram selecionadas pelo usuário
+    * Codigo
+        ```css
+        p::selection{
+        color: red;
+        background-color: orange;
+        }       
+        ```
+    * Resultado <br>
+        <img src='./images/css_avancado/result_css_5.gif'>
