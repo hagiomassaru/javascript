@@ -777,3 +777,33 @@ elementoDiv::metodo{
         ```
     * Resultado <br>
         <img src='./images/css_avancado/result_css_5.gif'>
+
+
+## Seletores ou Selectors
+
+Seletores sao maneirar de selecionarmos elementos no CSS. Estavamos utilizando eles o tempo todo sem saber exatamento o que era, e agora vou mostrar todos eles abaixo.
+
+- `.class` -> `.intro` => Seleciona todos os elementos com `class = "intro"`
+- `#id` -> `#firstname` => Seleciona o elemento com `id = "firstname"`
+- `element` -> `p` => Seleciona todos os elementos `<p>`
+- `element.class` -> `p.intro` => Seleciona todos os elementos `<p>` com `class = "intro"`
+- `element,element` -> `div, p` => Seleciona todos os elementos `<div>` e todos os elementos `<p>`
+- `element element` -> `div p` => Seleciona todos os elementos `<p>` dentro dos elementos `<div>`
+- `element>element` -> `div > p` => Seleciona todos os elementos `<p>` em que o pai é um elemento `<div>`
+- `element+element` -> `div + p` => Seleciona o primeiro elemento `<p>` que é colocado imediatamente após os elementos `<div>`
+- `element1~element2` -> `p ~ ul` => Seleciona todos os elementos `<ul>` que são precedidos por um elemento `<p>`
+- `[attribute]` -> `[target]` => Seleciona todos os elementos com um atributo `target`
+- `[attribute=value]` -> `[target=_blank]` => Seleciona todos os elementos com `target="_blank"`
+- `[attribute~=value]` -> `[title~=flower]` => Seleciona todos os elementos com um atributo de título que contém a palavra `"flower"`
+- `[attribute | =value]` -> `[lang | =en]` => Seleciona todos os elementos com um valor de atributo lang igual a `"en"` ou começando com `"en-"`
+- `[attribute^=value]` -> `a[href^="https"]` => Seleciona todos os elementos `<a>` cujo valor do atributo `href` começa com `"https"`
+- `[attribute$=value]` -> `a[href$=".pdf"]` => Seleciona todos os elementos `<a>` cujo valor do atributo `href` termina com `".pdf"`
+- `[attribute*=value]` -> `a[href*="w3schools"]` => Seleciona todos os elementos `<a>` cujo valor do atributo href contém a substring `"w3schools"`
+- [Para mais seletores](https://www.w3schools.com/cssref/css_selectors.asp)
+
+## QuerySelector
+
+Podemos utilizar os seguintes metodos:
+
+- `document.querySelector(CSS selectors);` -> O método retorna o primeiro elemento que corresponde a um (s) seletor (es) CSS especificado (s) no documento.
+- `document.querySelectorAll(CSS selectors)` -> O método retorna todos os elementos no documento que correspondem a um (s) seletor (es) CSS especificado (s), como um objeto estático do NodeList.

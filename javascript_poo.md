@@ -54,6 +54,10 @@ let tag = document.getElementById("idDatag");// estou extraindo tag do documento
 console.log(tag.value); // podemos ver que para extrair o valor tive que usar a propriedade `.value`, se for um input sera o 
 // valor digitado e se for uma tag com valor determinado sera o valor da tag.
 ```
+> Podemos extrair valores de seletores CSS tambem:
+- `document.querySelector(CSS selectors);` -> O método retorna o primeiro elemento que corresponde a um (s) seletor (es) CSS especificado (s) no documento.
+- `document.querySelectorAll(CSS selectors)` -> O método retorna todos os elementos no documento que correspondem a um (s) seletor (es) CSS especificado (s), como um objeto estático do NodeList.
+- [Ver mais nas anotacoes CSS](/css.md#QuerySelector)
 ## Modificando conteudo e atributos
 
 A variavel `p` e o HTML extraido no ultimo topico, assim podemos realizar as modificacoes
