@@ -807,3 +807,28 @@ Podemos utilizar os seguintes metodos:
 
 - `document.querySelector(CSS selectors);` -> O método retorna o primeiro elemento que corresponde a um (s) seletor (es) CSS especificado (s) no documento.
 - `document.querySelectorAll(CSS selectors)` -> O método retorna todos os elementos no documento que correspondem a um (s) seletor (es) CSS especificado (s), como um objeto estático do NodeList.
+
+## Pseudo Classes
+
+Uma pseudo-classe CSS é uma palavra-chave adicionada a seletores que especifica um estado especial do elemento selecionado. Por exemplo, `:hover` pode ser usado para alterar a cor de um botão quando o usuário passar o cursor sobre ele.
+
+**Sintax**
+```css
+/*Qualquer botão sobre o qual o ponteiro do usuário esteja passando sobre*/
+button:hover {
+  color: blue;
+}
+```
+
+Temos varios outros que podemos utilizar:
+
+- `:hover` -> Ativado quando o ponteiro do mouse esta sobre o elemento
+- `:link` -> A pseudo-class CSS :link permite que você selecione os links dentro de um elemento.
+- `:visited` -> Seleciona qualquer `<a>` que poderá ser visitado
+- `:active` ->  Seletor é usado para selecionar e modelar o link ativo.
+- `:focus` -> Seletor é usado para selecionar o elemento que tem foco.
+- `:first-child` -> Seletor é usado para selecionar o seletor especificado, apenas se for o primeiro filho de seu pai.
+- `:first-of-type` -> Seletor corresponde a todos os elementos que são o primeiro filho, de um tipo específico, de seus pais.
+- `:nth-child(n)` -> Seletor corresponde a todos os elementos que são o enésimo filho, independentemente do tipo, de seus pais. `n` pode ser um número, uma palavra-chave ou uma fórmula.
+[Para ver Mais](https://www.w3schools.com/css/css_pseudo_classes.asp)
+
