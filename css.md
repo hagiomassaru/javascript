@@ -832,3 +832,58 @@ Temos varios outros que podemos utilizar:
 - `:nth-child(n)` -> Seletor corresponde a todos os elementos que são o enésimo filho, independentemente do tipo, de seus pais. `n` pode ser um número, uma palavra-chave ou uma fórmula.
 [Para ver Mais](https://www.w3schools.com/css/css_pseudo_classes.asp)
 
+## Calc()
+
+A função  `calc()` **CSS** permite você executar cálculos quando especificar os valores de propriedades no **CSS**.
+
+### Exemplo
+```css
+/* propriedade: calc(expressão) */
+width: calc(100% - 80px);
+```
+## Syntax
+A função  calc() recebe uma simples expressão como parâmetro e o resultado desta expressão é utilizado como valor. Pode ser uma simples expressão, combinando os seguintes operadores, utilizando padrão operator precedence rules:
+
+- `+` -> Adição.
+- `-` -> Subtração.
+- `*` -> Multiplicação. Pelo menos um dos argumentos deve ser um `<number>`.
+- `/` ->Divisão. O operador da direita deve ser um `<number>`.
+
+
+Os operandos na expressão podem ser qualquer valor de sintaxe `<length>` (en-US). Você pode usar unidades diferentes para cada valor em sua expressão, se desejar. Você também pode usar parênteses para estabelecer a ordem de computação quando necessário.
+
+### Notas
+
+- Divisão por 0 (zero) resulta em um erro gerado pelo HTML parser.
+
+
+- Os operadores + e - devem estar cercados por espaço em branco. Por exemplo, `calc(50% -8px)` será analisado como uma porcentagem seguida por um comprimento negativo - uma expressão inválida — enquanto `calc(50% - 8px)` é uma porcentagem seguida por um operador de subtração e um comprimento. Da mesma forma, `calc(8px + -50%)` é tratado como um comprimento seguido por um operador de adição e uma porcentagem negativa.
+
+
+- Os operadores `*` e `/` não requerem espaço em branco, mas adicioná-lo para consistência é permitido e recomendado.
+
+- Expressões matemáticas envolvendo porcentagens de larguras e alturas em colunas de tabela, grupos de coluna de tabela, linhas de tabela, grupos de linhas de tabela e células de tabela em tabelas de layout automáticas e fixas podem ser tratadas como se auto tivesse sido especificado.
+
+
+- É permitido aninhar funções `calc()`, em cujo caso as internas são tratadas como parênteses simples.
+
+[Saiba Mais](https://developer.mozilla.org/pt-BR/docs/Web/CSS/calc())
+
+## Transform
+
+A Propriedade **CSS** transform permite modificar o espaço coordenado do modelo de formatação **CSS**. Usando-a, elementos podem ser traduzidos, rotacionados, ter seu tamanho ajustado e inclinados de acordo com os valores definidos.
+
+### Exemplo
+```css
+transform: translateX(10px) rotate(10deg) translateY(5px);
+```
+
+### Funcoes Transform
+
+- `transform: scale(x[,y]);` -> Definicao de escala do elemento **CSS**. Sendo que a propriedade `y` e opcional
+- `transform:  rotate(angle);` -> Definicao de rotacao do elemento **CSS**. Sendo que usamos valores em **graus** e conhecido comunmente como `deg`.
+- `transform:  skew(ax[, ay]);` -> Inclina o elemento em torno dos eixos **X** e **Y** pelos ângulos especificados. Se `ay` não for fornecido, nenhuma inclinação será executada no eixo **Y**.
+- `transform:  translate(tx[, ty])` -> Especifica uma tradução 2D pelo vetor[tx, ty]. Se `ty` não for especificado, seu valor será considerado zero.
+> Todas as funcoes acima tem maneiras individuais de alteracao do **x** e **y**. 
+
+
