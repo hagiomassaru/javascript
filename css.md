@@ -886,4 +886,15 @@ transform: translateX(10px) rotate(10deg) translateY(5px);
 - `transform:  translate(tx[, ty])` -> Especifica uma tradução 2D pelo vetor[tx, ty]. Se `ty` não for especificado, seu valor será considerado zero.
 > Todas as funcoes acima tem maneiras individuais de alteracao do **x** e **y**. 
 
+## Variaveis em CSS
 
+Para se criar uma variavel fazemos o seguinte:
+```css
+:root{ /* :root se refere ao documento HTML*/
+    --variavel: valor;
+}
+```
+E para decrarar:
+```css
+var(--variavel);
+```
