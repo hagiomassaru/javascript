@@ -898,3 +898,6 @@ E para decrarar:
 ```css
 var(--variavel);
 ```
+
+## Flexbox
+[Ver Mais - click aqui](./flex_box.md)
