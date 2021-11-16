@@ -11,4 +11,6 @@ elementoPai{
 ```
 
 > Ao aplicas `display: flex;` em um elemento que tenha filhos, todos eles vao ter uma mudanca.
+> Sendo assim podemos atraves do mesmo aplicar mudancas em todos os seus filhos.
+
 
