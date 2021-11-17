@@ -180,9 +180,9 @@ EX:
 
 - `<tag data-numero='numero'>` -> declaramos esses atributos criados com o prefixo `data-` e depois o nome do atributo, ficando `data-algumacoisa`.
 
-Declatando os atributos HTML desta maneira, podemos extrair seus valores no `javascript` utilizando a propriedade `.dataset.atributo`.
+Declarando os atributos HTML desta maneira, podemos extrair seus valores no `javascript` utilizando a propriedade `.dataset.atributo`.
 
-- `p.dataset.numero` -> O objeto `p` e a tag que HTML que extraimos, sendo o `dataset` a propriedade para estracao dos atributos `data-####`, seguido do nome do atributo sem o `data-`. Assim extraimos o valor. 
+- `p.dataset.numero` -> O objeto `p` e a tag que HTML que extraimos, sendo o `dataset` a propriedade para extracao dos atributos `data-####`, seguido do nome do atributo sem o `data-`. Assim extraimos o valor. 
 
 ## Alterando `<video>` no javascript
 
