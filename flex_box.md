@@ -25,6 +25,8 @@ Define como os itens flexíveis são colocados no contêiner flexível, definind
 
 <img src='./images/flex/flex5.png' style='width:600px'>
 
+<img src='./images/flex/flex9.svg' style='width:600px'>
+
 ## Flex-wrap
 
 Define se os itens flexíveis são forçados a ficarem na mesma linha ou se podem ser quebradas em varias linhas. Se o argumento for valido, ele define a direção em que as linhas são empilhadas.
@@ -35,6 +37,8 @@ Define se os itens flexíveis são forçados a ficarem na mesma linha ou se pode
 - `flex-wrap: wrap-reverse;` -> Se comporta da mesma maneira que o `wrap` mas a de linha ocorre na direção contrária, ou seja, para a linha acima.
 
 <img src='./images/flex/flex-wrap3.png' style='width:600px'>
+
+<img src='./images/flex/flex8.svg' style='width:600px'>
 
 ## Flex-flow
 
@@ -51,4 +55,30 @@ div {
 
 ## Justify-content
 
-A propriedade justifique-content alinha os itens do contêiner flexível quando os itens não usam todo o espaço disponível no eixo principal (horizontalmente).
+A propriedade `justify-content` alinha os itens do contêiner flexível quando os itens não usam todo o espaço disponível no eixo principal (horizontalmente).
+
+**Syntax**
+- `justify-content: flex-start(padrao)|flex-end|center|space-between|space-around|space-evenly;`
+    * `flex-start` -> Valor padrão. Os itens são posicionados no início do contêiner.
+    * `flex-end` -> Os itens são posicionados no final do contêiner
+    * `center` -> Os itens estão posicionados no centro do contêiner
+    * `space-between` -> Os itens terão espaço entre eles
+    * `space-around` -> Os itens terão espaço antes, entre e depois deles
+    * `space-evenly` -> Os itens terão espaço igual ao seu redor
+
+<img src='./images/flex/flex6.png' style='width:400px'>
+
+## Align-items
+
+A propriedade `align-items` especifica o alinhamento padrão para itens dentro do contêiner flexível.
+
+**Syntax**
+
+- `align-items: stretch|center|flex-start|flex-end|baseline;`
+    * `stretch` -> Padrão. Os itens são esticados para caber no contêiner
+    * `center` -> Os itens estão posicionados no centro do contêiner
+    * `flex-start` -> Os itens são posicionados no início do contêiner
+    * `flex-end` -> Os itens são posicionados no final do contêiner
+    * `baseline` -> Os itens são posicionados na linha de base do contêiner
+    
+<img src='./images/flex/flex7.svg' style='width:400px'>
