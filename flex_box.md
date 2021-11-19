@@ -48,3 +48,7 @@ div {
   flex-flow: row-reverse wrap;
 }
 ```
+
+## Justify-content
+
+A propriedade justifique-content alinha os itens do contêiner flexível quando os itens não usam todo o espaço disponível no eixo principal (horizontalmente).
