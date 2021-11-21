@@ -82,3 +82,20 @@ A propriedade `align-items` especifica o alinhamento padrão para itens dentro d
     * `baseline` -> Os itens são posicionados na linha de base do contêiner
     
 <img src='./images/flex/flex7.svg' style='width:400px'>
+
+## Align-content
+
+A propriedade `align-content` modifica o comportamento da propriedade flex-wrap. É semelhante aos itens de alinhamento, mas em vez de alinhar itens flexíveis, ele alinha linhas flexíveis.
+
+**Syntax**
+
+- `align-content: stretch|center|flex-start|flex-end|space-between|space-around;`
+    * `stretch` -> Valor padrão. As linhas se estendem para ocupar o espaço restante	
+    * `center` -> As linhas são compactadas em direção ao centro do contêiner flexível	
+    * `flex-start` -> As linhas são compactadas no início do contêiner flexível	
+    * `flex-end` -> As linhas são embaladas no final do contêiner flexível	
+    * `space-between` -> As linhas são distribuídas uniformemente no contêiner flexível	
+    * `space-around` -> As linhas são distribuídas uniformemente no contêiner flexível, com espaços de tamanho médio em cada extremidade	
+    * `space-evenly` -> As linhas são distribuídas uniformemente no contêiner flexível, com espaço igual ao seu redor
+
+<img src='./images/flex/flex10.svg' style='width:400px'>
