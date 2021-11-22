@@ -99,3 +99,43 @@ A propriedade `align-content` modifica o comportamento da propriedade flex-wrap.
     * `space-evenly` -> As linhas são distribuídas uniformemente no contêiner flexível, com espaço igual ao seu redor
 
 <img src='./images/flex/flex10.svg' style='width:400px'>
+
+## Flex-shrink
+
+A propriedade `flex-shrink` especifica como o item diminuirá em relação ao restante dos itens flexíveis dentro do mesmo contêiner.
+
+**Syntax**
+- `flex-shrink: number;` -> Um número que especifica quanto o item diminuirá em relação ao restante dos itens flexíveis ( O numero e de 0 ate 10, sendo zero nao deixa encolher). O valor padrão é 1
+
+<img src='./images/flex/flex11.png' style='width:400px'>
+
+## Flex-grow
+
+A propriedade `flex-grow` especifica quanto o item crescerá em relação ao restante dos itens flexíveis dentro do mesmo contêiner.
+
+**Syntax**
+- `flex-grow: number` -> Um número que especifica quanto o item crescerá em relação ao restante dos itens flexíveis ( O numero e de 0 ate 10, sendo zero nao deixa creser). O valor padrão é 0.
+
+<img src='./images/flex/flex-grow.png' style='width:400px'>
+
+## Order
+
+Por padrão, os itens de um Flex Container são exibidos na ordem presente no HTML. Com a propriedade order nós podemos alterar a ordem dos elementos. O valor deve ser um número inteiro, negativo ou positivo
+
+**Syntax**
+``` css
+
+order: number;
+
+/* Exemplo */
+.container{
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;  
+}
+.item.selected{
+   order: 1;  
+}
+```
+
+<img src='./images/flex/order.svg' style='width:400px'>

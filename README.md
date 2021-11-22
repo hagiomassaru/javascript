@@ -8,6 +8,7 @@ Estes documentos terao conteudos relacionado aos meus estudos de programacao **f
 3. [Git Hub Documentation](https://docs.github.com/pt)
 4. [Flexboxfroggy](https://flexboxfroggy.com)
 5. [Repositorio GitHub: luong-komorebi](https://github.com/luong-komorebi/Markdown-Tutorial/blob/master/README_pt-BR.md)
+6. [Marcelo Pereira - flexbox](https://github.com/marcelopoars/flexbox)
 
 > OBS: Essa lista podera aumentar caso o numero de fontes de meu conteudo aumento.
 
