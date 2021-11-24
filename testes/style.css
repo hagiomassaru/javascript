@@ -1,0 +1,20 @@
+.container {
+    color: white;
+    display: grid;
+    padding: 10px;
+    background-color: gray;
+
+    /* grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto; */
+
+    grid-template: auto auto / auto auto auto;
+}
+.rct1 {
+    background-color: red;
+}
+.rct2 {
+    background-color: blue;
+}
+.rct3 {
+    background-color: green;
+}
