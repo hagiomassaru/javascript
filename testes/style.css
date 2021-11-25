@@ -1,8 +1,17 @@
 .container {
+    height: 500px;
     color: white;
     display: grid;
     padding: 10px;
     background-color: gray;
+
+    justify-items: center;
+    align-items: center;
+
+    /* grid-row-gap: 10px;
+    grid-column-gap: 10px; */
+
+    grid-gap: 10px;
 
     /* grid-template-rows: auto auto;
     grid-template-columns: auto auto auto; */
@@ -18,3 +27,9 @@
 .rct3 {
     background-color: green;
 }
+.rect{
+    height: 100px;
+    width: 100px;
+}
+
+
