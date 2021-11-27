@@ -18,7 +18,7 @@ Para comecarmos devemos atribuir `grid` a propriedade `display`, e depois antes 
 }
 ```
 
-> OBS: Lembando que detro das propriedade grid-template-rows e grid-template-columns a cada propriedade definida e separada por espaco, definindo uma linha ou coluna nova.
+> OBS: Lembando que dentro das propriedade grid-template-rows e grid-template-columns a cada propriedade definida e separada por espaco, definindo uma linha ou coluna nova.
 
 # grid-template-rows e grid-template-columns
 
