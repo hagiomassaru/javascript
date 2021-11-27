@@ -1,3 +1,5 @@
+## [Voltar ao arquivo CSS.md](css.md)
+
 # Grid
 
 Grid e uma propriedade em CSS para criacao e personalizacao de layouts. Diferente do flex-box, Grid separa os elemento como uma grande tabela com linhas e colunas que podemos personalizar usando de algumas ferramentas que ele nos disponibiliza.
@@ -96,3 +98,7 @@ A propriedade CSS `align-items` define o valor de `align-self` em todas as filho
     `flex-start` -> Os itens são posicionados no início do contêiner
     `flex-end` -> Os itens são posicionados no final do contêiner
     `baseline` -> Os itens são posicionados na linha de base do contêiner
+
+
+> `align-items` e `justify-items` vao alterar o espaco entre o elemento em relacao ao container(ou o pai do elemento)
+
