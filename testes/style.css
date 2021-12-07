@@ -1,35 +1,17 @@
-.container {
-    height: 500px;
-    color: white;
-    display: grid;
-    padding: 10px;
-    background-color: gray;
-
-    justify-items: center;
-    align-items: center;
-
-    /* grid-row-gap: 10px;
-    grid-column-gap: 10px; */
-
-    grid-gap: 10px;
-
-    /* grid-template-rows: auto auto;
-    grid-template-columns: auto auto auto; */
-
-    grid-template: auto auto / auto auto auto;
-}
-.rct1 {
-    background-color: red;
-}
-.rct2 {
-    background-color: blue;
-}
-.rct3 {
-    background-color: green;
-}
-.rect{
-    height: 100px;
-    width: 100px;
+@keyframes changeColor {
+    0% {background-color: red;width: 200px;}
+    25% {background-color: green;}
+    50% {background-color: yellow;width: 800px;}
+    75% {background-color: blueviolet;}
+    100% {background-color: blue;width: 200px;}
+    
 }
 
+.box{
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    animation-name: changeColor;
+    animation-duration: 9s;
+}
 
