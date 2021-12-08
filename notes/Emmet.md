@@ -1,3 +1,9 @@
+---
+tags: [front-end, programacao]
+title: Emmet
+created: '2021-11-15T13:19:17.938Z'
+modified: '2021-12-08T13:35:18.638Z'
+---
 
 # [Voltar ao arquivo README.md](README.md)
 # Dicas do Emmet

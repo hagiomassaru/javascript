@@ -1,3 +1,10 @@
+---
+tags: [front-end, programacao]
+title: markdown
+created: '2021-11-15T13:19:18.042Z'
+modified: '2021-12-08T13:35:18.967Z'
+---
+
 # Markdown Tutorial 
 
 * [Voltando para o arquivo README.md](README.md)

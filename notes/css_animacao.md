@@ -1,3 +1,10 @@
+---
+tags: [front-end, programacao]
+title: css_animacao
+created: '2021-11-28T15:22:38.472Z'
+modified: '2021-12-08T13:36:08.577Z'
+---
+
  # Animacao com CSS
 
  A animacao em css e definida em tres pilares.
