@@ -21,9 +21,9 @@ Estes documentos terao conteudos relacionado aos meus estudos de programacao **f
 
 ## Indice
 
-- [CSS3](css.md)
-- [HTML5](html.md)
-- [Javascript](javascript.md)
-- [Javascrip POO](javascript_poo.md)
-- [Git](git.md)
-- [Markdown](markdown.md)
+- [CSS3](notes/css.md)
+- [HTML5](notes/html.md)
+- [Javascript](notes/javascript.md)
+- [Javascrip POO](notes/javascript_poo.md)
+- [Git](notes/git.md)
+- [Markdown](notes/markdown.md)

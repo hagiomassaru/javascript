@@ -2,7 +2,7 @@
 tags: [front-end, programacao]
 title: css_animacao
 created: '2021-11-28T15:22:38.472Z'
-modified: '2021-12-08T13:36:08.577Z'
+modified: '2021-12-08T14:14:53.196Z'
 ---
 
  # Animacao com CSS
@@ -50,7 +50,7 @@ modified: '2021-12-08T13:36:08.577Z'
 
  ## Controle por porcentagem
 
-Esse tipo de controle e muito util caso queremos ter maior autonomia ao cria animacoes. Isso possibilita utilizarmos modificar varias propriedades alem do que `from` e o `to`.
+Esse tipo de controle e muito util caso queremos ter maior autonomia ao criar animacoes. Isso possibilita modificar varias propriedades alem do `from` e o `to`.
 
 ```css
 @keyframes changeColor {
@@ -75,5 +75,62 @@ e tambem podemos alterar mais de uma propriedade ao mesmo tempo ( o mesmo vale p
     
 }
 ```
+## Animation Delay
 
+Essa propriedade serve para definirmos o tempo de espera antes da animacao comecar de fato.
 
+```css
+.box{
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    animation-name: changeColor;
+    animation-duration: 9s;
+    animation-delay: 4.5s; /* Definindo delay */
+}
+```
+em cado de valores negativos, a animacao comeca a partir do valor negativo estipulado.
+
+```css
+.box{
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    animation-name: changeColor;
+    animation-duration: 9s;
+    animation-delay: -4.5s; /* Definindo delay */
+    /* a animacao comeca a partir dos 4.5 segundos */
+}
+```
+
+## Animation Iteration Count - Loop
+
+Esse prorpriedade serve para criarmos loops em nossas animacoes
+
+**Syntax**
+`animation-iteration-count: number|infinite|initial|inherit;`
+
+- Loop infinito
+```css
+.box{
+    animation-iteration-count: infinite;
+}
+```
+
+- Loop finito
+```css
+.box{
+    animation-iteration-count: 2;
+}
+```
+
+## Animation Direction
+
+A propriedade `animation-direction` define se uma animação deve ser reproduzida para frente, para trás ou em ciclos alternativos.
+
+**Syntax**
+- `animation-direction: normal|reverse|alternate|alternate-reverse;`
+    - normal -> Valor padrão. A animação é reproduzida normalmente (para a frente)
+    - reverse -> A animação é reproduzida na direção inversa (para trás)
+    - alternate -> A animação é tocada primeiro e depois para trás
+    - alternate-reverse -> A animação é reproduzida primeiro e depois para a frente
