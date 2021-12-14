@@ -130,7 +130,18 @@ A propriedade `animation-direction` define se uma animação deve ser reproduzid
 
 **Syntax**
 - `animation-direction: normal|reverse|alternate|alternate-reverse;`
-    - normal -> Valor padrão. A animação é reproduzida normalmente (para a frente)
-    - reverse -> A animação é reproduzida na direção inversa (para trás)
-    - alternate -> A animação é tocada primeiro e depois para trás
-    - alternate-reverse -> A animação é reproduzida primeiro e depois para a frente
+    - `normal` -> Valor padrão. A animação é reproduzida normalmente (para a frente)
+    - `reverse` -> A animação é reproduzida na direção inversa (para trás)
+    - `alternate` -> A animação é tocada primeiro e depois para trás
+    - {alternate-reverse} -> A animação é reproduzida primeiro e depois para a frente
+
+# Animation fill mode
+
+A propriedade animation-fill-mode especifica um estilo para o elemento quando a animação não está sendo reproduzida (antes de começar, depois de terminar ou ambos)
+
+**Syntax**
+`animation-fill-mode: none|forwards|backwards|both|initial|inherit;`
+    - `none` -> Valor padrão. A animação não aplicará nenhum estilo ao elemento antes ou depois da execução
+    - `forwards` -> O elemento manterá os valores de estilo definidos no último quadro-chave (depende da animação-direção e da animação-iteração-contagem)
+    - `backwards` -> O elemento obterá os valores de estilo definidos pelo primeiro quadro-chave (depende da direção da animação) e os manterá durante o período de atraso da animação
+    - `both` -> A animação seguirá as regras para frente e para trás, estendendo as propriedades da animação nas duas direções
