@@ -140,8 +140,20 @@ A propriedade `animation-direction` define se uma animação deve ser reproduzid
 A propriedade animation-fill-mode especifica um estilo para o elemento quando a animação não está sendo reproduzida (antes de começar, depois de terminar ou ambos)
 
 **Syntax**
-`animation-fill-mode: none|forwards|backwards|both|initial|inherit;`
+- `animation-fill-mode: none|forwards|backwards|both|initial|inherit;`
     - `none` -> Valor padrão. A animação não aplicará nenhum estilo ao elemento antes ou depois da execução
     - `forwards` -> O elemento manterá os valores de estilo definidos no último quadro-chave (depende da animação-direção e da animação-iteração-contagem)
     - `backwards` -> O elemento obterá os valores de estilo definidos pelo primeiro quadro-chave (depende da direção da animação) e os manterá durante o período de atraso da animação
     - `both` -> A animação seguirá as regras para frente e para trás, estendendo as propriedades da animação nas duas direções
+
+# Animation timing function
+
+A `animation-timing-function` especifica a curva de velocidade de uma animação.
+
+**Syntax**
+- `animation-timing-function: linear|ease|ease-in|ease-out|ease-in-out;`
+    - `linear` -> A animação tem a mesma velocidade do início ao fim 
+    - `ease` -> Valor padrão. A animação tem um início lento, depois rápido, antes de terminar lentamente 
+    - `ease-in` -> A animação tem um começo lento 
+    - `ease-out` -> A animação tem um final lento 
+    - `ease-in-out` -> A animação tem um começo lento e um final lento
