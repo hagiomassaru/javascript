@@ -157,3 +157,28 @@ A `animation-timing-function` especifica a curva de velocidade de uma animação
     - `ease-in` -> A animação tem um começo lento 
     - `ease-out` -> A animação tem um final lento 
     - `ease-in-out` -> A animação tem um começo lento e um final lento
+
+# Short Hand - codando animacao com uma linha
+
+A propriedade `animation` é uma propriedade abreviada para :
+
+- `animation-name`
+- `animation-duration`
+- `animation-timing-function`
+- `animation-delay`
+- `animation-iteration-count`
+- `animation-direction`
+- `animation-fill-mode`
+- `animation-play-state`
+
+**Syntax**
+
+`animation: name duration timing-function delay iteration-count direction fill-mode play-state;`
+    - `animation-name` -> Especifica o nome do quadro-chave que você deseja vincular ao seletor
+    - `animation-duration` -> Especifica quantos segundos ou milissegundos uma animação leva para ser concluída
+    - `animation-timing-function` -> Especifica a curva de velocidade da animação
+    - `animation-delay` -> Especifica um atraso antes que a animação comece
+    - `animation-iteration-count` -> Especifica quantas vezes uma animação deve ser reproduzida
+    - `animation-direction` -> Especifica se a animação deve ou não ser reproduzida ao contrário em ciclos alternativos
+    - `animation-fill-mode` -> Especifica quais valores são aplicados pela animação fora do momento em que ela está sendo executada
+    - `animation-play-state` -> Especifica se a animação está em execução ou pausada
