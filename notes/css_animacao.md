@@ -12,7 +12,7 @@ modified: '2021-12-08T14:14:53.196Z'
  - Indicar qual propriedade queremos modificar
  - Definir o tempo da animacao
 
- ## Criando animacao e indicando as propriedades
+ # Criando animacao e indicando as propriedades
 
  Para criar animacao usamos o codigo abaixo.
 
@@ -33,7 +33,7 @@ modified: '2021-12-08T14:14:53.196Z'
 }
  ```
 
- ## Indicando duracao e atribuindo animacao
+ # Indicando duracao e atribuindo animacao
 
  Agora com a animacao criada podemos atribuir ela a um elemento css
 
@@ -48,7 +48,7 @@ modified: '2021-12-08T14:14:53.196Z'
 
  ```
 
- ## Controle por porcentagem
+ # Controle por porcentagem
 
 Esse tipo de controle e muito util caso queremos ter maior autonomia ao criar animacoes. Isso possibilita modificar varias propriedades alem do `from` e o `to`.
 
@@ -75,7 +75,7 @@ e tambem podemos alterar mais de uma propriedade ao mesmo tempo ( o mesmo vale p
     
 }
 ```
-## Animation Delay
+# Animation Delay
 
 Essa propriedade serve para definirmos o tempo de espera antes da animacao comecar de fato.
 
@@ -103,7 +103,7 @@ em cado de valores negativos, a animacao comeca a partir do valor negativo estip
 }
 ```
 
-## Animation Iteration Count - Loop
+# Animation Iteration Count - Loop
 
 Esse prorpriedade serve para criarmos loops em nossas animacoes
 
@@ -124,7 +124,7 @@ Esse prorpriedade serve para criarmos loops em nossas animacoes
 }
 ```
 
-## Animation Direction
+# Animation Direction
 
 A propriedade `animation-direction` define se uma animação deve ser reproduzida para frente, para trás ou em ciclos alternativos.
 
@@ -173,7 +173,7 @@ A propriedade `animation` é uma propriedade abreviada para :
 
 **Syntax**
 
-`animation: name duration timing-function delay iteration-count direction fill-mode play-state;`
+- `animation: name duration timing-function delay iteration-count direction fill-mode play-state;`
     - `animation-name` -> Especifica o nome do quadro-chave que você deseja vincular ao seletor
     - `animation-duration` -> Especifica quantos segundos ou milissegundos uma animação leva para ser concluída
     - `animation-timing-function` -> Especifica a curva de velocidade da animação
@@ -182,3 +182,92 @@ A propriedade `animation` é uma propriedade abreviada para :
     - `animation-direction` -> Especifica se a animação deve ou não ser reproduzida ao contrário em ciclos alternativos
     - `animation-fill-mode` -> Especifica quais valores são aplicados pela animação fora do momento em que ela está sendo executada
     - `animation-play-state` -> Especifica se a animação está em execução ou pausada
+
+
+# Transitions
+
+Como o proprio nome diz, sao as transicoes de uma propriedade css para outra. E podemos controlar modificando as seguintes propriedades:
+
+- `transition-property`
+- `transition-duration`
+- `transition-timing-function`
+- `transition-delay`
+
+## transition-property
+
+A propriedade de transition-property especifica o nome da propriedade CSS para a qual o efeito de transição é (o efeito de transição será iniciado quando a propriedade CSS especificada for alterada).
+
+**Syntax**
+
+- `transition-property: none|all|property;`
+    - `none` -> Nenhuma propriedade terá um efeito de transiçãot
+    - `all` -> Valor padrão. Todas as propriedades terão um efeito de transição
+    - `property` -> Define uma lista separada por vírgula de nomes de propriedades CSS para os quais o efeito de transição é
+
+Exemplo:
+```css
+div {
+  transition-property: width, height;
+}
+
+div:hover {
+  width: 300px;
+  height: 300px;
+}
+```
+
+## transition-duration
+
+O `transition-duration` especifica quantos segundos (s) ou milissegundos (ms) um efeito de transição leva para ser concluído.
+
+**Syntax**
+
+`transition-duration: time;`
+
+## transition-timing-function
+
+a propriedade `transition-timing-function` especifica a curva de velocidade do efeito de transição.
+
+**Syntax**
+
+- `transition-timing-function: linear|ease|ease-in|ease-out|ease-in-out;`
+    - `linear` -> A animação tem a mesma velocidade do início ao fim 
+    - `ease` -> Valor padrão. A animação tem um início lento, depois rápido, antes de terminar lentamente 
+    - `ease-in` -> A animação tem um começo lento 
+    - `ease-out` -> A animação tem um final lento 
+    - `ease-in-out` -> A animação tem um começo lento e um final lento
+
+
+## transition-delay
+
+A propriedade `transition-delay` especifica quando o efeito de transição será iniciado.
+
+**Syntax**
+
+`transition-delay: time;`
+
+## Short Hand - transition
+
+Para codar todas essa propriedade com uma linha:
+
+**Syntax**
+
+- `transition: property duration timing-function delay;`
+    - `transition-property`
+    - `transition-duration`
+    - `transition-timing-function`
+    - `transition-delay`
+
+Exemplo:
+```css
+input[type=text] {
+  width: 100px;
+  transition: width .35s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 250px;
+}
+```
+<img src="./images/Peek 17-12-2021 00-18.gif">
+
