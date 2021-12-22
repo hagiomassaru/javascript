@@ -107,6 +107,12 @@ A propriedade `align-content` modifica o comportamento da propriedade flex-wrap.
 
 <img src='./images/flex/flex10.svg' style='width:400px'>
 
+## Align-self
+A propriedade `align-items` especifica o alinhamento para o item selecionado dentro do contêiner flexível.
+
+**Syntax**
+- `align-self: auto|stretch|center|flex-start|flex-end|baseline`
+> Identico ao `Align-items`
 ## Flex-shrink
 
 A propriedade `flex-shrink` especifica como o item diminuirá em relação ao restante dos itens flexíveis dentro do mesmo contêiner.
