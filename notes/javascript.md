@@ -25,19 +25,27 @@ Escrevendo no proprio HTML usando a tag `<script>`
 
 ## Funções/Sinais Uteis
 
-`alert(str)` → mensagem de alerta no navegador.
+- `alert(str)` → mensagem de alerta no navegador.
 
-`prompt(str)` → mensagem de alerta com entrada de dados.
+- `prompt(str)` → mensagem de alerta com entrada de dados.
 
-`console.log(str)` → imprimir no console do navegador.
+- `console.log(str)` → imprimir no console do navegador.
 
-`parseInt(str)` → converter valor em inteiro
+- `parseInt(str)` → converter valor em inteiro
 
-`parseFloat(str)` → converter valor em real (ponto flutuante)
+- `parseFloat(str)` → converter valor em real (ponto flutuante)
 
-`//` → Comentar uma linha
+- `string.length` -> verificar tamanho de listas ou strings.
 
-`/* alguma coisa */` → Comentar um paragrafo
+- `//` → Comentar uma linha
+
+- `/* alguma coisa */` → Comentar um paragrafo
+
+- `typeof` -> O operador typeof retorna uma string indicando o tipo de um operando.
+
+    - *Syntax* `typeof operando` / `typeof 37 === 'number';` / `typeof "bla" === 'string';`
+
+- `isNaN` -> Verifica se a String e `NaN`.
 
 ## Declaração de variavel
 
