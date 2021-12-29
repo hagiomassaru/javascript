@@ -44,6 +44,7 @@ Escrevendo no proprio HTML usando a tag `<script>`
 - `typeof` -> O operador typeof retorna uma string indicando o tipo de um operando.
 
     - *Syntax* `typeof operando` / `typeof 37 === 'number';` / `typeof "bla" === 'string';`
+- `String(inteiro)` -> Converte qualquer coisa em `String`
 
 - `isNaN` -> Verifica se a String e `NaN`.
 
