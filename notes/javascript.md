@@ -48,6 +48,7 @@ Escrevendo no proprio HTML usando a tag `<script>`
 
 - `isNaN` -> Verifica se a String e `NaN`.
 
+- `eval(string)` -> A função `eval()` computa um código JavaScript representado como uma string.
 ## Declaração de variavel
 
 ```js
@@ -213,6 +214,11 @@ lista.shift();// exclui o primeiro elemento (com indice 0)
 lista.splice("IndiceDoelemento","quantidadeDeElementos");// exclui elementos seguindo condenadas
 lista.splice(2, 1);// ex: (indice 2, quantidade 1)
 lista.splice("IndiceDoelemento","quantidadeDeElementos","valor");// subistitua o valor no indice indicado ex: (indice,quantidade,valor)
+string.split(separador, limite); // Transforma string em lista
+lista.includes(elementoProcurado[, fromIndex]); // O método includes() determina se um array contém um determinado elemento, retornando true ou false apropriadamente.
+lista.find(funcao_executara_cada_elemento); // O método find() retorna o valor do primeiro elemento do array que satisfizer a função de teste provida. Caso contrario, undefined é retornado.
+lista.filter(funcao_executara_cada_elemento); // O método filter() cria um novo array com todos os elementos que passaram no teste implementado pela função fornecida.
+array.indexOf(elementoDePesquisa, [pontoInicial = 0]); // O método indexOf() retorna o primeiro índice em que o elemento pode ser encontrado no array, retorna -1 caso o mesmo não esteja presente.
 
 // utilizando "for" e "in" para varrer o array
 for (var i in lista){// "in" coloca o numero do index na "var i"
