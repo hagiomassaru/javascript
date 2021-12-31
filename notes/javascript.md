@@ -152,7 +152,7 @@ switch(valor){
         // sem o break o bloco de codigo nao se encerra, e continua o fluxo pulando para o proximo 'case'
     default:
         Bloco de codigo
-        // default e o case padrao caso nenhum atenda condicao do switch
+        // default e o case padrão caso nenhum atenda condicao do switch
 }
 ```
 
@@ -165,15 +165,15 @@ Sintax abaixo:
 ```JS
 var numero = 5;
 // estrutura
-// for ( variavel ; condicao ; contagem)
-for (var variavel; variavel < numero; variavel++){
+// for ( variável ; condicao ; contagem)
+for (var variável; variável < numero; variável++){
     bloco de codigo
 }
 ```
 
-Este laco de repeticao nos permite controlar melhor as repeticoes
+Este laco de repetição nos permite controlar melhor as repetições
 
-## Diferenca de `of` para `in`
+## Diferença de `of` para `in`
 
 ```JS
 var arr = ["gato", "cachorro", "macaco"];
@@ -187,7 +187,15 @@ for (var i of arr) {
 ```
 Se por ventura você estiver usando um obj o for in iria retornar o nome das chaves.
 
-## Lacos de repeticao `while`
+## Manipulação de strings
+
+- `elemento.toString()` -> Converte qualquer elemento em `string`
+- `elemento.length` -> Tamanho da `string`
+- `string.charAt(indice)` -> Acessa uma caracter do indice indicado.
+- `string.indexOf(string)` -> Identificar o indice de uma caracter especifica (oposto do `.charAt()`)
+- `string.replace(substituído, substituto)` -> método para substituir caracteres de uma `strng` (caso queira substituir vários usaremos expressão regular: `/string/g`)
+
+## Laços de repetição `while`
 
 Sintax abaixo:
 
@@ -200,7 +208,7 @@ while (numero < 5) {
     bloco de codigo
 }
 ```
-Este laco de repeticao executa enquanto a condicao nao e atendida, facilita lacos infinitos.
+Este laco de repetição executa enquanto a condicao nao e atendida, facilita laços infinitos.
 
 ## Listas (Array) em javascript
 
