@@ -194,6 +194,11 @@ Se por ventura você estiver usando um obj o for in iria retornar o nome das cha
 - `string.charAt(indice)` -> Acessa uma caracter do indice indicado.
 - `string.indexOf(string)` -> Identificar o indice de uma caracter especifica (oposto do `.charAt()`)
 - `string.replace(substituído, substituto)` -> método para substituir caracteres de uma `strng` (caso queira substituir vários usaremos expressão regular: `/string/g`)
+- `string.toUpperCase() / string.toLowerCase()` -> Tudo maiúscula / tudo minuscula
+- `string.substr(indiceComeca[, tamanho]))` ->  método `substr()` retorna uma parte da string, começando no índice especificado e estendendo-se por um determinado número de caracteres posteriormente.
+- `string.slice()` -> O método `slice()` extrai uma parte de uma string e a retorna como uma nova string, sem modificar a string original.
+- `string.split(separador, limite)` -> Transforma string em lista
+- `string.concat(string2 [, ...stringN])` -> O método `concat()` combina o texto de duas ou mais strings e retorna uma nova string.
 
 ## Laços de repetição `while`
 
@@ -222,7 +227,6 @@ lista.shift();// exclui o primeiro elemento (com indice 0)
 lista.splice("IndiceDoelemento","quantidadeDeElementos");// exclui elementos seguindo condenadas
 lista.splice(2, 1);// ex: (indice 2, quantidade 1)
 lista.splice("IndiceDoelemento","quantidadeDeElementos","valor");// subistitua o valor no indice indicado ex: (indice,quantidade,valor)
-string.split(separador, limite); // Transforma string em lista
 lista.includes(elementoProcurado[, fromIndex]); // O método includes() determina se um array contém um determinado elemento, retornando true ou false apropriadamente.
 lista.find(funcao_executara_cada_elemento); // O método find() retorna o valor do primeiro elemento do array que satisfizer a função de teste provida. Caso contrario, undefined é retornado.
 lista.filter(funcao_executara_cada_elemento); // O método filter() cria um novo array com todos os elementos que passaram no teste implementado pela função fornecida.
