@@ -193,7 +193,7 @@ Se por ventura você estiver usando um obj o for in iria retornar o nome das cha
 - `elemento.length` -> Tamanho da `string`
 - `string.charAt(indice)` -> Acessa uma caracter do indice indicado.
 - `string.indexOf(string)` -> Identificar o indice de uma caracter especifica (oposto do `.charAt()`)
-- `string.replace(substituído, substituto)` -> método para substituir caracteres de uma `strng` (caso queira substituir vários usaremos expressão regular: `/string/g`)
+- `string.replace(substituído, substituto)` -> método para substituir caracteres de uma `strig` (caso queira substituir vários usaremos expressão regular: `/string/g`)
 - `string.toUpperCase() / string.toLowerCase()` -> Tudo maiúscula / tudo minuscula
 - `string.substr(indiceComeca[, tamanho]))` ->  método `substr()` retorna uma parte da string, começando no índice especificado e estendendo-se por um determinado número de caracteres posteriormente.
 - `string.slice()` -> O método `slice()` extrai uma parte de uma string e a retorna como uma nova string, sem modificar a string original.
