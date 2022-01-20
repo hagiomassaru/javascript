@@ -694,6 +694,31 @@ div#myDiv:hover{
     * initial -> Define essa propriedade para o seu valor padrão. 	
     * inherit -> Herdará essa propriedade do seu elemento pai.
 
+
+## Sobrepondo elementos
+
+Podemos usar o pseudo-elemento `nth-of-type`
+
+```css
+divElemento:nth-of-type(ordem_dos_elementos){
+    codigo
+}
+```
+
+EX:
+
+```css
+divElemento:nth-of-type(0){
+    codigo
+}
+divElemento:nth-of-type(1){
+    codigo
+}
+divElemento:nth-of-type(2){
+    codigo
+}
+```
+
 ## Usando `:hover`, `::after` e `::before`
 
 - `elemento:hover` -> O seletor `:hover` é usado para definir eventos em elementos quando você passa o mouse por cima deles.
