@@ -695,9 +695,10 @@ div#myDiv:hover{
     * inherit -> Herdará essa propriedade do seu elemento pai.
 
 
-## Sobrepondo elementos
+## Sobrepondo elementos e `:nth-of-type()`
 
-Podemos usar o pseudo-elemento `nth-of-type`
+A pseudo-classe CSS `:nth-of-type()` corresponde a um ou mais elementos de um dado tipo, baseado em sua posição entre um grupo de irmãos.
+[:nth-of-type()](https://developer.mozilla.org/pt-BR/docs/Web/CSS/:nth-of-type)
 
 ```css
 divElemento:nth-of-type(ordem_dos_elementos){

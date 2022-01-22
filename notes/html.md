@@ -75,6 +75,12 @@ Obs: `<extag>meu titulo</extag>` -> os dois juntos formam um elemento html compl
 
 </html>
 ```
+## Span
+
+O elemento HTML `<span>` é um conteiner generico em linha para conteúdo fraseado , que não representa nada por natureza. Ele pode ser usado para agrupar elementos para fins de estilo (usando os atributos class ou id ), ou para compartilhar valores de atributos como lang. Ele deve ser usado somente quando nenhum outro elemento semântico for apropriado. `<span>` é muito parecido com o elemento `<div>` , entretando  `<div>` é um elemento de nível de bloco enquanto `<span>` é um elemento em linha. Ex: 
+```html
+    <p><span>Some text</span></p>
+```
 ## Criando favicom (icone na bara do navegador)
 
 ```html
