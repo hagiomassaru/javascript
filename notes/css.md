@@ -861,7 +861,7 @@ Temos varios outros que podemos utilizar:
 - `:focus` -> Seletor é usado para selecionar o elemento que tem foco.
 - `:first-child` -> Seletor é usado para selecionar o seletor especificado, apenas se for o primeiro filho de seu pai.
 - `:first-of-type` -> Seletor corresponde a todos os elementos que são o primeiro filho, de um tipo específico, de seus pais.
-- `:nth-child(n)` -> Seletor corresponde a todos os elementos que são o enésimo filho, independentemente do tipo, de seus pais. `n` pode ser um número, uma palavra-chave ou uma fórmula.
+- `:nth-child(n)` -> Seletor corresponde a todos os elementos que são o enésimo filho, independentemente do tipo, de seus pais. `n` pode ser um número, uma palavra-chave ou uma fórmula.(mais sobre [w3schools](https://developer.mozilla.org/pt-BR/docs/Web/CSS/:nth-child))
 [Para ver Mais](https://www.w3schools.com/css/css_pseudo_classes.asp)
 
 ## Calc()
