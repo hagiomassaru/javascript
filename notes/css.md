@@ -101,9 +101,9 @@ modified: '2021-12-08T13:34:30.839Z'
 ## Margem - margin
 ### Definir margem do elemento
 - `margin: 10px (comprimento)|auto|initial|inherit;` -> pode usar margin-top entre outros
-    * auto -> O navegador calcula uma margem
-    * initial -> Define essa propriedade para o seu valor padrão https://www.w3schools.com/cssref/css_initial.asp
-    * inherit -> Herdará essa propriedade do seu elemento pai https://www.w3schools.com/cssref/css_inherit.asp    
+    * `auto` -> O navegador calcula uma margem
+    * `initial` -> Define essa propriedade para o seu valor padrão https://www.w3schools.com/cssref/css_initial.asp
+    * `inherit` -> Herdará essa propriedade do seu elemento pai https://www.w3schools.com/cssref/css_inherit.asp    
     * Todos os elementos margin usam as propriedades acima.
 - `margin-bottom: (comprimento)|auto|initial|inherit;` -> Define a margem inferior de um elemento
 - `margin-left: (comprimento)|auto|initial|inherit;` -> Define a margem esquerda de um elemento
@@ -694,7 +694,25 @@ div#myDiv:hover{
     * initial -> Define essa propriedade para o seu valor padrão. 	
     * inherit -> Herdará essa propriedade do seu elemento pai.
 
+## camadas dos elementos - `z-index`
 
+```css
+/* Keyword value */
+z-index: auto;
+
+/* <integer> values */
+z-index: 0;
+z-index: 3;
+z-index: 289;
+z-index: -1; /* Valores negativos para diminuir a prioridade */
+
+/* Global values */
+z-index: inherit;
+z-index: initial;
+z-index: revert;
+z-index: unset;
+
+```
 ## Sobrepondo elementos e `:nth-of-type()`
 
 A pseudo-classe CSS `:nth-of-type()` corresponde a um ou mais elementos de um dado tipo, baseado em sua posição entre um grupo de irmãos.
@@ -936,3 +954,5 @@ var(--variavel);
 
 ## Grid
 [Ver Mais - click aqui](./grid.md)
+
+
