@@ -369,3 +369,11 @@ mas podemos substituir as aspas (`'` ou `"`) por crase e utilizar o `${variavelO
 let variavel = `Ola ${mundo}`
 ```
 
+## Strict - Restrição e obrigatoriedade de declaração de variavel
+
+```js
+"use strict"; // com essa string escrita no topo do documento voce faz com que todas as variaves sejam declaradas.
+
+let variavel = codigo
+
+``` 
