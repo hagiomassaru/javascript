@@ -377,3 +377,26 @@ let variavel = `Ola ${mundo}`
 let variavel = codigo
 
 ``` 
+
+## Arrow function
+
+Funcao normal
+
+```js
+function codigo(parametro){
+    return (parametro * 2);
+}
+```
+Funcao anonima
+
+```js
+let codigo = function (parametro){
+    return (parametro * 2);
+}
+```
+Arrow function
+
+```js
+let codigo = (parametro) => parametro * 2;
+//codigo mais siples. repare que o return e omitido e os parenteses tambem.
+```
