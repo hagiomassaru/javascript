@@ -399,4 +399,9 @@ Arrow function
 ```js
 let codigo = (parametro) => parametro * 2;
 //codigo mais siples. repare que o return e omitido e os parenteses tambem.
+
 ```
+
+## Callback
+
+Esse tipo de termo e quando que o codigo seja executado um depois do outro sem eu saber o tempo de delay que cada bloco.
