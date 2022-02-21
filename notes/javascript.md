@@ -398,10 +398,35 @@ Arrow function
 
 ```js
 let codigo = (parametro) => parametro * 2;
-//codigo mais siples. repare que o return e omitido e os parenteses tambem.
+//codigo mais simples. repare que o return e omitido e os parenteses também.
 
 ```
 
 ## Callback
 
 Esse tipo de termo e quando que o codigo seja executado um depois do outro sem eu saber o tempo de delay que cada bloco.
+
+## Promised
+
+Uma Promise representa um proxy para um valor que não é necessariamente conhecido quando a promessa é criada. Isso permite a associação de métodos de tratamento para eventos da ação assíncrona num caso eventual de sucesso ou de falha. Isto permite que métodos assíncronos retornem valores como métodos síncronos: ao invés do valor final, o método assíncrono retorna uma promessa ao valor em algum momento no futuro.
+
+Um Promise está em um destes estados: 
+
+* pending (pendente): Estado inicial, que não foi realizada nem rejeitada.
+* fulfilled (realizada): sucesso na operação.
+* rejected (rejeitado):  falha na operação.
+
+Uma promessa pendente pode se tornar realizada com um valor ou rejeitada por um motivo (erro). Quando um desses estados ocorre, o método then do Promise é chamado, e ele chama o método de tratamento associado ao estado (rejected ou resolved).  Se a promessa foi realizada ou rejeitada quando o método de tratamento correspondente for associado, o método será chamado, deste forma não há uma condição de competição entre uma operação assíncrona e seus manipuladores que estão sendo associados.
+
+Como os métodos `Promise.prototype.then` e `Promise.prototype.catch`  retornam promises, eles podem ser encadeados — uma operação chamada composição.
+
+## Async / Await
+
+```js
+
+async function codigo(){ // definimos async para dizer que essa funcao e uma asincrona
+    await function_codigo(); //usamos o await para definirmos quais comandos devem ser aguardados a execucao para ai sim ir para o proximo.
+    console.log('codigo')
+}
+
+```
