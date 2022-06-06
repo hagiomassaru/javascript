@@ -430,3 +430,34 @@ async function codigo(){ // definimos async para dizer que essa funcao e uma asi
 }
 
 ```
+
+## Filter - filtro de array
+
+O método `filter()` cria um novo array com todos os elementos que passaram no teste implementado pela função fornecida.
+Exemplo:
+```js
+
+// declarando uma funcao para criar objetos
+function newNumero(num1, num2) {
+    return { num1, num2 };// com esse return nao so retorna um objeto, mas também um indice sem precisar ligar os dois.
+}
+
+// declarando uma lista com objetos contendo números
+let numeros = [
+    newNumero(1, 2),
+    newNumero(1, 3),
+    newNumero(1, 4),
+    newNumero(2, 5),
+];
+
+// criando um callback (ou uma condição)
+function filtrandoNumeros(numero){
+    return numero.num1 > 1; // retornando o callback
+}
+
+let numerosFiltrados = numeros.filter(filtrandoNumeros); // lista.filter(callback)
+//criando uma lista contendo todos o elementos que passaram pela condição implementada.
+
+console.log(numerosFiltrados);// mostrando a lista dos filtrados
+
+```
