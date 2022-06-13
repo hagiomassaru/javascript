@@ -489,6 +489,10 @@ function doisnumeros (num){
 console.log(numeros.map(doisnumeros)); // essa funcao retornara um array composta por string e nao por objetos.
 ```
 
+saida:
+
+![saida](./images/saida/Captura%20de%20tela%20de%202022-06-13%2011-07-02.png)
+
 ## Observacoes dos metodaos `filter()` e `map()`
 
 Caso queremos criar um novo array modificando esses elemento na saida, tanto o original e a copia sao modificados.
