@@ -461,3 +461,52 @@ let numerosFiltrados = numeros.filter(filtrandoNumeros); // lista.filter(callbac
 console.log(numerosFiltrados);// mostrando a lista dos filtrados
 
 ```
+
+## Map - mapeamento de array
+
+O metodo `map()` cria um novo array, mas diferente do `filter()` ele cria uma totalmente diferente, podendo usar todos elementos que passam no teste imprementado pela funcao fornecida.
+Exemplo:
+
+```js
+// declarando uma funcao para criar objetos
+function newNumero(num1, num2) {
+    return { num1, num2 };// com esse return nao so retorna um objeto, mas também um indice sem precisar ligar os dois.
+}
+
+// declarando uma lista com objetos contendo números
+let numeros = [
+    newNumero(1, 2),
+    newNumero(1, 3),
+    newNumero(1, 4),
+    newNumero(2, 5),
+];
+
+// criando um callback (ou uma condição)
+function doisnumeros (num){
+    return num.num1 + " esta junto com " + num.num2;  // pademos ver que a maneira que tradamos o retorno da funcao mudou, agora encaramos que vamos criar um array totalmente diferente.
+}
+
+console.log(numeros.map(doisnumeros)); // essa funcao retornara um array composta por string e nao por objetos.
+```
+
+## Observacoes dos metodaos `filter()` e `map()`
+
+Caso queremos criar um novo array modificando esses elemento na saida, tanto o original e a copia sao modificados.
+Exemplo:
+```js
+// criando uma funcao como ja vimos
+function doisnumeros (num){
+    num.num1 += 5;// modificando os elementos de saida da funcao
+    num.num2 += 2;
+    return num.num1 + " esta junto com " + num.num2;
+}
+
+console.log(numeros.map(doisnumeros)); // essa funcao retornara um array composta por string e nao por objetos como antes.
+console.log(numeros); // aqui mostramos um log do ultimo array
+```
+saida:
+
+![saida](./images/saida/Captura%20de%20tela%20de%202022-06-13%2011-00-40.png)
+
+como podemos ver, os dois arrays foram copidados.
+
