@@ -615,3 +615,33 @@ saida (ambas as formas):
 
 ![saida](./images/saida/Captura%20de%20tela%20de%202022-06-29%2017-00-38.png)
 
+
+### Spread Operator - ...
+
+Esse operador serve para nos criarmos copias de elementos, sem ser referenciados.
+
+```js
+let num1 = [1,2,3,4,5];
+let num2 = [6,7,8,9];
+let num3 = [...num1,...num2]; // unindo os dois
+console.log(num3); // mostrando no log do navegador
+```
+saida:
+
+![saida](./images/saida/Captura%20de%20tela%20de%202022-06-29%2017-14-08.png)
+
+Caso nao nao utilizacimos o `...` ficaria assim
+
+```js
+let num1 = [1,2,3,4,5];
+let num2 = [6,7,8,9];
+let num3 = [num1,num2]; // unindo os dois sem spread operator
+console.log(num3); // mostrando no log do navegador
+
+```
+
+saida:
+
+![saida](./images/saida/Captura%20de%20tela%20de%202022-06-29%2017-16-57.png)
+
+Como podemos ver o ceu e o limite.
