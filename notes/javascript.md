@@ -15,7 +15,7 @@ modified: '2021-12-08T13:35:18.884Z'
 Escrevendo no proprio HTML usando a tag `<script>`
 
 ```JS
-<script>
+<scrip>
 
     Conteudo do codigo JS
 
@@ -513,4 +513,92 @@ saida:
 ![saida](./images/saida/Captura%20de%20tela%20de%202022-06-13%2011-00-40.png)
 
 como podemos ver, os dois arrays foram copidados.
+
+
+## Valor vs Referência
+
+Quando utilizamos um objeto declarado em outra variavel, criamos um vinculo. Tornando esta mesma variavel um referencia.
+
+```js
+let ValorA = { nome: `a`, tipo: `b` }; // criando objeto
+let ValorB = ValorA; // Declarando variavel em uma variavel
+ValorB.nome = `c`; // Mudando um dos elementos do objeto
+console.log(ValorB);
+console.log(ValorA);
+```
+saida:
+
+![saida](./images/Captura%20de%20tela%20de%202022-06-29%2016-37-11.png)
+
+como podemos ver os valores foram modificados mesmo nao tendo alterado a variavel `ValorA`.
+
+Isso nao acontece se usarmos tipos primitivos.
+
+```js
+let ValorA = 15; // criando objeto
+let ValorB = ValorA; // Declarando variavel em uma variavel
+ValorB= `c`; // Mudando um dos elementos do objeto
+console.log(ValorB);
+console.log(ValorA);
+```
+saida:
+
+![saida](./images/saida/Captura%20de%20tela%20de%202022-06-29%2016-41-17.png)
+
+Com tudo, no javascript existem valores a que a serem declarados em variaveis, podem ser referenciados por `valor` ou por `referencia`.
+
+### Valores que usam `valor`
+
+- `string`
+- `numeros racionais`
+- `boorlean`
+- entre outros tipos primitivos
+
+### Valores que usam `referencia`
+
+- objetos `{}`
+- Listas `[]`
+
+
+Caso queira declarar referenciando como valor podemos usar os seguintes metodos.
+
+**Listas:**
+
+- 1 forma
+
+```js
+let ValorA = [1,2,3,4,5,6,7,8,9]; // criando lista
+let ValorB = ValorA.slice(); // o método .slice e usado para fatiar listas, mas caso nao passemos algum parâmetro ele copia a lista inteira
+ValorB[1] = `c`; // Mudando um dos elementos
+console.log(ValorB);
+console.log(ValorA);
+```
+
+- 2 forma
+
+```js
+let ValorA = [1,2,3,4,5,6,7,8,9]; // criando lista
+let ValorB = [...ValorA]; // o simbolo ... indica que iremos copiar o valor da variavel seguinte
+ValorB[1] = `c`; // Mudando um dos elementos
+console.log(ValorB);
+console.log(ValorA);
+```
+
+saida (ambas as formas):
+
+![saida](./images/saida/Captura%20de%20tela%20de%202022-06-29%2016-53-02.png)
+
+**Objetos:**
+
+```js
+let ValorA = { nome: `a`, tipo: `b` }; // criando objeto
+let ValorB = Object.assign({},ValorA); // Copiando objeto com o metodo assign
+ValorB.nome = `c`; // modificando objeto
+console.log(ValorB);
+console.log(ValorA);
+```
+
+saida :
+
+![saida](./images/saida/Captura%20de%20tela%20de%202022-06-29%2017-00-38.png)
 
