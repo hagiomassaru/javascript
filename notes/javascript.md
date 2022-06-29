@@ -590,6 +590,8 @@ saida (ambas as formas):
 
 **Objetos:**
 
+- 1 forma
+
 ```js
 let ValorA = { nome: `a`, tipo: `b` }; // criando objeto
 let ValorB = Object.assign({},ValorA); // Copiando objeto com o metodo assign
@@ -598,7 +600,18 @@ console.log(ValorB);
 console.log(ValorA);
 ```
 
-saida :
+- 2 forma
+
+```js
+let ValorA = { nome: `a`, tipo: `b` }; // criando objeto
+let ValorB = {...ValorA}; // Copiando objeto com o metodo ...
+ValorB.nome = `c`; // modificando objeto
+console.log(ValorB);
+console.log(ValorA);
+
+```
+
+saida (ambas as formas):
 
 ![saida](./images/saida/Captura%20de%20tela%20de%202022-06-29%2017-00-38.png)
 
