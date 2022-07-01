@@ -713,4 +713,73 @@ saida:
 
 ![saida](./images/saida/Captura%20de%20tela%20de%202022-07-01%2016-51-56.png)
 
+e com array (listas) e a mesma logica, mas usamos como referencia a posicao.
 
+```js
+let objeto = {
+    // criando objeto
+    numero: 980,
+    rua: `rua batista`,
+    telefone: 9549541,
+};
+let objeto2 = {
+    // criando objeto
+    numero: 980,
+    rua: `rua batista`,
+    telefone: 9549541,
+};
+//         1posisao 2posisao
+objetos = [objeto, objeto2];
+
+
+//  1posisao 2posisao
+let [marcos, antonio] = objetos; // fatiando array com objetos
+
+console.log(marcos); //verificando se deu certo.
+console.log(antonio);
+```
+
+saida:
+
+![saida](./images/saida/Captura%20de%20tela%20de%202022-07-01%2017-07-12.png)
+
+podemos utilizar tambem o spread operator para copiarmos os objetos que sobram.
+
+```js
+let objeto = {
+    // criando objeto
+    numero: 980,
+    rua: `rua batista`,
+    telefone: 9549541,
+};
+let objeto2 = {
+    // criando objeto
+    numero: 980,
+    rua: `rua batista`,
+    telefone: 9549541,
+};
+let objeto3 = {
+    // criando objeto
+    numero: 980,
+    rua: `rua batista`,
+    telefone: 9549541,
+};
+let objeto4 = {
+    // criando objeto
+    numero: 980,
+    rua: `rua batista`,
+    telefone: 9549541,
+};
+
+objetos = [objeto, objeto2, objeto3, objeto4];
+
+let [marcos, antonio, ...outros] = objetos; // fatiando array com objetos, e utilizando spread operator
+
+console.log(marcos); //verificando se deu certo.
+console.log(antonio);
+console.log(outros);
+```
+
+saida:
+
+![saida](./images/saida/Captura%20de%20tela%20de%202022-07-01%2017-13-20.png)
