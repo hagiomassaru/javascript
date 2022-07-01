@@ -645,3 +645,72 @@ saida:
 ![saida](./images/saida/Captura%20de%20tela%20de%202022-06-29%2017-16-57.png)
 
 Como podemos ver o ceu e o limite.
+
+
+### Desestruturando um objeto
+
+Podemos desestroturar um objeto usando suas propriedades como variaveis.
+
+```js
+let objeto = {
+    // criando objeto
+    numero: 980,
+    rua: `rua batista`,
+    telefone: 9549541,
+};
+
+let { numero } = objeto; // fatiando objeto, estamos declarando uma propriedade do objeto como variavel.
+
+console.log(numero); //verificando se deu certo.
+```
+
+saida:
+
+![saida](./images/saida/Captura%20de%20tela%20de%202022-07-01%2016-35-53.png)
+
+Esse metodo funciona caso queira declarar mais de uma e ate mesmo com copia
+
+- Exemplo 1
+
+```js
+let objeto = {
+    // criando objeto
+    numero: 980,
+    rua: `rua batista`,
+    telefone: 9549541,
+};
+
+let { numero, rua } = objeto; // fatiando objeto, estamos declarando duas propriedades do objeto como variável.
+
+console.log(numero); //verificando se deu certo.
+console.log(rua);
+
+```
+
+saida:
+
+![saida](./images/saida/Captura%20de%20tela%20de%202022-07-01%2016-39-15.png)
+
+- Exemplo 2
+
+```js
+let objeto = {
+    // criando objeto
+    numero: 980,
+    rua: `rua batista`,
+    telefone: 9549541,
+};
+
+let { numero, rua, ...copia } = objeto; // fatiando objeto, estamos declarando duas propriedades do objeto como variável.
+
+console.log(numero); //verificando se deu certo.
+console.log(rua);
+console.log(copia);
+
+```
+
+saida:
+
+![saida](./images/saida/Captura%20de%20tela%20de%202022-07-01%2016-51-56.png)
+
+
