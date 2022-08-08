@@ -860,3 +860,19 @@ try {
 }
 
  ```
+
+ e caso tenhamos uma execao podemos utilizar o `throw`
+
+ ```js
+
+nome = ``;
+
+try {
+    if (nome == ``) {
+        throw ` O nome nao pode ser vazio`;
+    } else {
+        console.log(nome);
+    }
+} catch (res) {}
+
+ ```
