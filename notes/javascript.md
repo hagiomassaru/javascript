@@ -433,7 +433,7 @@ async function codigo(){ // definimos async para dizer que essa funcao e uma asi
 
 ## Filter - filtro de array
 
-O método `filter()` cria um novo array com todos os elementos que passaram no teste implementado pela função fornecida.
+O método `filter()` cria um novo array com todos os elementos que passaram no teste (um callback que retornara `true` ou `false`) implementado pela função fornecida.
 Exemplo:
 ```js
 
@@ -783,3 +783,80 @@ console.log(outros);
 saida:
 
 ![saida](./images/saida/Captura%20de%20tela%20de%202022-07-01%2017-13-20.png)
+
+## Fetch
+
+Esse `funcao` serve para buscarmos **API** (Interface de Programacao de aplicacoes) e utilizarmos os seus recursos em nosso projeto.
+
+### Declaracao
+
+```js
+
+let url = `https://economia.awesomeapi.com.br/last/USD-BRL`;
+
+
+fetch(url)
+
+```
+ele retornara como `promissed` entao devemos usar o `then` para converter em objeto.
+
+```js
+
+fetch(url).then
+
+```
+
+e nao so depois disso podemos converter para `JSON`.
+
+```js
+
+fetch(url).then((res)=>{
+    
+    return res.json();
+})
+
+```
+
+sendo assim ja podemos tratar como qualquer objeto jason.
+
+```js
+
+fetch(url).then((res)=>{
+    
+    return res.json();
+})
+.then((data)=>{
+    console.log(data.USDBRL.high);
+});
+
+```
+
+## Tratamento de erros - try catch
+
+`try` vem do ingles de `tentar` e na programacao serve para testarmos uma parte do codigo e tratarmos esse erro com `catch`.
+
+```js
+
+try{ //bloco de código que iremos tratar
+    console.log(nome);
+}catch(res/*temos que passar o argumento*/){
+    // nao colocarei nenhum argumento
+}
+
+```
+
+ e tambem podemos usar o `finally` que serve para executarmos esse bloco de codigo idenpendente se houver erro no codigo.
+
+ ```js
+
+try {
+    //bloco de código que iremos tratar
+    console.log(nome);
+} catch (res /*temos que passar o argumento*/) {
+    // nao colocarei nenhum argumento
+} finally {
+    // esse bloco de codigo sempre ira ser executado
+    console.log("Boa noite");
+}
+
+ ```
