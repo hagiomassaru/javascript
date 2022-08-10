@@ -5,7 +5,7 @@ created: '2021-11-15T13:19:17.938Z'
 modified: '2021-12-08T13:41:49.037Z'
 ---
 
-# [Voltar ao arquivo README.md](README.md)
+# [Voltar ao arquivo README.md](../README.md)
 # Dicas do Emmet
 
 Podemos usar no vscode essa ferramenta chamada "Emmet" que eu gosto de chamar de "encurtador de codigo html".

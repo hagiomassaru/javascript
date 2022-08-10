@@ -27,3 +27,4 @@ Estes documentos terao conteudos relacionado aos meus estudos de programacao **f
 - [Javascrip POO](notes/javascript_poo.md)
 - [Git](notes/git.md)
 - [Markdown](notes/markdown.md)
+- [Dicas de Emmet em HTML no VSCODE](notes/Emmet.md)
