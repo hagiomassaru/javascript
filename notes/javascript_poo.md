@@ -121,6 +121,42 @@ function f1(e){// se essa funcao for declarada no "codigoOuFuncaoJS"/"addEventLi
 window.onload = FuncaoOuQualquerCoisa // Executa uma funcao ao carregar a pagina
 ```
 
+## O que e `.target`
+
+Serve para nos referirmos ao elemento que sofreu a ação do objeto.
+
+Ex:
+
+```html
+
+<!DOCTYPE html>
+<html>
+<body onclick="myFunction(event)">
+
+<p>Click on any elements in this document to find out which element triggered the onclick event.</p>
+
+<h1>This is a heading</h1>
+
+<button>This is a button</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(event) { 
+  var x = event.target;
+  document.getElementById("demo").innerHTML = "Triggered by a " + x.tagName + " element";
+}
+</script>
+
+</body>
+</html>
+
+```
+
+saida:
+
+![saida](./images/saida/Peek%2017-09-2022%2019-49.gif)
+
 ## Acessando tags pais e filhos
 
 OBS: usaremos a variavel `p`
