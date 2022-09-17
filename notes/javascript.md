@@ -22,6 +22,13 @@ Escrevendo no proprio HTML usando a tag `<script>`
 </script>
 
 ```
+Utilizando a propriedade `src` da tag script
+
+```js
+
+<script src='script.js'><script>
+
+```
 
 ## Funções/Sinais Uteis
 
@@ -876,3 +883,33 @@ try {
 } catch (res) {}
 
  ```
+
+## Utilizando `forEach`
+
+O metodo `forEach` serve para percorermos um array aplicando uma funcao para cada elemento.
+
+```js
+
+numbers.forEach(function(parameto) { // A funcao pode ser anonima ou qualquer tipo de outra funcao
+    // código
+});
+
+```
+
+Ex:
+
+```js
+
+let numeros = [1,2,3,4,5,6,7,8,9];
+
+numeros.forEach(function (parametro) {
+    return console.log(parametro*2);
+});
+
+```
+
+saida:
+
+![saida](./images/saida/Captura%20de%20tela%20de%202022-09-17%2019-32-35.png)
+
+
