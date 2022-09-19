@@ -738,9 +738,10 @@ divElemento:nth-of-type(2){
 }
 ```
 
-## Usando `:hover`, `::after` e `::before`
+## Usando Eventos `:hover`, `::after` e `::before` entre outros
 
 - `elemento:hover` -> O seletor `:hover` é usado para definir eventos em elementos quando você passa o mouse por cima deles.
+- `elemento:active` -> O seletor `:active` é usado para definir eventos em elementos quando ele e ativo ou clicado pelo mouse.
 - `elemento::after` -> o seletor insere algo após o conteúdo de cada elemento (s) selecionado (s).
 - `elemento::before` -> o seletor insere algo antes do conteúdo de cada elemento (s) selecionado (s).
 EX:
