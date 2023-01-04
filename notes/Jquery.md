@@ -47,10 +47,68 @@ $("elemento_html").hide(()=>{
 
 quando queremos utilizar um evento ou animacao de pois de ter executado outra, usamos callback.
 
-```js
 
-$(elemento).hiden(2000,()=>{
-    $(elemento).show()
-})
+```html
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo</title>
+</head>
+
+<body>
+<div>
+    <button class="bt1">FadeIn</button>
+    <div class="div1 divMod" ></div>
+</div>
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+        $(".bt1").click(() => {
+            $(".div1").hide(1000,()=>{
+                console.log("vermelho");
+            });
+        })
+
+    </script>
+
+</body>
+
+</html>
+```
+
+![alt](/notes/images/Peek%2004-01-2023%2023-29.gif)
+
+E encadeamento, sever para executar eventos em seguencia
+
+```html
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo</title>
+</head>
+
+<body>
+<div>
+    <button class="bt1">FadeIn</button>
+    <div class="div1 divMod" ></div>
+</div>
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script>
+        $(".bt1").click(() => {
+            $(".div1").hide(1000).show(100);
+        })
+
+    </script>
+
+</body>
+
+</html>
+
 
 ```
+
+da o mesmo resultado da ultima imagem.
