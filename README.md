@@ -16,6 +16,7 @@ Estes documentos terao conteudos relacionado aos meus estudos de programacao **f
 4. [Flexboxfroggy](https://flexboxfroggy.com)
 5. [Repositorio GitHub: luong-komorebi](https://github.com/luong-komorebi/Markdown-Tutorial/blob/master/README_pt-BR.md)
 6. [Marcelo Pereira - flexbox](https://github.com/marcelopoars/flexbox)
+7. [ProgramadorBR](https://programadorbr.com)
 
 > OBS: Essa lista podera aumentar caso o numero de fontes de meu conteudo aumento.
 
@@ -25,6 +26,8 @@ Estes documentos terao conteudos relacionado aos meus estudos de programacao **f
 - [HTML5](notes/html.md)
 - [Javascript](notes/javascript.md)
 - [Javascrip POO](notes/javascript_poo.md)
+- [Firebase](notes/firebase.md)
 - [Git](notes/git.md)
 - [Markdown](notes/markdown.md)
 - [Dicas de Emmet em HTML no VSCODE](notes/Emmet.md)
+
