@@ -913,3 +913,17 @@ saida:
 ![saida](./images/saida/Captura%20de%20tela%20de%202022-09-17%2019-32-35.png)
 
 
+podemos utilizan junto com arrow function:
+
+
+```js
+
+let numeros = [1,2,3,4,5,6,7,8,9];
+
+numeros.forEach( parametro => console.log(parametro*2);
+);
+
+```
+
+dando o mesmo resultado
+
