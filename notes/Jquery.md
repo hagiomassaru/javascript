@@ -43,9 +43,47 @@ $("elemento_html").hide(()=>{
 - `$("elemento_html").animate(objeto,time)` -> transição `animacao personalizada` (objeto deve conter os elementos css que vc quer modificar).
 - `$("elemento_html").stop()` -> evento para animação.
 
+## Truques e solucao de conflitos
+
+1. Quando queremos utilizar um elemento que e filho de um elemento especifico podemos utilizar o sinal de `>`:
+
+```js
+// $("elemento_pai > elemento_filho").hide()
+$("h1 > .item2").hide()
+
+```
+
+2. Quando estamos usando mais de um framework, o sinal de `$` pode conflitar com outros pacotes. Port isso podemos utilizar a expressão:
+
+```js
+$.noConflict()
+
+```
+fazendo com que o `$` seja substituído por `jquery`.
+
+```js
+//antes de declarar noConflict
+$("elemento_html")
+// Depois
+jquery("elemento_html")
+
+```
+
+e ainda podemos atribuir a um variável personalizando a declaração.
+
+```js
+//antes de declarar noConflict
+$("elemento_html")
+// declarando noConflict e declarando em variavel 'jq'
+let jq = $.noConflict()
+//depois
+jq("elemento_html")
+
+```
+
 ## Utilizando callback e encadeamento
 
-quando queremos utilizar um evento ou animacao de pois de ter executado outra, usamos callback.
+quando queremos utilizar um evento ou animação de pois de ter executado outra, usamos callback.
 
 
 ```html
@@ -112,3 +150,13 @@ E encadeamento, sever para executar eventos em seguencia
 ```
 
 da o mesmo resultado da ultima imagem.
+
+## Selecionando elementos filhos
+
+Podemos utilizar o evento `.find()` para procurar recursivamente.
+
+- `$("elemento").find("elementa_a_ser_procurado")` -> Serve para procurarmos recursivamente todos elementos filhos, netos e etc.
+
+podemos tambem utilisar o `.children()` que ira procurar apenas os filhos nao executando recursivamente.
+ 
+- `$("elemento").children("elementa_a_ser_procurado")` -> Serve para procurarmos todos elementos filhos.
