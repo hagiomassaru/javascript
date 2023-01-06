@@ -151,6 +151,19 @@ E encadeamento, sever para executar eventos em seguencia
 
 da o mesmo resultado da ultima imagem.
 
+## Mais sobre encadeamento
+
+O elemento `$` e uma função no jquery, podendo ser atribuído a uma variável e usada como o mesmo, além de podermos usar a função `$.noConflict()` para evitar conflitos com outros frameworks.
+
+Mas também podemos atribuir o `$` em uma variável e encadear acoes.
+
+```js
+let lista1 = $("#lista1").slideUp(1000).slideDown(1000);// atribuindo o encadeamento com o elemento $
+
+console.log(lista1.fadeOut(1000).fadeIn(1000));// mostrando resultado e adicionando mais funções
+
+```
+
 ## Selecionando elementos filhos
 
 Podemos utilizar o evento `.find()` para procurar recursivamente.
@@ -160,3 +173,12 @@ Podemos utilizar o evento `.find()` para procurar recursivamente.
 podemos tambem utilisar o `.children()` que ira procurar apenas os filhos nao executando recursivamente.
  
 - `$("elemento").children("elementa_a_ser_procurado")` -> Serve para procurarmos todos elementos filhos.
+
+## Extraindo dados
+
+Para extrais dados podemos usar as seguintes funcoes:
+
+- `$("h1").text()` -> Extrai o texto
+- `$("h1").html()` -> Extrai o html
+- `$("h1").val()` -> Extrai o valor no atributo `value` normalmente encontrado em um elemento `<input>`.
+- `$("h1").attr("nome_atributo")` -> Extrai o valor no atributo `"nome_atributo"` que foi usado como parâmetro.

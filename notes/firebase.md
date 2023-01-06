@@ -7,7 +7,6 @@ Firebase e um serviço disponibilizado pela google para ajudar no desenvolviment
 [Site official](https://firebase.google.com)
 
 ## Como usar?
-
 ### 1. Criar uma conta
 
 Para se criar uma conta nao tem segredo, acessar o site e seguis os passos abaixo:
