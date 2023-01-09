@@ -176,9 +176,19 @@ podemos tambem utilisar o `.children()` que ira procurar apenas os filhos nao ex
 
 ## Extraindo dados
 
-Para extrais dados podemos usar as seguintes funcoes:
+Para extrais dados podemos usar as seguintes funções:
 
 - `$("h1").text()` -> Extrai o texto
 - `$("h1").html()` -> Extrai o html
 - `$("h1").val()` -> Extrai o valor no atributo `value` normalmente encontrado em um elemento `<input>`.
 - `$("h1").attr("nome_atributo")` -> Extrai o valor no atributo `"nome_atributo"` que foi usado como parâmetro.
+
+## Modificando dados
+
+Podemos reaproveitar as funções de extração, e modificamos usando os parâmetros:
+
+- `$("h1").text("valor_modificado")` -> Modifica o texto
+- `$("h1").html("valor_modificado")` -> Modifica o html
+- `$("h1").val("valor_modificado")` -> Modifica o valor no atributo `value` normalmente encontrado em um elemento `<input>`.
+- `$("h1").attr("nome_atributo","valor_modificado")` -> Modifica o valor no atributo `"nome_atributo"` pelo parâmetro `"valor_modificado"` OBS: podemos usar funções no valor modificado.
+
