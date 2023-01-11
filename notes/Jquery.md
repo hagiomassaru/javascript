@@ -191,4 +191,16 @@ Podemos reaproveitar as funções de extração, e modificamos usando os parâme
 - `$("h1").html("valor_modificado")` -> Modifica o html
 - `$("h1").val("valor_modificado")` -> Modifica o valor no atributo `value` normalmente encontrado em um elemento `<input>`.
 - `$("h1").attr("nome_atributo","valor_modificado")` -> Modifica o valor no atributo `"nome_atributo"` pelo parâmetro `"valor_modificado"` OBS: podemos usar funções no valor modificado.
+## Selecionando elemento pelo atributo
+
+Para selecionar um elemento através do atributo usamos a seguinte sintaxe:
+
+```js
+
+// $("[atributo = valor]")
+$("[key = 2]")
+
+```
+
+
 
