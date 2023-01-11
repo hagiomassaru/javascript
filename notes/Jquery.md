@@ -202,5 +202,7 @@ $("[key = 2]")
 
 ```
 
+OBS: E sempre recomendável usar esse tipo de seleção.
+
 
 
