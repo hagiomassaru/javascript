@@ -43,7 +43,7 @@ $("elemento_html").hide(()=>{
 - `$("elemento_html").animate(objeto,time)` -> transição `animacao personalizada` (objeto deve conter os elementos css que vc quer modificar).
 - `$("elemento_html").stop()` -> evento para animação.
 
-## Truques e solucao de conflitos
+## Truques e solução de conflitos
 
 1. Quando queremos utilizar um elemento que e filho de um elemento especifico podemos utilizar o sinal de `>`:
 
@@ -203,6 +203,16 @@ $("[key = 2]")
 ```
 
 OBS: E sempre recomendável usar esse tipo de seleção.
+
+## Maneiras de exclusão de elementos
+
+- `$("h1").remove()` -> Remove elemento
+- `$("h1").empty()` -> Remove todos os elementos filhos
+
+E a função `.remove()` podemos passar como parâmetros os elementos filhos que queremos excluir.
+
+- `$("h1").remove("elemento")` -> Remove elemento filho especifico.
+- `$("h1").remove("elemento1 , elemento2")` -> Remove vários elementos filhos.
 
 
 
