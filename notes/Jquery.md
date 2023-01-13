@@ -214,5 +214,14 @@ E a função `.remove()` podemos passar como parâmetros os elementos filhos que
 - `$("h1").remove("elemento")` -> Remove elemento filho especifico.
 - `$("h1").remove("elemento1 , elemento2")` -> Remove vários elementos filhos.
 
+## Utilizando append - inserindo elementos
+
+- `$("h1").append("elemento")` -> Insere dado no final do elemento mantendo o que ja foi inserido.
+- `$("h1").prepend("elemento")` -> Insere dado no inicio do elemento mantendo o que ja foi inserido.
+- `$("h1").after("elemento")` -> Insere elemento antes do elemento referido.
+- `$("h1").before("elemento")` -> Insere elemento depois do elemento referido.
+
+
+
 
 
