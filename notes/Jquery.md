@@ -221,6 +221,22 @@ E a função `.remove()` podemos passar como parâmetros os elementos filhos que
 - `$("h1").after("elemento")` -> Insere elemento antes do elemento referido.
 - `$("h1").before("elemento")` -> Insere elemento depois do elemento referido.
 
+OBS: todos esse metodos podemos inserir varios elementos ao mesmo tempo apenas separando por virgula. EX
+
+- `$("h1").append("elemento" , "elemento2" , "elemento3")`
+
+## Modificando elementos
+
+- `$("h1").addClass("nome-class")` - Adiciona uma classe ao elemento.
+- `$("h1").removeClass("nome-class")` - Remove a `nome-class` do e elemento.
+- `$("h1").toggleClass("nome-class")` - Remove se existir a classe, e adiciona se nao existir.
+
+Podemos modificar o `css`...
+
+- `$("h1").css("propriedade_css")` - Acessa a propriedade css.
+- `$("h1").css("propriedade_css","valor_modificado")` - Modifica a propriedade css.
+- `$("h1").css({"propriedade_css":"valor_modificado","propriedade_css2":"valor_modificado2"})` - Modifica varias propriedades css.
+
 
 
 

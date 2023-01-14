@@ -34,6 +34,8 @@ Utilizando a propriedade `src` da tag script
 
 - `alert(str)` → mensagem de alerta no navegador.
 
+- `setTimeout(callback,tempo_milissegundos)` -> define um tempo para execução do `callback`.
+
 - `prompt(str)` → mensagem de alerta com entrada de dados.
 
 - `console.log(str)` → imprimir no console do navegador.
@@ -192,7 +194,7 @@ for (var i of arr) {
     console.log(i); // Imprime "gato", "cachorro", "macaco"
 }
 ```
-Se por ventura você estiver usando um obj o for in iria retornar o nome das chaves.
+Se por ventura você estiver usando um obj o `for in` iria retornar o nome das chaves.
 
 ## Manipulação de strings
 
@@ -412,6 +414,11 @@ let codigo = (parametro) => parametro * 2;
 ## Callback
 
 Esse tipo de termo e quando que o codigo seja executado um depois do outro sem eu saber o tempo de delay que cada bloco.
+
+```js
+
+
+```
 
 ## Promised
 
