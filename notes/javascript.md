@@ -413,9 +413,14 @@ let codigo = (parametro) => parametro * 2;
 
 ## Callback
 
-Esse tipo de termo e quando que o codigo seja executado um depois do outro sem eu saber o tempo de delay que cada bloco.
+E uma funcao que sera executada quando algun evento acontecer ou algum objeto chegar no estado desejado.
 
 ```js
+function teste(teste1,callback){
+    callback();
+    console.log(teste1);
+    // como podemos ver essa funcao executaq a funcao callback e depois o console.log. respeitando o tempo de execusao de cada uma.
+}
 
 
 ```
@@ -433,6 +438,13 @@ Um Promise está em um destes estados:
 Uma promessa pendente pode se tornar realizada com um valor ou rejeitada por um motivo (erro). Quando um desses estados ocorre, o método then do Promise é chamado, e ele chama o método de tratamento associado ao estado (rejected ou resolved).  Se a promessa foi realizada ou rejeitada quando o método de tratamento correspondente for associado, o método será chamado, deste forma não há uma condição de competição entre uma operação assíncrona e seus manipuladores que estão sendo associados.
 
 Como os métodos `Promise.prototype.then` e `Promise.prototype.catch`  retornam promises, eles podem ser encadeados — uma operação chamada composição.
+
+Esqueleto de uma promised
+
+```js
+new Promise((resolve,reject) => {codigo})
+
+```
 
 ## Async / Await
 

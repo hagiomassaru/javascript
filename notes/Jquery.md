@@ -240,4 +240,17 @@ Podemos modificar o `css`...
 
 
 
+## Extraindo Dimensões com jquery
 
+- `$("h1").width()` -> Mostra largura
+- `$("h1").innerWidth()` -> Mostra largura + padding
+- `$("h1").outerWidth()` -> Mostra largura + padding + borda
+- `$("h1").outerWidth(true)` -> Mostra largura + padding + borda + margin
+
+OBS: isso vale para altura também, so trocar `width` por `height`
+
+E para modificar e so colocar como parâmetro das funções
+
+- `$("h1").width(valor_modificar)` -> Modifica largura
+- `$("h1").innerWidth(valor_modificar)` -> Modifica largura + padding
+- `$("h1").outerWidth(valor_modificar)` -> Modifica largura + padding + borda
