@@ -269,3 +269,14 @@ E para modificar e so colocar como parâmetro das funções
 - `$("h1").prevUntil("elemento")` -> Seleciona do elemento `h1` ate o elemento declarado no argumento `elemento` seguindo a logica da função `prev`.
 
 >OBS: Os elementos a seguir nao segue a logica de filtragem mencionado anteriormente.
+
+## Outra maneiras de selecionar elementos (fim)
+
+
+- `$("h1").filter("valor_filtrado")` -> Filtra múltiplas seleções que correspondem ao argumento `"valor_filtrado"`.
+- `$("h1").first()` -> Seleciona o primeito elemento de um conjunto de elementos.
+- `$("h1").last()` -> Seleciona o ultimo elemento de um conjunto de elementos.
+- `$("h1").not("valor_filtrado")` -> Filtra múltiplas seleções que **nao** correspondem ao argumento `"valor_filtrado"`.
+- `$("h1").eq("numeto_do_indice")` -> Seleciona o elemento com base no `"numeto_do_indice"` do retorno do console do navegador. 
+
+![Indice](./images/2023-01-17_02-27.png)
