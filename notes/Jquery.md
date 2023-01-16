@@ -190,7 +190,7 @@ Podemos reaproveitar as funções de extração, e modificamos usando os parâme
 - `$("h1").text("valor_modificado")` -> Modifica o texto
 - `$("h1").html("valor_modificado")` -> Modifica o html
 - `$("h1").val("valor_modificado")` -> Modifica o valor no atributo `value` normalmente encontrado em um elemento `<input>`.
-- `$("h1").attr("nome_atributo","valor_modificado")` -> Modifica o valor no atributo `"nome_atributo"` pelo parâmetro `"valor_modificado"` OBS: podemos usar funções no valor modificado.
+- `$("h1").attr("nome_atributo","valor_modificado")` -> Modifica o valor no atributo `"nome_atributo"` pelo parâmetro `"valor_modificado"` >OBS: podemos usar funções no valor modificado.
 ## Selecionando elemento pelo atributo
 
 Para selecionar um elemento através do atributo usamos a seguinte sintaxe:
@@ -202,7 +202,7 @@ $("[key = 2]")
 
 ```
 
-OBS: E sempre recomendável usar esse tipo de seleção.
+>OBS: E sempre recomendável usar esse tipo de seleção.
 
 ## Maneiras de exclusão de elementos
 
@@ -221,7 +221,7 @@ E a função `.remove()` podemos passar como parâmetros os elementos filhos que
 - `$("h1").after("elemento")` -> Insere elemento antes do elemento referido.
 - `$("h1").before("elemento")` -> Insere elemento depois do elemento referido.
 
-OBS: todos esse metodos podemos inserir varios elementos ao mesmo tempo apenas separando por virgula. EX
+>OBS: todos esse metodos podemos inserir varios elementos ao mesmo tempo apenas separando por virgula. EX
 
 - `$("h1").append("elemento" , "elemento2" , "elemento3")`
 
@@ -247,10 +247,25 @@ Podemos modificar o `css`...
 - `$("h1").outerWidth()` -> Mostra largura + padding + borda
 - `$("h1").outerWidth(true)` -> Mostra largura + padding + borda + margin
 
-OBS: isso vale para altura também, so trocar `width` por `height`
+>OBS: isso vale para altura também, so trocar `width` por `height`
 
 E para modificar e so colocar como parâmetro das funções
 
 - `$("h1").width(valor_modificar)` -> Modifica largura
 - `$("h1").innerWidth(valor_modificar)` -> Modifica largura + padding
 - `$("h1").outerWidth(valor_modificar)` -> Modifica largura + padding + borda
+
+## Selecionando elementos irmãos, (na mesma hierarquia)
+
+- `$("h1").siblings()` -> Seleciona todos os elementos irmãos.
+- `$("h1").nextAll()` -> Seleciona todos os irmãos em seguida do elemento.
+- `$("h1").next()` -> Seleciona o irmão em seguida do elemento.
+- `$("h1").prev()` -> Seleciona o irmão antecessor do elemento.
+- `$("h1").prevAll()` -> Seleciona todos os irmãos antecessores do elemento.
+
+>OBS:Podemos utilizar o argumento para filtrar os elementos e retornar o dado exato que desejamos EX: `$("h1").prev(valor_filtro)`
+
+- `$("h1").nextUntil("elemento")` -> Seleciona do elemento `h1` ate o elemento declarado no argumento `elemento` seguindo a logica da função `next`.
+- `$("h1").prevUntil("elemento")` -> Seleciona do elemento `h1` ate o elemento declarado no argumento `elemento` seguindo a logica da função `prev`.
+
+>OBS: Os elementos a seguir nao segue a logica de filtragem mencionado anteriormente.
