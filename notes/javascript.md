@@ -413,13 +413,12 @@ let codigo = (parametro) => parametro * 2;
 
 ## Callback
 
-E uma funcao que sera executada quando algun evento acontecer ou algum objeto chegar no estado desejado.
+E uma funcao que sera executada quando algum evento acontecer ou algum objeto chegar no estado desejado. Em outras palavras e uma funcao sendo usada como argumento de uma outra funcao.
 
 ```js
 function teste(teste1,callback){
-    callback();
+    callback(); // <---------- callback
     console.log(teste1);
-    // como podemos ver essa funcao executaq a funcao callback e depois o console.log. respeitando o tempo de execusao de cada uma.
 }
 
 
