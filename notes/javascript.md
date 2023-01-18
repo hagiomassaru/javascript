@@ -426,22 +426,36 @@ function teste(teste1,callback){
 
 ## Promised
 
-Uma Promise representa um proxy para um valor que não é necessariamente conhecido quando a promessa é criada. Isso permite a associação de métodos de tratamento para eventos da ação assíncrona num caso eventual de sucesso ou de falha. Isto permite que métodos assíncronos retornem valores como métodos síncronos: ao invés do valor final, o método assíncrono retorna uma promessa ao valor em algum momento no futuro.
-
-Um Promise está em um destes estados: 
-
-* pending (pendente): Estado inicial, que não foi realizada nem rejeitada.
-* fulfilled (realizada): sucesso na operação.
-* rejected (rejeitado):  falha na operação.
-
-Uma promessa pendente pode se tornar realizada com um valor ou rejeitada por um motivo (erro). Quando um desses estados ocorre, o método then do Promise é chamado, e ele chama o método de tratamento associado ao estado (rejected ou resolved).  Se a promessa foi realizada ou rejeitada quando o método de tratamento correspondente for associado, o método será chamado, deste forma não há uma condição de competição entre uma operação assíncrona e seus manipuladores que estão sendo associados.
-
-Como os métodos `Promise.prototype.then` e `Promise.prototype.catch`  retornam promises, eles podem ser encadeados — uma operação chamada composição.
-
-Esqueleto de uma promised
+Sao uma outra forma de se usar o callback, mas de forma diferente. Ela consegue rodar dois codigo de forma simultânea usando o `resolve` e `reject`
 
 ```js
-new Promise((resolve,reject) => {codigo})
+let promise = new Promise((resolve,reject) => {
+    let x = 0;
+
+    if (x == 0){
+        resolve("teste1");
+    }else{
+        reject("teste2");
+    }
+    
+    })
+
+```
+
+quando queremos usar o argumento `resolve` usando o `.then()`
+
+```js
+promise.then((teste1)=>{
+    console.log(teste1);
+})
+
+```
+quando queremos usar o argumento `reject` usando o `.catch()`
+
+```js
+promise.catch((teste2)=>{
+    console.log(teste2);
+})
 
 ```
 
