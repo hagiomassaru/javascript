@@ -148,4 +148,67 @@ docRef.get().then((doc)=>{
     console.log(aluno.nome);
 })
 ```
+## Criando e alterando documentos
+
+Para criacao de manipulacao de documentos no firebase, iremos ver alguns métodos uteis para este fim.
+
+1. **Criando documento novo**
+
+    - `db.collection().add(objeto)` -> A funcao `.add()` recebera um **objeto js** que sera interpretado como uma documento no firebase, ja que sua estrutura e praticamente a mesma.
+
+    ### Exemplo
+
+    ```js
+
+    db.collection(TURMA).add({
+        nome:"Marcos",
+        sobrenome: "Antonio",
+        notas:{nota1:9.5,nota2:5}
+    })
+
+    ```
+
+    - Resultado
+
+
+    ![resultado](./images/2023-01-20_01-52.png)
+
+
+    Lembrando que esse método também retorna um `promise` que pode ser tratado com `.then()` e `.catch()`
+
+    ```js
+    db.collection(TURMA).add({
+        nome:"Marcos",
+        sobrenome: "Antonio",
+        notas:{nota1:9.5,nota2:5}
+    }).then(doc=>{
+        console.log("Documento criado com sucesso! ", doc);
+    }).catch(err=>{
+        console.log(err)
+    })
+
+    ```
+
+2. **Criando documento novo e modificando seu ID**
+
+    - `db.collection(TURMA).doc("NovoAluno").set(objeto)` -> Podemos ver que agora estamos usando a método `.doc()` passando como argumento  `"NovoAluno"` que sera o nome do documento. Ja o `.set()` serve para "setar" o conteúdo do documento, e esse conteúdo e passado como argumento em forma de objeto como ja fizemos anteriormente.
+
+    ```js
+    db.collection(TURMA).doc("NovoAluno").set({
+            nome: "Marcos2",
+            sobrenome: "Antonio2",
+            notas: { nota1: 9.5, nota2: 5 },
+        })
+        .then((/* `.set()` nao retorna nenhum objeto nesse caso */) => {
+            console.log("Documento criado com sucesso! ");
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+
+    ```
+    - Resultado
+
+    ![resultado](./images/2023-01-20_02-16.png)
+
 
