@@ -232,11 +232,35 @@ Para criacao de manipulacao de documentos no firebase, iremos ver alguns método
 
     > OBS: temos que tomar cuidado pois `.set()` ele substitui as ultimas informações. Com isso abre margem para erro.
 
-    Caso queira mesclar os documentos podemos fazer o seguinte.
+    Ex:
 
     ```js
     db.collection(TURMA).doc("NovoAluno").set({
-        nome: "Marcos2",
+                nome: "Marcos3"                
+            })
+            .then(() => {
+                console.log("Documento criado com sucesso! ");
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+
+    ```
+
+    = Resultado
+
+    ![resultado](./images/2023-01-23_02-43.png)
+
+
+
+    Como podemos ver ele nao mesclou os elemento, e sim criou um novo documento sobreescrevento e excluindo todos que nao condizem com o documento atual.
+
+3. **Mesclando documentos**
+
+    Caso queira mesclar os documentos de forma mais segura podemos fazer o seguinte.
+
+    ```js
+    db.collection(TURMA).doc("NovoAluno").set({
         sobrenome: "Antonio2",
         notas: { nota1: 9.5, nota2: 5 },
     }),{merge:true} //<- utilizando isso
@@ -248,14 +272,18 @@ Para criacao de manipulacao de documentos no firebase, iremos ver alguns método
     });
 
     ```
+    - Resultado
+
+    
+
+    ![resultado](./images/2023-01-23_02-50.png)
+
 
     E tambem utilizar o metodo `.update()`
 
     ```js
     db.collection(TURMA).doc("NovoAluno").update({ //<--------
-        nome: "Marcos2",
-        sobrenome: "Antonio2",
-        notas: { nota1: 9.5, nota2: 5 },
+        apelido:"Fulano"
     })
     .then(() => {
         console.log("Documento criado com sucesso! ");
@@ -265,12 +293,18 @@ Para criacao de manipulacao de documentos no firebase, iremos ver alguns método
     });
 
     ```
+
+    - Resultado
+
+
+    ![resultado](./images/2023-01-23_02-53.png)
+
 
     e caso queira modificar um campo `map` (que seria uma objeto dentro do documento firebase) podemos usar o `"notas.nota1" : 9`
 
     ```js
     db.collection(TURMA).doc("NovoAluno").update({ 
-        "notas.nota1":9
+        "notas.nota1":10
     })
     .then(() => {
         console.log("Documento criado com sucesso! ");
@@ -279,6 +313,11 @@ Para criacao de manipulacao de documentos no firebase, iremos ver alguns método
         console.log(err);
     });
     ```
+    - Resultado
+
+
+    ![resultado](./images/2023-01-23_02-56.png)
+
 
     e tambem caso queria incementar um elemento em um `array` podemos utilizar `firebase.firestore.FieldValue.arrayUnion("elemento","elemento2")`
     
