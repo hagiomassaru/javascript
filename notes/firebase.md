@@ -211,4 +211,40 @@ Para criacao de manipulacao de documentos no firebase, iremos ver alguns método
 
     ![resultado](./images/2023-01-20_02-16.png)
 
+    > OBS: temos que tomar cuidado pois `.set()` ele substitui as ultimas informações. Com isso abre margem para erro.
+
+    Caso queira mesclar os documentos podemos fazer o seguinte.
+
+    ```js
+    db.collection(TURMA).doc("NovoAluno").set({
+        nome: "Marcos2",
+        sobrenome: "Antonio2",
+        notas: { nota1: 9.5, nota2: 5 },
+    }),{merge:true} //<- utilizando isso
+    .then(() => {
+        console.log("Documento criado com sucesso! ");
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+
+    ```
+
+    E tambem utilizar o metodo `.update()`
+
+    ```js
+    db.collection(TURMA).doc("NovoAluno").update({ //<--------
+        nome: "Marcos2",
+        sobrenome: "Antonio2",
+        notas: { nota1: 9.5, nota2: 5 },
+    }),{merge:true}
+    .then(() => {
+        console.log("Documento criado com sucesso! ");
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+
+    ```
+
 
