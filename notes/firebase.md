@@ -5,9 +5,7 @@
 Firebase e um serviço de banco de dados nao sql (nosgl) que funciona com base em coleções. Estas mesmas coleções se compõem principalmente de documentos que sao compostos por campos e valores (igual a objetos no JS).
 
 ```
-colecao > documentos > {
-    campos:valores;
-}
+colecao { documentos { campos:valores; } }
 ```
 
 ## O que e firebase?
@@ -148,6 +146,9 @@ docRef.get().then((doc)=>{
     console.log(aluno.nome);
 })
 ```
+retorna:
+
+![retorno](./images/2023-01-23_03-01.png)
 ## Buscando dados 
 
 Quando buscamos dados podemos utilizar o metodo `.where()` com tres parametros: campo buscado, condicao , valor buscado. EX
@@ -274,7 +275,7 @@ Para criacao de manipulacao de documentos no firebase, iremos ver alguns método
     ```
     - Resultado
 
-    
+
 
     ![resultado](./images/2023-01-23_02-50.png)
 
