@@ -84,7 +84,7 @@ db.collection("TurmaA").get()
 // O .get e uma promised
 ```
 
-Sendo o `.get()` uma promised, o que significa que devemos que usar o `.then()` e passar alguma funções como argumento para manipular os dados que ele esta retornando.
+Sendo o `.get()` e uma promised, o que significa que devemos que usar o `.then()` e passar alguma funções como argumento para manipular os dados que ele esta retornando.
 
 ```js
 db.collection("TurmaA").get().then()
@@ -148,6 +148,25 @@ docRef.get().then((doc)=>{
     console.log(aluno.nome);
 })
 ```
+## Buscando dados 
+
+Quando buscamos dados podemos utilizar o metodo `.where()` com tres parametros: campo buscado, condicao , valor buscado. EX
+
+```js
+db.collection(TURMA)
+    .where(`nome`, `==`, `Marcos`)
+    .get()
+    .then((snapshot) => {
+        snapshot.forEach((doc) => {
+            console.log(doc.id);
+        });
+    });
+```
+
+como podemos ver eu busquei todos os documentos com o valor igual a "Marcos" no campo "nome" retornando o **id** de todos os documentos
+
+![resultado](./images/2023-01-22_23-50.png)
+
 ## Criando e alterando documentos
 
 Para criacao de manipulacao de documentos no firebase, iremos ver alguns métodos uteis para este fim.
@@ -237,7 +256,7 @@ Para criacao de manipulacao de documentos no firebase, iremos ver alguns método
         nome: "Marcos2",
         sobrenome: "Antonio2",
         notas: { nota1: 9.5, nota2: 5 },
-    }),{merge:true}
+    })
     .then(() => {
         console.log("Documento criado com sucesso! ");
     })
@@ -247,4 +266,46 @@ Para criacao de manipulacao de documentos no firebase, iremos ver alguns método
 
     ```
 
+    e caso queira modificar um campo `map` (que seria uma objeto dentro do documento firebase) podemos usar o `"notas.nota1" : 9`
 
+    ```js
+    db.collection(TURMA).doc("NovoAluno").update({ 
+        "notas.nota1":9
+    })
+    .then(() => {
+        console.log("Documento criado com sucesso! ");
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+    ```
+
+    e tambem caso queria incementar um elemento em um `array` podemos utilizar `firebase.firestore.FieldValue.arrayUnion("elemento","elemento2")`
+    
+    ```js
+    db.collection(TURMA).doc("NovoAluno").update({
+        cidades: firebase.firestore.FieldValue.arrayUnion("d")
+    })
+    .then(() => {
+        console.log("Documento criado com sucesso! ");
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+
+    ```
+    e tambem caso queria remover um elemento em um `array` podemos utilizar `firebase.firestore.FieldValue.arrayRemove("elemento")`
+        
+    ```js
+    db.collection(TURMA).doc("NovoAluno").update({
+        cidades: firebase.firestore.FieldValue.arrayRemove("d")
+    })
+    .then(() => {
+        console.log("Documento criado com sucesso! ");
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+
+    ```
+    nao so isso, tambem podemos incrementar um numero com `firebase.firestore.FieldValue.increment("string ou numero")`.
