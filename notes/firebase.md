@@ -380,3 +380,29 @@ Como podemos ver o que eu fiz foi so mostrar todos os documentos junto como seus
 O firebase executa a funcao novamente que eu ja havia escrito, como podemos ver acima.
 
 > Lembrando que nao usamos o `.then()` porque esse métodos nao e uma `promised`.
+
+Mas o codigo acima aplica o `onSnapshot()` na funcao inteira, podemos tambem aplicar somente em um documento especifico.
+
+```js
+let documentoRef = db.collection(TURMA).doc("NovoAluno");
+
+
+documentoRef.onSnapshot(doc=>{
+    let aluno = doc.data();
+    console.log(aluno.nome);
+})
+```
+
+- Resultado
+
+![resultado](./images/2023-01-24_23-36.png)
+
+No caso acima apenas "vigiaremos" o documento `"NovoAluno"` onde apenas as alterações no mesmo serão validas para execucao
+
+![resultado](./images/Peek%2024-01-2023%2023-41.gif)
+
+A imagem acima mostra que ao alterarmo o documento `"NovoAluno"` e impresso o campo `nome` do documento...
+
+![resultado](./images/Peek%2024-01-2023%2023-45.gif)
+
+Mas quando alteramos outro documento nada acontece.
