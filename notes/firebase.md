@@ -10,7 +10,7 @@ colecao { documentos { campos:valores; } }
 
 ## O que e firebase?
 
-Firebase e um serviço disponibilizado pela google para ajudar no desenvolvimento de aplicativos como Banco de dados, autenticação e etc.
+Firebase e um serviço disponibilizado pela google para ajudar no desenvolvimento de aplicativos com Banco de dados, autenticação e etc.
 
 [Site official](https://firebase.google.com)
 
@@ -71,7 +71,7 @@ Primeiramente precisamos referenciar nosso banco de dados no firestore. No caso 
 
 ```js
 const db = firebase.firestore();
-// pode ver que a para realizarmos essa referencia usamos o método firebase.firestore() e atribuímos a uma variável db
+// pode ver que para realizarmos essa referencia usamos o método firebase.firestore() e atribuímos a uma variável db
 
 ```
 
@@ -82,7 +82,7 @@ db.collection("TurmaA").get()
 // O .get e uma promised
 ```
 
-Sendo o `.get()` e uma promised, o que significa que devemos que usar o `.then()` e passar alguma funções como argumento para manipular os dados que ele esta retornando.
+Sendo o `.get()` uma promised, devemos usar o `.then()` e passar `callback` como argumento para manipular os dados que ele esta retornando.
 
 ```js
 db.collection("TurmaA").get().then()
@@ -93,7 +93,7 @@ No caso iremos fazer um `snapshot` de nossos documentos, e para isso usamos essa
 db.collection("TurmaA").get().then((snapshot)=>{})
 ```
 
-Esse `snapshot` e o estado atual do documento, sendo o mesmo igual a um **array** que podemos usar os mesmos métodos de manipulação de arrays em JS. O principal que vamos usar e o `.forEach()` que serve para percorremos um array aplicando uma função para cada elemento.
+Esse `snapshot` e o estado atual do documento, sendo o mesmo retornando um **array** que podemos usar os mesmos métodos de manipulação de arrays em JS. O principal que vamos usar e o `.forEach()` que serve para percorremos um array aplicando uma função para cada elemento.
 
 ```js
 db.collection("TurmaA").get().then((snapshot)=>{
@@ -104,7 +104,7 @@ A funcao que usaremos como argumento sera uma **arrow function** que iremos pass
 
 ```js
 db.collection("TurmaA").get().then((snapshot)=>{
-    snapshot.forEach(/*no caso a funcao de callback sera uma arrow function*/(doc)=>{
+    snapshot.forEach((doc)=>{
         console.log(doc);
     });
     
@@ -117,7 +117,7 @@ resultado:
 
 > Como podemos ver pelos ID, retornamos os documentos.
 
-Tendo em vista que agora temos acesso aos documentos do banco de dados firebase, podemos acessar os dados do documentos usando o metodo `.data()` e assim retornando os dados em formato JSON.
+Tendo em vista que agora temos acesso aos documentos do banco de dados firebase, podemos acessar os dados dos documentos usando o metodo `.data()` e assim retornando os dados em formato JSON.
 
 ```js
 db.collection("TurmaA").get().then(
@@ -258,13 +258,13 @@ Para criacao de manipulacao de documentos no firebase, iremos ver alguns método
 
 3. **Mesclando documentos**
 
-    Caso queira mesclar os documentos de forma mais segura podemos fazer o seguinte.
+    Caso queira mesclar os documentos de forma mais segura podemos colocar um novo objeto contendo `{merge:true}`.
 
     ```js
     db.collection(TURMA).doc("NovoAluno").set({
         sobrenome: "Antonio2",
         notas: { nota1: 9.5, nota2: 5 },
-    }),{merge:true} //<- utilizando isso
+    },{merge:true}) //<- utilizando isso
     .then(() => {
         console.log("Documento criado com sucesso! ");
     })
