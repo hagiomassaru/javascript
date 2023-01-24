@@ -30,5 +30,6 @@ Estes documentos terao conteudos relacionado aos meus estudos de programacao **f
 - [Firebase - pausado](notes/firebase.md)
 - [Git](notes/git.md)
 - [Markdown](notes/markdown.md)
+- [Firebase](notes/firebase.md)
 - [Dicas de Emmet em HTML no VSCODE](notes/Emmet.md)
 

@@ -320,7 +320,7 @@ Para criacao de manipulacao de documentos no firebase, iremos ver alguns método
     ![resultado](./images/2023-01-23_02-56.png)
 
 
-    e tambem caso queria incementar um elemento em um `array` podemos utilizar `firebase.firestore.FieldValue.arrayUnion("elemento","elemento2")`
+    e tambem caso queria incrementar um elemento em um `array` podemos utilizar `firebase.firestore.FieldValue.arrayUnion("elemento","elemento2")`
     
     ```js
     db.collection(TURMA).doc("NovoAluno").update({
@@ -349,3 +349,34 @@ Para criacao de manipulacao de documentos no firebase, iremos ver alguns método
 
     ```
     nao so isso, tambem podemos incrementar um numero com `firebase.firestore.FieldValue.increment("string ou numero")`.
+
+## Vigiando alterações no firebase
+
+No firebase poder "prestar atenção" em algum dados houve alguma alteração, e se houver a gente poder tratar isso.
+
+Exemplo:
+
+Abaixo usaremos uma funcao chamada `.onSnapshot()` para "vigiar" nosso banco de dados e caso tenha alguma alteracao ele executara o funcao que passaremos como **callback**
+
+```js
+db.collection("TurmaA").onSnapshot((snapshot) => {
+    snapshot.forEach((doc) => {
+        let aluno = doc.data();
+        console.log(aluno);
+    });
+});
+
+```
+
+- Resultado
+
+
+![resultado](./images/2023-01-24_23-16.png)
+
+Como podemos ver o que eu fiz foi so mostrar todos os documentos junto como seus tados em formato `json`. Mas caso eu altere alguma coisa no firebase...
+
+![resultado](./images/Peek%2024-01-2023%2023-18.gif)
+
+O firebase executa a funcao novamente que eu ja havia escrito, como podemos ver acima.
+
+> Lembrando que nao usamos o `.then()` porque esse métodos nao e uma `promised`.
