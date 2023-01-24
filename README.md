@@ -5,7 +5,7 @@ created: '2021-11-15T13:19:17.938Z'
 modified: '2021-12-08T13:35:44.142Z'
 ---
 
-# Anotacoes Front-end - Conhecimentos
+# Programming Notes - Anotacoes de programacao
 
 Esse repositorio tera documento em `markdown` de acesso publico, onde qualquer um tem livre acesso e podendo utilizar da maneira que quiser.
 Estes documentos terao conteudos relacionado aos meus estudos de programacao **front-end** pelo curso [ProgramadorBR](https://programadorbr.com) iniciado em 09/06/2021, e tambem conhecimento praticando com projetos pessoais relacionados a **front-end** . Alem disso passarei alguns sites que estou utilizando como consulta e que de alguma forma tem uma probabilidade de conterem em minhas anotacoes.
