@@ -405,4 +405,53 @@ A imagem acima mostra que ao alterarmo o documento `"NovoAluno"` e impresso o ca
 
 ![resultado](./images/Peek%2024-01-2023%2023-45.gif)
 
-Mas quando alteramos outro documento nada acontece.
+Mas quando alteramos outro documento nada acontece. Pois o metodo de refere exclusivamente ao `"NovoAluno"`
+
+
+## Excluindo dados no firebase
+
+Para excluirmos usaremos o metodo `.delete()`, para excluir um campo usaremos o exemplo a seguir:
+
+
+
+```js
+db.collection(TURMA)
+    .doc("NovoAluno")
+    .update({
+        apelido: firebase.firestore.FieldValue.delete()
+    })
+    .then(() => {
+        console.log("Documento criado com sucesso! ");
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+
+```
+
+- resultado
+
+![resultado](./images/2023-01-25_20-40.png)
+
+Usando o `firebase.firestore.FieldValue.delete()` em um campo ele deleta esse campo.
+
+![resultado](./images/2023-01-25_20-42.png)
+
+O mesmo vale para documentod
+
+```js
+db.collection(TURMA)
+    .doc("NovoAluno")
+    .delete()
+    .then(() => {
+        console.log("Documento criado com sucesso! ");
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+
+```
+
+- Resultado
+
+![resultado](./images/2023-01-25_20-49.png)
