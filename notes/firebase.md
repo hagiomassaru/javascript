@@ -455,3 +455,119 @@ db.collection(TURMA)
 - Resultado
 
 ![resultado](./images/2023-01-25_20-49.png)
+
+
+## Autenticação - gerenciando usuários
+
+# Criando usuário
+
+No firebase permite que gerenciemos usuários pelo próprio site ou através do próprio código. Nesse inicia iremos adicionar um usuário pelo site [Firebase.com](https://firebase.google.com/?hl=pt-br).
+
+Na dashbord iremos ativar a tecnologia de autenticação
+
+
+![resultado](./images/2023-01-27_00-03.png)
+![resultado](./images/2023-01-27_00-03_1.png)
+![resultado](./images/2023-01-27_00-04.png)
+![resultado](./images/2023-01-27_00-05.png)
+![resultado](./images/2023-01-27_00-05_1.png)
+![resultado](./images/2023-01-27_00-07.png)
+![resultado](./images/2023-01-27_00-07_1.png)
+
+> Lembrando que a senha tem que ser mais de 6 numeros
+
+![resultado](./images/2023-01-27_00-08.png)
+
+Pronto! criamos um usuário. Mas agora iremos criar um usuário via javascript. 
+- Segue o script que iremos usar...
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Testando Firebase</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <!-- link abaixo ativa o suporte a autenticação firebase no script  -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+```
+
+```js
+let auth = firebase.auth();
+
+let userEmail = "novousuario@teste.com";
+let pass = "123";
+
+auth.createUserWithEmailAndPassword(userEmail, pass)
+    .then((user) => {
+        console.log(user);
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+
+```
+
+Como podemos ver, foi adicionado no arquivo `html` a tag `<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>` que adiciona o suporte a autenticação firebase a pagina. Depois no script `javascript` atribuímos o `firebase.auth()` na variável `auth` para facilitar nossa vida na utilização dos métodos, e depois, adicionamos mais duas variaves com os dados para autenticação. Também usamos o metodo `.createUserWithEmailAndPassword(userEmail, pass)` na variável `auth` passando as variáveis anteriores para criação do usuário.
+Ao terminar vemos que esse metodo retorna uma promised que tratamos os dados para mostrar no console.
+
+**Retornando**
+
+![resultado](./images/2023-01-27_00-39.png)
+
+como podemos ver a senha esta muito fraca, tem que ter mais dígitos
+
+**correção**
+
+```js
+let auth = firebase.auth();
+
+let userEmail = "novousuarioteste.com"; //??
+let pass = "123abc"; // adicionado mais caractere
+
+auth.createUserWithEmailAndPassword(userEmail, pass)
+    .then((user) => {
+        console.log(user);
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+```
+**Retornando**
+
+![resultado](./images/2023-01-27_00-53.png)
+
+Agora o email que esta mal formatado
+
+
+**correção 2**
+
+```js
+let auth = firebase.auth();
+
+let userEmail = "novousuario@teste.com"; // corrigido
+let pass = "123abc"; 
+
+auth.createUserWithEmailAndPassword(userEmail, pass)
+    .then((user) => {
+        console.log(user);
+    })
+    .catch((err) => {
+        console.log(err);
+    });
+```
+**Retornando**
+
+![resultado](./images/2023-01-27_01-00.png)
+
+Agora esta tudo certo!
