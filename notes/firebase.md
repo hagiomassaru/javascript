@@ -421,7 +421,7 @@ db.collection(TURMA)
         apelido: firebase.firestore.FieldValue.delete()
     })
     .then(() => {
-        console.log("Documento criado com sucesso! ");
+        console.log("Documento removido com sucesso! ");
     })
     .catch((err) => {
         console.log(err);
@@ -444,7 +444,7 @@ db.collection(TURMA)
     .doc("NovoAluno")
     .delete()
     .then(() => {
-        console.log("Documento criado com sucesso! ");
+        console.log("Documento removido com sucesso! ");
     })
     .catch((err) => {
         console.log(err);
