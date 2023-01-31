@@ -27,9 +27,8 @@ Estes documentos terao conteudos relacionado aos meus estudos de programacao **f
 - [Javascript](notes/javascript.md)
 - [Javascrip POO](notes/javascript_poo.md)
 - [Jquery](notes/Jquery.md)
-- [Firebase - pausado](notes/firebase.md)
+- [Firebase](notes/firebase.md)
 - [Git](notes/git.md)
 - [Markdown](notes/markdown.md)
-- [Firebase](notes/firebase.md)
 - [Dicas de Emmet em HTML no VSCODE](notes/Emmet.md)
 
