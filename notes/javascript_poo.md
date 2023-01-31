@@ -7,7 +7,7 @@ modified: '2021-12-08T13:35:18.925Z'
 
 # Javascript Orientado a Objeto
 
-- [Voltar ao arquivo README.md](./README.md)
+- [Voltar ao arquivo README.md](../README.md)
 - [Javascript](./javascript.md)
 
 

@@ -1,6 +1,6 @@
 # Anotações front-end - Aprendendo Jquery
 
-- [Voltar ao arquivo README.md](/README.md)
+- [Voltar ao arquivo README.md](../README.md)
 - [Javascrip POO](./javascript_poo.md)
 
 # Introducao
