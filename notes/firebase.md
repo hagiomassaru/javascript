@@ -459,7 +459,7 @@ db.collection(TURMA)
 
 ## Autenticação - gerenciando usuários
 
-# Criando usuário
+- ### Criando usuário
 
 No firebase permite que gerenciemos usuários pelo próprio site ou através do próprio código. Nesse inicia iremos adicionar um usuário pelo site [Firebase.com](https://firebase.google.com/?hl=pt-br).
 
@@ -518,7 +518,7 @@ auth.createUserWithEmailAndPassword(userEmail, pass)
 
 ```
 
-Como podemos ver, foi adicionado no arquivo `html` a tag `<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>` que adiciona o suporte a autenticação firebase a pagina. Depois no script `javascript` atribuímos o `firebase.auth()` na variável `auth` para facilitar nossa vida na utilização dos métodos, e depois, adicionamos mais duas variaves com os dados para autenticação. Também usamos o metodo `.createUserWithEmailAndPassword(userEmail, pass)` na variável `auth` passando as variáveis anteriores para criação do usuário.
+Como podemos ver, foi adicionado no arquivo `html` a tag `<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>` que adiciona o suporte a autenticação firebase a pagina. Depois no script `javascript` atribuímos o `firebase.auth()` na variável `auth` para facilitar nossa vida na utilização dos métodos, e depois, adicionamos mais duas variaves com os dados para autenticação. Também usamos o metodo `.createUserWithEmailAndPassword(userEmail, pass)` na variável `auth` passando as variáveis anteriores com parâmetros para criação do usuário.
 Ao terminar vemos que esse metodo retorna uma promised que tratamos os dados para mostrar no console.
 
 **Retornando**
@@ -569,5 +569,83 @@ auth.createUserWithEmailAndPassword(userEmail, pass)
 **Retornando**
 
 ![resultado](./images/2023-01-27_01-00.png)
+![resultado](./images/2023-01-27_01-02.png)
 
 Agora esta tudo certo!
+
+- ### Verificando login
+
+Para realizar a verificação de login usaremos o metodo `.currentUser`.,
+
+```js
+let user = auth.currentUser;
+
+console.log(user);
+```
+**Resultado**
+
+![resultado](./images/2023-02-01_01-48.png)
+
+Como podemos ver, apesar de termos criado um usuario, nao logamos com o mesmo. Para isso usaremos o metodo `.singnInWithEmailAndPassword(userEmail,pass);`.
+
+```js
+    auth.singnInWithEmailAndPassword(userEmail, pass)
+        .then((loggedUser) => {
+            console.log(loggedUser);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+
+    let user = auth.currentUser;
+
+    console.log(user);
+```
+
+**Resultado**
+
+![resultado](./images/2023-02-01_01-56.png)
+![resultado](./images/2023-02-01_01-56_1.png)
+
+> Caso o arquivo javascript for recarregado o usuário deixara de estar logado e voltara o retornar `null`.
+
+Para Resolver esse problema iremos usar o metodo `.onAuthStateChanged(callback)` para monitorar o estado de nosso usuário, e criar uma condição que caso esteja logado ira nos retornar as informações do usuário e caso nao esteja logo retornara uma mensagem de **Ninguém logado**.
+
+```js
+auth.onAuthStateChanged((user) => {
+    if (user) {
+        console.log(user);
+    } else {
+        console.log("Ninguém Logado");
+    }
+});
+
+```
+
+**Resultado**
+
+![resultado](./images/2023-02-01_02-09.png)
+
+Agora toda vez que o estado do usuário mudar esse metodo ira dispara como o status atual do usuário.
+
+
+- ## logoff
+
+Para realizarmos **logoff** do usuario utilizaremos o metodo `.sighOut()`.
+
+```js
+auth.signOut()
+        .then(() => {
+            console.log("Usuario deslogado");
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+
+```
+
+**Resultado**
+
+![resultado](./images/2023-02-01_02-19.png)
+
+> A mensagem `Ninguém logado` e referente ao metodo `.onAuthStateChanged(callback)` que monitora o status do usuário. Que agora se encontra deslogado.
