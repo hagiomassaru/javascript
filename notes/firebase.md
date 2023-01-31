@@ -1,4 +1,4 @@
-# Firebase basico
+# Firebase básico
 
 ## Conhecimentos uteis
 
@@ -12,7 +12,7 @@ colecao { documentos { campos:valores; } }
 
 Firebase e um serviço disponibilizado pela google para ajudar no desenvolvimento de aplicativos com Banco de dados, autenticação e etc.
 
-[Site official](https://firebase.google.com)
+[Tutorial - Como importar o Firebase](./tutorial_como_import_firebase.md)
 
 >OBS: firebase passou por algumas mudancas. siga o link a seguir para te ajudar a prosseguir...
 [Click aqui!](https://best-screw-ce8.notion.site/Tutorial-ProgramadorBR-428367c478fe4d9783de57a2abded76e)
@@ -631,12 +631,12 @@ Agora toda vez que o estado do usuário mudar esse metodo ira dispara como o sta
 
 - ## logoff
 
-Para realizarmos **logoff** do usuario utilizaremos o metodo `.sighOut()`.
+Para realizarmos **logoff** do usuário utilizaremos o metodo `.sighOut()`.
 
 ```js
 auth.signOut()
         .then(() => {
-            console.log("Usuario deslogado");
+            console.log("Usuário deslogado");
         })
         .catch((err) => {
             console.log(err);
