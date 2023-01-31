@@ -1,4 +1,4 @@
-## [Voltar ao arquivo README.md](/README.md)
+## [Voltar ao arquivo README.md](./README.md)
 # Firebase básico
 
 ## Conhecimentos uteis

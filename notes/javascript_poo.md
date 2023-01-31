@@ -7,8 +7,8 @@ modified: '2021-12-08T13:35:18.925Z'
 
 # Javascript Orientado a Objeto
 
-- [Voltar ao arquivo README.md](/README.md)
-- [Javascript](/javascript.md)
+- [Voltar ao arquivo README.md](./README.md)
+- [Javascript](./javascript.md)
 
 
 Quase todos as propriedades de um objeto que extraem um conteudo do mesmo, pode ser modificado e afetar o conteudo do html onde foi declarado o script.

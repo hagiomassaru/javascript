@@ -4,7 +4,7 @@ title: flex_box
 created: '2021-11-16T12:09:49.986Z'
 modified: '2021-12-08T13:35:18.695Z'
 ---
-- [Voltar ao arquivo README.md](/README.md)
+- [Voltar ao arquivo README.md](./README.md)
 # FlexBox
 
 Esse tipo de elemento serve para deixar os elementos 'flexiveis' o bastante para se adequarem ao tamanho do elemento pai. Na pratica estamos falando de um definir um estilo que se adequa a qualquer tamanho de tela.
