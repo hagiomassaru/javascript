@@ -7,7 +7,7 @@ modified: '2021-12-08T13:34:30.839Z'
 
 # CSS
 
-## [Voltar ao arquivo README.md](README.md)
+## [Voltar ao arquivo README.md](/README.md)
 
 ## Tipos de declaração em CSS
 

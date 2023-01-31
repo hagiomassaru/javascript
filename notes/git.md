@@ -7,7 +7,7 @@ modified: '2021-12-08T13:35:18.737Z'
 
 # GIT
 
--   [Voltar ao arquivo README.md](README.md)
+-   [Voltar ao arquivo README.md](/README.md)
 
 ## Estados
 

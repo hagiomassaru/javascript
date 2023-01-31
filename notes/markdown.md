@@ -7,7 +7,7 @@ modified: '2021-12-08T13:35:18.967Z'
 
 # Markdown Tutorial 
 
-* [Voltando para o arquivo README.md](README.md)
+* [Voltando para o arquivo README.md](/README.md)
 
 ![](http://i.imgur.com/IMTN5cy.png)  
 

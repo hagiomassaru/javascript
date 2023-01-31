@@ -1,7 +1,7 @@
 # Canvas
-- [Voltar ao arquivo Javascript POO](javascript_poo.md)
-- [Javascript](javascript.md)
-- [README.md](README.md)
+- [Voltar ao arquivo Javascript POO](/javascript_poo.md)
+- [Javascript](/javascript.md)
+- [README.md](/README.md)
 
 
 Canvas e uma **API** que serve para realizarmos desenhos e animacoes graficas via `javascript` e via `HTML`. Com ela podemos criar tambem Jogos, visualizacao de dados, manipulacao de fotos e processamento de video em tempo real.

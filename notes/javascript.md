@@ -7,8 +7,8 @@ modified: '2021-12-08T13:35:18.884Z'
 
 # Anotações front-end - Aprendendo javascript
 
-- [Voltar ao arquivo README.md](README.md)
-- [Javascrip POO](javascript_poo.md)
+- [Voltar ao arquivo README.md](/README.md)
+- [Javascrip POO](/javascript_poo.md)
 
 ## Maneiras de se usar script.js em um arquivo HTML
 

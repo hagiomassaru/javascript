@@ -5,7 +5,7 @@ created: '2021-11-23T13:35:52.014Z'
 modified: '2021-12-08T13:35:18.780Z'
 ---
 
-## [Voltar ao arquivo CSS.md](css.md)
+## [Voltar ao arquivo CSS.md](/css.md)
 
 # Grid
 
