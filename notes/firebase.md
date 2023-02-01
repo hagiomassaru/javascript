@@ -1,7 +1,7 @@
 ## [Voltar ao arquivo README.md](../README.md)
 # Firebase básico
 
-## Conhecimentos uteis
+# Conhecimentos uteis
 
 Firebase e um serviço de banco de dados nao sql (nosgl) que funciona com base em coleções. Estas mesmas coleções se compõem principalmente de documentos que sao compostos por campos e valores (igual a objetos no JS).
 
@@ -9,7 +9,7 @@ Firebase e um serviço de banco de dados nao sql (nosgl) que funciona com base e
 colecao { documentos { campos:valores; } }
 ```
 
-## O que e firebase?
+# O que e firebase?
 
 Firebase e um serviço disponibilizado pela google para ajudar no desenvolvimento de aplicativos com Banco de dados, autenticação e etc.
 
@@ -18,7 +18,7 @@ Firebase e um serviço disponibilizado pela google para ajudar no desenvolviment
 >OBS: firebase passou por algumas mudancas. siga o link a seguir para te ajudar a prosseguir...
 [Click aqui!](https://best-screw-ce8.notion.site/Tutorial-ProgramadorBR-428367c478fe4d9783de57a2abded76e)
 
-## Conectando JS com Firebase
+# Conectando JS com Firebase
 
 ```html
 <!DOCTYPE html>
@@ -66,7 +66,7 @@ firebase.firestore().settings({
 ```
 
 
-### Lendo dados
+## Lendo dados
 
 Primeiramente precisamos referenciar nosso banco de dados no firestore. No caso abaixo atribuímos ele a uma variável.
 
@@ -150,7 +150,7 @@ docRef.get().then((doc)=>{
 retorna:
 
 ![retorno](./images/2023-01-23_03-01.png)
-## Buscando dados 
+# Buscando dados 
 
 Quando buscamos dados podemos utilizar o metodo `.where()` com tres parametros: campo buscado, condicao , valor buscado. EX
 
@@ -169,7 +169,7 @@ como podemos ver eu busquei todos os documentos com o valor igual a "Marcos" no 
 
 ![resultado](./images/2023-01-22_23-50.png)
 
-## Criando e alterando documentos
+# Criando e alterando documentos
 
 Para criacao de manipulacao de documentos no firebase, iremos ver alguns métodos uteis para este fim.
 
@@ -351,7 +351,7 @@ Para criacao de manipulacao de documentos no firebase, iremos ver alguns método
     ```
     nao so isso, tambem podemos incrementar um numero com `firebase.firestore.FieldValue.increment("string ou numero")`.
 
-## Vigiando alterações no firebase
+# Vigiando alterações no firebase
 
 No firebase poder "prestar atenção" em algum dados houve alguma alteração, e se houver a gente poder tratar isso.
 
@@ -409,7 +409,7 @@ A imagem acima mostra que ao alterarmo o documento `"NovoAluno"` e impresso o ca
 Mas quando alteramos outro documento nada acontece. Pois o metodo de refere exclusivamente ao `"NovoAluno"`
 
 
-## Excluindo dados no firebase
+# Excluindo dados no firebase
 
 Para excluirmos usaremos o metodo `.delete()`, para excluir um campo usaremos o exemplo a seguir:
 
@@ -458,9 +458,9 @@ db.collection(TURMA)
 ![resultado](./images/2023-01-25_20-49.png)
 
 
-## Autenticação - gerenciando usuários
+# Autenticação - gerenciando usuários
 
-- ### Criando usuário
+## Criando usuário
 
 No firebase permite que gerenciemos usuários pelo próprio site ou através do próprio código. Nesse inicia iremos adicionar um usuário pelo site [Firebase.com](https://firebase.google.com/?hl=pt-br).
 
@@ -574,7 +574,7 @@ auth.createUserWithEmailAndPassword(userEmail, pass)
 
 Agora esta tudo certo!
 
-- ### Verificando login
+## Verificando login
 
 Para realizar a verificação de login usaremos o metodo `.currentUser`.,
 
@@ -586,6 +586,10 @@ console.log(user);
 **Resultado**
 
 ![resultado](./images/2023-02-01_01-48.png)
+
+
+## Login
+
 
 Como podemos ver, apesar de termos criado um usuario, nao logamos com o mesmo. Para isso usaremos o metodo `.singnInWithEmailAndPassword(userEmail,pass);`.
 
@@ -630,7 +634,8 @@ auth.onAuthStateChanged((user) => {
 Agora toda vez que o estado do usuário mudar esse metodo ira dispara como o status atual do usuário.
 
 
-- ## logoff
+## logoff
+
 
 Para realizarmos **logoff** do usuário utilizaremos o metodo `.sighOut()`.
 
@@ -650,3 +655,72 @@ auth.signOut()
 ![resultado](./images/2023-02-01_02-19.png)
 
 > A mensagem `Ninguém logado` e referente ao metodo `.onAuthStateChanged(callback)` que monitora o status do usuário. Que agora se encontra deslogado.
+
+## Persistência de login
+
+Persistência de login serve para definirmos o quanto tempo uma sessão deve se manter. Para isso usamos alguns métodos...
+
+- `auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL)` => E o metodo padrão, ele mantém o usuário logado ate realizar o logoff.
+
+**Exemplo:**
+
+```js
+
+auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+        .then(() => {
+            auth.signInWithEmailAndPassword(userEmail, pass)
+                .then((loggedUser) => {
+                    console.log(auth.currentUser);
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+
+```
+
+- `auth.setPersistence(firebase.auth.Auth.Persistence.SESSION)` => Esse metodo, mantém o usuário logado apenas na "aba" em que foi realizado login.
+
+**Exemplo:**
+
+```js
+
+auth.setPersistence(firebase.auth.Auth.Persistence.SESSION)
+        .then(() => {
+            auth.signInWithEmailAndPassword(userEmail, pass)
+                .then((loggedUser) => {
+                    console.log(auth.currentUser);
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+
+```
+- `auth.setPersistence(firebase.auth.Auth.Persistence.NONE)` => Esse metodo, mantém o usuário logado apenas na realização do login, realizando logoff imediatamente.
+
+**Exemplo:**
+
+```js
+
+auth.setPersistence(firebase.auth.Auth.Persistence.NONE)
+        .then(() => {
+            auth.signInWithEmailAndPassword(userEmail, pass)
+                .then((loggedUser) => {
+                    console.log(auth.currentUser);
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+
+```
