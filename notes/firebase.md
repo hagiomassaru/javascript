@@ -724,3 +724,13 @@ auth.setPersistence(firebase.auth.Auth.Persistence.NONE)
         });
 
 ```
+
+# Regras
+
+Regras servem para definirmos condições de acesso ao banco de dados.
+
+Caso tenha escolhido um banco de dados aberto, que pode ser alterado por qualquer um. Ele estara assim...
+
+**Exemplo:**
+
+![regras](/notes/images/2023-02-03_03-08.png)
