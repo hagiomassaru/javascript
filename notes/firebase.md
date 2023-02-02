@@ -729,8 +729,16 @@ auth.setPersistence(firebase.auth.Auth.Persistence.NONE)
 
 Regras servem para definirmos condições de acesso ao banco de dados.
 
-Caso tenha escolhido um banco de dados aberto, que pode ser alterado por qualquer um. Ele estara assim...
+Caso tenha escolhido um banco de dados aberto, que pode ser alterado por qualquer um. Ele estará assim...
 
 **Exemplo:**
 
 ![regras](/notes/images/2023-02-03_03-08.png)
+
+Se mudarmos para isso...
+
+![regras](/notes/images/2023-02-03_03-11_1.png)
+
+nao teremos mais acesso...
+
+![regras](/notes/images/2023-02-03_03-11.png)
