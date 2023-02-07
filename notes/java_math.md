@@ -1,10 +1,3 @@
----
-tags: [front-end, programacao]
-title: java_math
-created: '2021-11-15T13:19:18.042Z'
-modified: '2021-12-08T13:35:18.851Z'
----
-
 [Voltar ao arquivo README.md](./javascrip_poo.md)
 
 `Math.E` -> Retorna o número de Euler (aprox. 2.718)

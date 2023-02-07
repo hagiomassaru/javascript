@@ -1,10 +1,3 @@
----
-tags: [front-end, programacao]
-title: javascript
-created: '2021-11-15T13:19:18.042Z'
-modified: '2021-12-08T13:35:18.884Z'
----
-
 # Anotações front-end - Aprendendo javascript
 
 - [Voltar ao arquivo README.md](../README.md)

@@ -1,10 +1,3 @@
----
-tags: [front-end, programacao]
-title: html
-created: '2021-11-15T13:19:17.938Z'
-modified: '2021-12-08T13:35:18.820Z'
----
-
 # Anotações do curso ProgramadorBR 09/06/2021
 
 ## [Voltar ao arquivo README.md](../README.md)

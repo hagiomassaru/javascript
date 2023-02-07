@@ -1,9 +1,3 @@
----
-tags: [front-end, programacao]
-title: css_animacao
-created: '2021-11-28T15:22:38.472Z'
-modified: '2021-12-08T14:14:53.196Z'
----
 - [Voltar ao arquivo README.md](../README.md)
  # Animacao com CSS
 

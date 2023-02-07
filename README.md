@@ -1,10 +1,3 @@
----
-tags: [front-end]
-title: README
-created: '2021-11-15T13:19:17.938Z'
-modified: '2021-12-08T13:35:44.142Z'
----
-
 # Programming Notes - Anotacoes de programacao
 
 Esse repositorio tera documento em `markdown` de acesso publico, onde qualquer um tem livre acesso e podendo utilizar da maneira que quiser.
