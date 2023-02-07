@@ -83,3 +83,36 @@
 
     >OBS: Voce pode consultar a documentação, pois essa anotação pode estar desatualizada
 
+# Classes `CSS` utilizadas
+
+## Bootstrap - Cores
+
+```html
+<div class="text-bg-primary p-3">Primary = Azul Escuro</div>
+<div class="text-bg-secondary p-3">Secondary = Cinza</div>
+<div class="text-bg-success p-3">Success = Verde</div>
+<div class="text-bg-danger p-3">Danger = Vermelho</div>
+<div class="text-bg-warning p-3">Warning = Amarelo</div>
+<div class="text-bg-info p-3">Info = Azul Claro</div>
+<div class="text-bg-light p-3">Light = Branco</div>
+<div class="text-bg-white p-3">White = Branco</div>
+<div class="text-bg-dark p-3">Dark = Preto</div>
+
+```
+Resultado:
+
+![resultado](/notes/images/2023-02-08_01-46.png)
+
+## Alguns tipos de elementos - Botão, Texto e Background
+```html
+<div class="btn">Botão</div>
+<div class="text">Texto</div>
+<div class="bg-dark">Background Dark</div>
+
+```
+Resultado:
+
+![resultado](/notes/images/2023-02-08_01-37.png)
+
+
+
