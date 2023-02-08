@@ -83,6 +83,18 @@
 
     >OBS: Voce pode consultar a documentação, pois essa anotação pode estar desatualizada
 
+# Como o bootstrap funciona?
+
+O bootstrap funciona com o sistema de `classes` CSS e funções `JS` que sao declaradas através do HTML. Isso significa se seguirmos um das formas de [Instalação do Bootstrap](#instalação-do-bootstrap), trabalhemos apenas com o `HTML` declarando apenas classes que ja conterão configuraçoes pre-programada.
+
+EX:
+
+```html
+
+<div class="text">Texto</div>
+
+```
+
 # Classes `CSS` utilizadas
 
 ## Bootstrap - Cores
@@ -103,16 +115,129 @@ Resultado:
 
 ![resultado](/notes/images/2023-02-08_01-46.png)
 
-## Alguns tipos de elementos - Botão, Texto e Background
+## Alguns tipos de elementos - Botão, Texto, Background e etc
+
 ```html
 <div class="btn">Botão</div>
 <div class="text">Texto</div>
 <div class="bg-dark">Background Dark</div>
+
 
 ```
 Resultado:
 
 ![resultado](/notes/images/2023-02-08_01-37.png)
 
+
+## Bootstrap - Títulos e Display
+
+
+```html
+    <h1 class="display-1">Titulo Display 1</h1>
+    <h2 class="display-2">Titulo Display 2</h2>
+    <h3 class="display-3">Titulo Display 3</h3>
+    <h4 class="display-4">Titulo Display 4</h4>
+    <h1 >Titulo H1</h1>
+    <h2 >Titulo H2</h2>
+    <h3 >Titulo H3</h3>
+    <h4 >Titulo H4</h4>
+
+```
+Resultado:
+
+![resultado](/notes/images/2023-02-08_23-37.png)
+
+
+
+```html
+    <p class="h1">Titulo H1 com bootstrap</p>
+    <p class="h2">Titulo H2 com bootstrap</p>
+    <p class="h3">Titulo H3 com bootstrap</p>
+    <p class="h4">Titulo H4 com bootstrap</p>
+
+```
+
+> * Podemos aplicar titulos `html` em qualquer elemento, mas nao tera peso semântico
+
+Resultado:
+
+![resultado](/notes/images/2023-02-08_23-39.png)
+
+## Bootstrap - Padding e Margin
+
+> A partir desse tópico evitarei de mostrar imagens para agilizar minhas anotações. Irei mostrar apenas html.
+
+
+* Padding = `p-X` / *X pode ser de 0 ate 5*
+
+    ```html
+    <p class="bg-info p-1">Tamanho do padding 1</p>
+    <p class="bg-info p-2">Tamanho do padding 2</p>
+    <p class="bg-info p-3">Tamanho do padding 3</p>
+    <p class="bg-info p-4">Tamanho do padding 4</p>
+    <p class="bg-info p-5">Tamanho do padding 5</p>
+    <!-- Sendo o p-0 sem padding -->
+    ```
+
+
+* Padding Start(Left), End(Right), Bottom e Top = `ps-X`, `pe-X`, `pb-X`, `pt-X`
+
+    ```html
+    <p class="bg-info ps-5">Tamanho 5, lado Start do padding </p>
+    <p class="bg-info pe-5">Tamanho 5, lado End do padding </p>
+    <p class="bg-info pb-5">Tamanho 5, lado Bottom do padding </p>
+    <p class="bg-info pt-5">Tamanho 5, lado Top do padding </p>
+    ```
+
+    > A logica funciona em margin também...
+
+* Padding Y (Vertical) e X(Horizontal) = `py-x` e `px-x`
+
+    ```html
+    <p class="bg-info py-3">Tamanho Vertical do padding</p>
+    <p class="bg-info px-4">Tamanho Horizontal do padding</p>
+
+    ```
+* Padding auto = `p-auto` / *centraliza elementos como no `HTML`*
+
+    ```HTML
+    <p class="bg-info py-auto">Tamanho Vertical do padding</p>
+    <p class="bg-info px-auto">Tamanho Horizontal do padding</p>
+    ```
+
+* Margin = `m-X` / *X pode ser de 0 ate 5*
+
+    ```html
+    <p class="bg-info m-1">Tamanho do margin 1</p>
+    <p class="bg-info m-2">Tamanho do margin 2</p>
+    <p class="bg-info m-3">Tamanho do margin 3</p>
+    <p class="bg-info m-4">Tamanho do margin 4</p>
+    <p class="bg-info m-5">Tamanho do margin 5</p>
+    <!-- Sendo o m-0 sem margin -->
+    ```
+
+* Margin Start(Left), End(Right), Bottom e Top = `ms-X`, `me-X`, `mb-X`, `mt-X`
+
+    ```html
+    <p class="bg-info ms-5">Tamanho 5, lado Start do margin </p>
+    <p class="bg-info me-5">Tamanho 5, lado End do margin </p>
+    <p class="bg-info mb-5">Tamanho 5, lado Bottom do margin </p>
+    <p class="bg-info mt-5">Tamanho 5, lado Top do margin </p>
+    ```
+
+
+* Margin Y (Vertical) e X(Horizontal) = `my-x` e `mx-x`
+
+    ```html
+    <p class="bg-info my-3">Tamanho Vertical do margin</p>
+    <p class="bg-info mx-4">Tamanho Horizontal do margin</p>
+
+    ```
+* Margin auto = `m-auto` / *centraliza elementos como no `HTML`*
+
+    ```HTML
+    <p class="bg-info my-auto">Tamanho Vertical do Margin</p>
+    <p class="bg-info mx-auto">Tamanho Horizontal do Margin</p>
+    ```
 
 
