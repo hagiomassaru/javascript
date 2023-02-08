@@ -240,4 +240,32 @@ Resultado:
     <p class="bg-info mx-auto">Tamanho Horizontal do Margin</p>
     ```
 
+# Bootstrap - Container
+
+Containers servem para separarmos em blocos que de auto ajustam melhoram a responsividade da pagina
+
+* Container = `container`
+
+    ```html
+    <div class="container">
+        <h1>Lorem Ipsum</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et erat ultrices, tristique leo id, sagittis
+            libero. Vivamus non porta sem. Pellentesque gravida libero id turpis elementum viverra. Praesent urna ex, luctus
+            vitae mollis eu, euismod eget nunc. Sed posuere metus id augue semper porta. Morbi ultrices posuere dui, sed
+            imperdiet tortor commodo volutpat. Phasellus pharetra volutpat libero eget pulvinar. Fusce eget molestie sapien.
+            Sed quis semper risus, vel suscipit felis. Duis ultrices at velit id tincidunt.
+        </p>
+    </div>
+
+    ```
+
+    Exemplo aplicando a classe `container`:
+
+    ![container](/notes/images/Peek%2009-02-2023%2000-51.gif)
+
+    Exemplo nao aplicando:
+
+    ![container](/notes/images/Peek%2009-02-2023%2000-53.gif)
+
 
