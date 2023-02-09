@@ -80,4 +80,8 @@ Agora iremos colocar cada arquivo em seu lugar.
 - `binario.png` -> Coloque na pasta `usr/pixmaps`
 
 
+# Fonte [TerminalRoot.com.br](https://terminalroot.com.br/2014/12/como-criar-pacotes-deb.html)
+# Video [youtube.com/@TerminalRootTV](https://www.youtube.com/watch?v=DS7ozD5_tko&t=759s)
+
+
 
