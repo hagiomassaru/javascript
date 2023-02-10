@@ -76,9 +76,42 @@ Exemplo de estrutura
 
 Agora iremos colocar cada arquivo em seu lugar. 
 
-- `binario.sh` -> tire a extencao do binario renomeando o mesma para `binario`. E Coloque na pasta `usr/bin`
+- `binario.sh` -> tire a extensão do `binario.sh` renomeando o mesma para `binario`. E Coloque na pasta `usr/bin`
 - `binario.png` -> Coloque na pasta `usr/pixmaps`
+- Crie um arquivo chamado `binario.desktop` em `usr/share/applications`.
 
+Depois edite o arquivo como o editor de sua preferencia. Coloque os dados abaixo:
+
+```
+[Desktop Entry]
+Name=binario
+Icon=binario.jpg
+Type=Application
+Categories=GNOME;GTK;Utility;TextEditor;
+Exec=binario
+StartupNotify=false
+Terminal=true
+
+```
+Ex:
+```
+[Desktop Entry]
+Name=Marcos Pinguim
+Icon=/opt/terminalroot.jpg
+Type=Application
+Categories=GNOME;GTK;Utility;TextEditor;
+Exec=terminalroot
+StartupNotify=false
+Terminal=false
+```
+
+depois isso execute o comando abaixo:
+
+```
+dpkg-deb -b binario/ binario.0.1.deb
+```
+
+pronto! Esta feito seu pacote .deb!
 
 # Fonte [TerminalRoot.com.br](https://terminalroot.com.br/2014/12/como-criar-pacotes-deb.html)
 # Video [youtube.com/@TerminalRootTV](https://www.youtube.com/watch?v=DS7ozD5_tko&t=759s)
