@@ -268,4 +268,46 @@ Containers servem para separarmos em blocos que de auto ajustam melhoram a respo
 
     ![container](/notes/images/Peek%2009-02-2023%2000-53.gif)
 
+# Bootstrap - Display + Float (CSS)
+
+[Mais sobre a propriedade Display](./css.md#display)
+
+[Mais sobre a propriedade Float](./css.md#metodo-float)
+
+* Display Block = `d-block`
+    
+    ```HTML
+    <p class="bg-info d-block">Display Block</p>
+    ```
+* Display Inline = `d-inline`
+    
+    ```HTML
+    <p class="bg-info d-inline">Display Inline</p>
+    ```
+* Display float left e Right = `float-start` e `float-end`
+    
+    ```HTML
+    <p class="bg-info float-star">float start/left</p>
+    <p class="bg-info float-end">float end/right</p>
+    ```
+
+# Bootstrap - Responsividade
+
+No bootstrap podemos adicionar um delimitador que faz que a classe so tenha um efeito caso tenha um determinado tamanho de tela. Esses delimitadores sao:
+
+* `sm` -> small/576px
+* `md` -> medium/768px
+* `lg` -> large/992px
+* `xl` -> xlarge/1200px
+
+Nao sao todas classes que aceitam esse delimitadores, por esse motivo e bom consultar documentação.
+
+Exemplo de uso:
+
+```HTML
+<p class="float-sm-star">float small start/left</p>
+<p class="float-md-star">float medium start/left</p>
+<p class="float-lg-star">float large start/left</p>
+<p class="float-xl-star">float xlarge start/left</p>
+```
 
