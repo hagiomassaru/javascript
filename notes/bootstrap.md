@@ -313,7 +313,38 @@ Exemplo de uso:
 
 # Bootstrap - Flexbox
 
+A logica para usarmos flexbox no bootstrap e basicamente isso: `propriedade-valor`. Segue alguns propriedades em `flexbox` para `bootstrap`
+
+## Display
+
 * `display: flex;` = `d-flex`
 
-* `flex-direction: column;` = `flex-column`
+## Flex-direction
+
+- `flex-direction: row;` = `flex-row`
+- `flex-direction: row-reverse;` = `flex-row-reverse`
+- `flex-direction: column;` = `flex-column`
+- `flex-direction: column-reverse;` = `flex-column-reverse`
+
+## justify-content
+
+- `justify-content: flex-start` = `justify-content-start` 
+- `justify-content: flex-end` = `justify-content-end` 
+- `justify-content: center` = `justify-content-center` 
+- `justify-content: between` = `justify-content-between` 
+- `justify-content: around` = `justify-content-around` 
+- `justify-content: evenly` = `justify-content-evenly`
+
+
+
+- `align-items: flex-start` = `align-items-start`
+- `align-items: flex-end` = `align-items-end`
+- `align-items: center` = `align-items-center`
+- `align-items: baseline` = `align-items-baseline`
+- `align-items: stretch` = `align-items-stretch`
+
+## Flex-wrap
+
+- `flex-wrap: nowrap` = `flex-nowrap`
+- `flex-wrap: wrap` = `flex-wrap`
 
