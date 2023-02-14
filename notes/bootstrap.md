@@ -311,3 +311,9 @@ Exemplo de uso:
 <p class="float-xl-star">float xlarge start/left</p>
 ```
 
+# Bootstrap - Flexbox
+
+* `display: flex;` = `d-flex`
+
+* `flex-direction: column;` = `flex-column`
+
