@@ -326,7 +326,7 @@ A logica para usarmos flexbox no bootstrap e basicamente isso: `propriedade-valo
 - `flex-direction: column;` = `flex-column`
 - `flex-direction: column-reverse;` = `flex-column-reverse`
 
-## justify-content
+## Justify-content
 
 - `justify-content: flex-start` = `justify-content-start` 
 - `justify-content: flex-end` = `justify-content-end` 
@@ -336,12 +336,20 @@ A logica para usarmos flexbox no bootstrap e basicamente isso: `propriedade-valo
 - `justify-content: evenly` = `justify-content-evenly`
 
 
-
+## Align-items
 - `align-items: flex-start` = `align-items-start`
 - `align-items: flex-end` = `align-items-end`
 - `align-items: center` = `align-items-center`
 - `align-items: baseline` = `align-items-baseline`
 - `align-items: stretch` = `align-items-stretch`
+
+## Align-self
+
+- `align-self: fles-start` = `align-self-start`
+- `align-self: fles-end` = `align-self-end`
+- `align-self: center` = `align-self-center`
+- `align-self: baseline` = `align-self-baseline`
+- `align-self: stretch` = `align-self-stretch`
 
 ## Flex-wrap
 
