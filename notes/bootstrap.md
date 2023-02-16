@@ -356,3 +356,70 @@ A logica para usarmos flexbox no bootstrap e basicamente isso: `propriedade-valo
 - `flex-wrap: nowrap` = `flex-nowrap`
 - `flex-wrap: wrap` = `flex-wrap`
 
+[Para saber mais como funciona o Flexbox no CSS. Click Aqui](./flex_box.md)
+
+# Grid
+[Para saber mais como funciona o Grid no CSS. Click Aqui](./grid.md)
+
+> O grid e declarado junto com o flebox, mas nao e necessário utilizar o `d-flex`. Apenas declarando as linhas e colunas e tudo certo.
+## Rows
+
+- `grid-template-rows: auto;` = `rows`
+
+## Columns
+
+- `grid-template-columns: auto;` = `col`
+
+## Base de 12 colunas
+
+No Grid no bootstrap apesar de nos podermos colocar inúmeras colunas, o sistema de distribuição e com em 12 colunas. Exemplo:
+
+```html
+<div class="row">
+        
+    <div class="bg-info col-3">coluna1</div>
+    <div class="bg-success col">coluna2</div>
+
+</div>
+
+```
+
+no caso acima eu defini que a coluna um ocupara 3 (`col-3`) espaços. Levando em conta que o bootstrap se baseia com 12 espaços/colunas,ele deduzira que o valor da coluna2 sera de nove (`col-9`) ja que nao passei valor nenhum.
+
+![resultado](./images/2023-02-17_01-23.png)
+
+E caso eu passasse o seguinte:
+
+```html
+<div class="row">
+        
+    <div class="bg-info col-3">coluna1</div>
+    <div class="bg-success col-3">coluna2</div>
+
+</div>
+
+```
+
+Seria coluna 1 e 2 ocupando 3 espacos (`col-3`) que somados totalizam 6 colunas ocupadas. As outras 6 sao ocupadas por espaços vazios.
+
+![resultado](./images/2023-02-17_01-30.png)
+
+## Responsividade no grid
+
+No grid podemos usar os parâmetros de [resposividade](#bootstrap---responsividade): `sm`, `md`, `lg` e `xl`
+que terão o mesmo efeito no que ja foi dito.
+
+```html
+<div class="row">
+        
+    <div class="bg-info col-md-3">coluna1</div><!-- aplicando responsividade  -->
+    <div class="bg-success col-3">coluna2</div>
+    <div class="bg-info col-3">coluna1</div>
+    <div class="bg-success col-3">coluna2</div>
+    
+</div>
+```
+
+Resultado:
+
+![resultado](./images/Peek%2017-02-2023%2001-43.gif)

@@ -2,11 +2,11 @@
 
 # Grid
 
-Grid e uma propriedade em CSS para criacao e personalizacao de layouts. Diferente do flex-box, Grid separa os elemento como uma grande tabela com linhas e colunas que podemos personalizar usando de algumas ferramentas que ele nos disponibiliza.
+Grid e uma propriedade em CSS para criação e personalização de layouts. Diferente do flex-box, Grid separa os elemento como uma grande tabela com linhas e colunas que podemos personalizar usando de algumas ferramentas que ele nos disponibiliza.
 
 # Inicio de tudo
 
-Para comecarmos devemos atribuir `grid` a propriedade `display`, e depois antes de comecar qualquer modificaremos os elementos definindo um templete utilizando a propriedade `grid-template-rows` para definirmos as linhas e `grid-template-columns` para as colunas.
+Para começarmos devemos atribuir `grid` a propriedade `display`, e depois antes de começar qualquer modificaremos os elementos definindo um templete utilizando a propriedade `grid-template-rows` para definirmos as linhas e `grid-template-columns` para as colunas.
 
 ## **Exemplo**
 
