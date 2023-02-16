@@ -423,3 +423,24 @@ que terão o mesmo efeito no que ja foi dito.
 Resultado:
 
 ![resultado](./images/Peek%2017-02-2023%2001-43.gif)
+
+## Flexbox no Grid
+
+Podemos utilizar elementos do flexbox no grid normalmente. Exemplo:
+
+```html
+<div class="row justify-content-between"><!-- aplicando flexbox  -->
+    <div class="bg-info col-2">coluna1</div>
+    <div class="bg-success col-2">coluna2</div>
+</div>
+
+<div class="row">
+    <div class="bg-info col-3">coluna1</div>
+    <div class="bg-success col-3">coluna2</div>
+</div>
+
+```
+
+resultado:
+
+![resultado](./images/2023-02-17_01-51.png)
