@@ -444,3 +444,6 @@ Podemos utilizar elementos do flexbox no grid normalmente. Exemplo:
 resultado:
 
 ![resultado](./images/2023-02-17_01-51.png)
+
+# Bootstrap - Tipografia
+
