@@ -447,3 +447,45 @@ resultado:
 
 # Bootstrap - Tipografia
 
+## Peso de fontes
+
+
+- `fw-bold` =  Negrito.
+
+- `fw-bolder` =  Texto com peso em negrito (relativo ao elemento pai).
+
+- `fw-semibold` =  Semi negrito.
+
+- `fw-normal` =  Normal.
+
+- `fw-light` =  Claro.
+
+- `fw-lighter` =  Texto com peso Claro (relativo ao elemento pai).
+
+- `fst-italic` =  Itálico.
+
+- `fst-normal` =  Texto com fonte normal
+
+## Formatação de texto
+
+
+- `text-start` = Texto a esquerda
+
+- `text-center` = Texto no centro
+
+- `text-end` = Texto a direita
+
+>obs: o texto justificado foi retirado no bootstrap, como usarmos teremos que usar manualmente com css puro `text-align: justify;`
+
+- `font-monospace` = deixar o texto em monospace (font-padrão)
+
+- `text-lowercase` = Texto em minusculo
+
+- `text-uppercase` = Texto em maiúsculo
+
+- `text-capitalize` = Texto capitalizado
+
+- `text-decoration-none` = Texto sem decoração
+
+- `list-unstyled` = Lista sem decoração
+
