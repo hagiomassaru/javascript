@@ -113,21 +113,27 @@ Ex:
 ## Tabelas
 
 - `<table>` -> Tag de armazena a tabela
+- `<thead>` -> Tag de cabeçalho
+- `<tbody>` -> Tag de corpo
 - `<tr>` -> Tag de linha da tabela
 - `<th>` -> Tag de cabeçalho da tabela
 - `<td>` -> Tag de Dados da tabela
 Ex:
 ```html
-<table><!-- Tabela -->
-    <tr><!-- Linha -->
-        <th>Nome</th><!-- Cabeçalho -->
-        <th>Sobrenome</th>
-    </tr>
-    <tr>
-        <td>Massaru</td><!-- Dados -->
-        <td>Hagio</td>
-    </tr>
-</table>
+    <table><!-- Tabela -->
+        <thead><!-- Seção Cabeçalho -->                
+            <tr><!-- Linha -->                    
+                <th>Nome</th><!-- Cabeçalho -->  
+                <th>Sobrenome</th>
+            </tr>
+        </thead>
+        <tbody><!-- Seção do Corpo -->   
+            <tr><!-- Linha -->  
+                <td>Massaru</td><!-- Dados -->
+                <td>Hagio</td>
+            </tr>
+        </tbody>
+    </table>
 ```
 
 

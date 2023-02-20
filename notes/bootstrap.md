@@ -489,3 +489,51 @@ resultado:
 
 - `list-unstyled` = Lista sem decoração
 
+# Bootstrap - Tabelas
+
+- `table` = Classe que formata a tabela no formato padrão do bootstrap. Muito mais bonito
+
+![resultado](./images/Peek%2021-02-2023%2000-45.gif)
+
+- `table-striped` = Tabela listrada
+
+- `table-bordered` = Tabela com bordas
+
+- `table-borderless` = Tabela sem bordas
+
+- `table-hover` = Tabela com efeito ao passar o mouse em cima
+
+- `table-dark` = Tabela com estilo Dark
+
+> Esses estilos podem ser aplicados em linhas individuais
+
+```html
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="table-success"> <!-- aplicando formatação em uma linha  -->
+            <td>Massaru</td>
+            <td>Hagio</td>
+        </tr>
+        <tr class="table-danger"> <!-- mesma coisa  -->
+            <td>Yuuko</td>
+            <td>Hagio</td>
+        </tr>
+    </tbody>
+</table>
+
+```
+
+![resultado](./images/2023-02-21_01-08.png)
+
+> Caso queira aplicar formatação no cabeçalho so substituir `table` por `thead` EX: `thead-dark` e `thead-light`
+
+- `table-sm` = Tabela padding compacto
+
+- `table-resposive` = Tabela responsiva (Quando nao puder aparecer os dados na janela, aparecera um scrolling na tela)
+

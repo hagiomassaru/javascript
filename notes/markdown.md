@@ -116,7 +116,10 @@ de outra forma teria um significado especial na sintaxe de formatação da Markd
  *  Qualquer URL (Como http://www.github.com/) será automaticamente convertido em um link clicável.  
  *  O suporte à tabela Markdown é projetado para lidar com a maioria das tabelas para a maioria das pessoas; não cobre todas as tabelas para todas as pessoas. Se você precisa de tabelas complexas, você precisará criá-las manualmente ou com uma ferramenta especificamente projetada para o formato de saída.  
 ```Eu tive tanta dor tornando possível a tabela acima```
- 
+
+[Mais sobre Markdown](https://docs.pipz.com/central-de-ajuda/learning-center/guia-basico-de-markdown#open)
+
+
 ###### Autor: *Vo Tran Thanh Luong*.
 ###### Tradução: *Héricles Emanuel*.
 ###### Correções: [*Alexander Santos*](https://github.com/Ronkiro).
