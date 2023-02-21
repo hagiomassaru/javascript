@@ -537,3 +537,5 @@ resultado:
 
 - `table-resposive` = Tabela responsiva (Quando nao puder aparecer os dados na janela, aparecera um scrolling na tela)
 
+# Bootstrap - Alertas
+
