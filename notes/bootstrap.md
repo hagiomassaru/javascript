@@ -543,3 +543,17 @@ resultado:
 
 - `alert-danger` = Deixa no formado alert e na cor `danger` ([mais sobre cores click aqui!](#bootstrap---cores))
 
+- `alert-link` = Link em formato de alerta
+
+- `alert-dismissible` = Aparentamento nao faz nada, mas se voce criar um `button` e adicionar a propriedade `data-bs-dismiss='alert'`, caso o usuário click no botão o alerta sera fechado.
+
+```html
+<div class="alert alert-danger alert-dismissible">
+        <button class="btn-close" data-bs-dismiss="alert"></button>
+        este e o meu alerta
+    </div>
+
+```
+
+![resultado](./images/Peek%2022-02-2023%2023-59.gif)
+
