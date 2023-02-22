@@ -539,3 +539,7 @@ resultado:
 
 # Bootstrap - Alertas
 
+- `alert` = Deixa em formato de alert
+
+- `alert-danger` = Deixa no formado alert e na cor `danger` ([mais sobre cores click aqui!](#bootstrap---cores))
+
