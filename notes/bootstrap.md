@@ -557,3 +557,65 @@ resultado:
 
 ![resultado](./images/Peek%2022-02-2023%2023-59.gif)
 
+# Bootstrap - Botão
+
+- `btn` = Classe padrão de botão no bootstrap.
+
+## Cor dos botãos
+
+- `btn-primary` = Primary / Azul Escuro
+
+- `btn-secondary` = Secondary / Cinza
+
+- `btn-success` = Success / Verde
+
+- `btn-danger` = Danger / Vermelho
+
+- `btn-warning` = Warning / Amarelo
+
+- `btn-info` = Info / Azul Claro
+
+- `btn-light` = Light / Branco
+
+- `btn-white` = White / Branco
+
+- `btn-dark` = Dark / Preto
+
+- `btn-link` = Link / Cor padrão de Link
+
+![resultado](./images/2023-02-27_23-19.png)
+
+## Estilo de Botoes podem ser utilizados em outros tipos de elemento html
+
+```html
+<input type="submit" class="btn btn-success" value="Enviar">
+
+<a href="#" class="btn btn-primary">Facebook</a>
+
+```
+
+![resultado](./images/2023-02-27_23-27.png)
+
+## `btn` outline
+
+- `btn-outline-primary` = Primary / Azul Escuro com outline
+
+![resultado](./images/Peek%2027-02-2023%2023-32.gif)
+
+Funciona com cor de estilo de qualquer botão.
+
+## Tamanho
+
+- `btn-sm` = botão pequeno (small)
+
+- `btn-lg` = botão grande (large)
+
+- `btn-block` = botão vai ocupar toda a largura da tela
+
+## Active / Disable
+
+- `active` = Estilo do botão fica como se estivesse ativo
+
+- `disable` = Estilo do botão fica como se estivesse inativo
+
+
