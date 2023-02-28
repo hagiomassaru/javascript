@@ -618,4 +618,60 @@ Funciona com cor de estilo de qualquer botão.
 
 - `disable` = Estilo do botão fica como se estivesse inativo
 
+## Agrupando Botoes
 
+- **Agrupamento simples**
+
+```html
+    <div class="btn-group">
+        <button>botão1</button>
+        <button>botão2</button>
+        <button>botão3</button>
+        <button>botão4</button>
+    </div>
+```
+
+- **Agrupamento composto**
+
+```html
+    <div class="btn-group">
+        <button>botão1</button>
+        <button>botão2</button>
+        <button>botão3</button>
+        <button>botão4</button>
+        <div class="btn-group">
+            <button>botão1</button>
+            <button>botão2</button>
+            <button>botão3</button>
+            <button>botão4</button>
+        </div>
+    </div>
+```
+
+- **Agrupamento tamanho**
+
+```html
+    <div class="btn-group btn-group-sm">
+        <button>botão1</button>
+        <button>botão2</button>
+        <button>botão3</button>
+        <button>botão4</button>        
+    </div>
+    <div class="btn-group btn-group-lg">
+        <button>botão1</button>
+        <button>botão2</button>
+        <button>botão3</button>
+        <button>botão4</button>        
+    </div>
+```
+
+- **Agrupamento vertical**
+
+```html
+    <div class="btn-group-vertical">
+        <button>botão1</button>
+        <button>botão2</button>
+        <button>botão3</button>
+        <button>botão4</button>        
+    </div>
+```
