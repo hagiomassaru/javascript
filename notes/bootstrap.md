@@ -618,7 +618,7 @@ Funciona com cor de estilo de qualquer botão.
 
 - `disable` = Estilo do botão fica como se estivesse inativo
 
-## Agrupando Botoes
+## Agrupando de Botoes
 
 - **Agrupamento simples**
 
@@ -675,3 +675,20 @@ Funciona com cor de estilo de qualquer botão.
         <button>botão4</button>        
     </div>
 ```
+
+# Collapse
+
+O classe `collapse` faz com que um elemento html seja mostrado diante de uma ação. Para usarmos esse recurso devemos definir um elemento com a classe `collapse` se recebera o evento e outro efetuara o evento.
+
+```html
+    <button data-bs-toggle="collapse" data-bs-target="#teste">Mostrar</button>
+    <div id="teste" class="collapse">Collapse</div>
+```
+![resultado](./images/Peek%2001-03-2023%2023-50.gif)
+
+O elemento que efetuara a ação e composto pela propriedade `data-bs-toggle` (define quais classes surtirão o efeito) e `data-bs-target` (Define qual elemento recebera o efeito). EX: `<button data-bs-toggle="collapse" data-bs-target="#teste">Mostrar</button>`
+
+Caso queira que o elemento ao invés de desaparecer e aparece, podemos fazer o contrario com a classe `show`.
+
+
+![resultado](./images/Peek%2001-03-2023%2023-46.gif)
