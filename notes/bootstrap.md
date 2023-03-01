@@ -690,5 +690,9 @@ O elemento que efetuara a ação e composto pela propriedade `data-bs-toggle` (d
 
 Caso queira que o elemento ao invés de desaparecer e aparece, podemos fazer o contrario com a classe `show`.
 
+```html
+    <button data-bs-toggle="collapse" data-bs-target="#teste">Mostrar</button>
+    <div id="teste" class="collapse show">Collapse</div>
+```
 
 ![resultado](./images/Peek%2001-03-2023%2023-46.gif)
