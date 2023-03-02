@@ -676,7 +676,7 @@ Funciona com cor de estilo de qualquer botão.
     </div>
 ```
 
-# Collapse
+# Bootstrap - Collapse
 
 O classe `collapse` faz com que um elemento html seja mostrado diante de uma ação. Para usarmos esse recurso devemos definir um elemento com a classe `collapse` se recebera o evento e outro efetuara o evento.
 
@@ -696,3 +696,5 @@ Caso queira que o elemento ao invés de desaparecer e aparece, podemos fazer o c
 ```
 
 ![resultado](./images/Peek%2001-03-2023%2023-46.gif)
+
+# Bootstrap - DropDown
