@@ -698,3 +698,172 @@ Caso queira que o elemento ao invés de desaparecer e aparece, podemos fazer o c
 ![resultado](./images/Peek%2001-03-2023%2023-46.gif)
 
 # Bootstrap - DropDown
+
+DropDown e um botão que abre um menu/lista de opções para o usuario.
+
+```html
+
+    <div class="container">
+        <div class="dropdown"><!-- criando div dropdown  -->
+            <button class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown">Atividades</button><!-- definindo botão responsável pelo dropdown -->
+            <div class="dropdown-menu"><!-- criando menu  -->
+                <!-- Elementos do menu  -->
+                <a class="dropdown-item" href="#">menu1</a>
+                <a class="dropdown-item" href="#">menu2</a>
+                <a class="dropdown-item" href="#">menu3</a>
+                <a class="dropdown-item" href="#">menu4</a>
+                <!-- class="dropdown-item" Serve para organizarmos os itens em uma lista vertical. -->
+            </div>
+        </div>
+    </div>
+
+```
+
+![resultado](./images/Peek%2006-03-2023%2000-27.gif)
+
+## dropdown-divider
+
+Podemos dividir o menu...
+
+```html
+<div class="dropdown">
+    <button class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown">Atividades</button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">menu1</a>
+        <a class="dropdown-item" href="#">menu2</a>
+        <a class="dropdown-item" href="#">menu3</a>
+        <a class="dropdown-item" href="#">menu4</a>
+        <div class="dropdown-divider"></div><!-- Divider -->
+        <a class="dropdown-item" href="#">menu1</a>
+        <a class="dropdown-item" href="#">menu2</a>
+        <a class="dropdown-item" href="#">menu3</a>
+        <a class="dropdown-item" href="#">menu4</a>
+    </div>
+</div>
+
+```
+
+![resultado](./images/2023-03-06_00-35.png)
+
+## dropdown-header
+
+Podemos definir cabeçalhos no menu...
+
+```html
+<div class="dropdown">
+    <button class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown">Atividades</button>
+    <div class="dropdown-menu">
+        <div class="dropdown-header"> Header Menu</div><!-- Header Menu -->                
+        <a class="dropdown-item" href="#">menu1</a>
+        <a class="dropdown-item" href="#">menu2</a>
+        <a class="dropdown-item" href="#">menu3</a>
+        <a class="dropdown-item" href="#">menu4</a>
+        <div class="dropdown-header"> Header Menu 2</div><!-- Header Menu -->
+        <a class="dropdown-item" href="#">menu1</a>
+        <a class="dropdown-item" href="#">menu2</a>
+        <a class="dropdown-item" href="#">menu3</a>
+        <a class="dropdown-item" href="#">menu4</a>
+    </div>
+</div>
+```
+
+![resultado](./images/2023-03-06_00-40.png)
+
+
+> As classe `active` e `disable` funcionam normalmente em qualquer `dropdown`.
+
+## Direção da abertura de menus
+
+Mudando classe no `<div class="dropdown">` podemos mudar direção adicionando alguns argumentos extras. 
+
+**Centered**
+
+```html
+    <div class="container">
+        <div class="dropdown-center">
+            <button class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown">Atividades</button>
+            <div class="dropdown-menu">               
+                <a class="dropdown-item" href="#">menu1</a>
+                <a class="dropdown-item" href="#">menu2</a>
+                <a class="dropdown-item" href="#">menu3</a>
+            </div>
+        </div>
+    </div>
+```
+
+![resultado](./images/2023-03-06_00-52.png)
+
+**Dropup**
+
+
+```html
+    <div class="container">
+        <div class="dropdown fixed-bottom dropup">
+            <!-- a classe fixed-bottom e apenas para jogar o botão para a parte inferior da tela. Nao e obrigatório. eu fiz isso por que caso contrario o menu suspenso nao apareceria no topo -->
+            <button class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown">Atividades</button>
+            <div class="dropdown-menu">               
+                <a class="dropdown-item" href="#">menu1</a>
+                <a class="dropdown-item" href="#">menu2</a>
+                <a class="dropdown-item" href="#">menu3</a>
+            </div>
+        </div>
+    </div>
+```
+
+![resultado](./images/2023-03-06_00-56.png)
+
+**Dropup centered**
+
+
+```html
+    <div class="container">
+        <div class="dropdown-center fixed-bottom dropup">
+            <button class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown">Atividades</button>
+            <div class="dropdown-menu">               
+                <a class="dropdown-item" href="#">menu1</a>
+                <a class="dropdown-item" href="#">menu2</a>
+                <a class="dropdown-item" href="#">menu3</a>
+            </div>
+        </div>
+    </div>
+```
+
+![resultado](./images/2023-03-06_01-07.png)
+
+**Dropend**
+
+
+```html
+    <div class="container">
+        <div class="dropdown dropend">
+            <button class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown">Atividades</button>
+            <div class="dropdown-menu">               
+                <a class="dropdown-item" href="#">menu1</a>
+                <a class="dropdown-item" href="#">menu2</a>
+                <a class="dropdown-item" href="#">menu3</a>
+            </div>
+        </div>
+    </div>
+```
+
+![resultado](./images/2023-03-06_01-03.png)
+
+**Dropstart**
+
+
+```html
+    <div class="container">
+        <div class="dropdown dropstart">
+            <button class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown">Atividades</button>
+            <div class="dropdown-menu">               
+                <a class="dropdown-item" href="#">menu1</a>
+                <a class="dropdown-item" href="#">menu2</a>
+                <a class="dropdown-item" href="#">menu3</a>
+            </div>
+        </div>
+    </div>
+```
+
+![resultado](./images/2023-03-06_01-03_1.png)
+
+
