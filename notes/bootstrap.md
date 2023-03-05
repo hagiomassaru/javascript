@@ -866,4 +866,25 @@ Mudando classe no `<div class="dropdown">` podemos mudar direção adicionando a
 
 ![resultado](./images/2023-03-06_01-03_1.png)
 
+## Utilizando btn-group
+
+podemos utiliza `btn-group` para colocarmos dois botoes unificados, sendo um descrição e o outro o `dropdown`...
+
+```html
+        <div class="btn-group">
+            <button class="btn btn-info">Atividades</button>
+            <button class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown"></button>
+            <div class="dropdown-menu">               
+                <a class="dropdown-item" href="#">menu1</a>
+                <a class="dropdown-item" href="#">menu2</a>
+                <a class="dropdown-item" href="#">menu3</a>
+            </div>
+        </div>
+
+```
+![resultado](./images/Peek%2006-03-2023%2002-01.gif)
+
+
+
+
 
