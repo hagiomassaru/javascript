@@ -884,6 +884,18 @@ podemos utiliza `btn-group` para colocarmos dois botoes unificados, sendo um des
 ```
 ![resultado](./images/Peek%2006-03-2023%2002-01.gif)
 
+# Bootstrap - Cards
+
+Podemos criar `cards` no bootstrap atribuindo um elemento html com o mesmo...
+
+```html
+<div class="card">
+    Card
+</div>
+
+```
+![resultado](./images/2023-03-08_01-31.png)
+
 
 
 
