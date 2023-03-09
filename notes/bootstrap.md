@@ -896,6 +896,23 @@ Podemos criar `cards` no bootstrap atribuindo um elemento html com o mesmo...
 ```
 ![resultado](./images/2023-03-08_01-31.png)
 
+podemos separar o card em seções como em uma pagina web...
+
+```html
+<div class="card w200">
+    <div class="card-header">
+        header
+    </div>
+    <div class="card-body">
+        body
+    </div>
+    <div class="card-footer">
+        footer
+    </div>
+</div>
+```
+![resultado](./images/2023-03-10_03-42.png)
+
 
 
 
