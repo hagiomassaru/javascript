@@ -913,7 +913,120 @@ podemos separar o card em seções como em uma pagina web...
 ```
 ![resultado](./images/2023-03-10_03-42.png)
 
+# Bootstrap - Accordion
+
+![resultado](./images/Peek%2004-04-2023%2016-22.gif)
+
+Código:
+
+```html
+<div class="card">
+    <div class="card-header">
+        <a href="#resp1" class="card-link" data-bs-toggle="collapse">
+            Pergunta 1
+        </a>
+    </div>
+    <div id="resp1" class="collapse">
+        <div class="card-body">
+            Resposta 1
+        </div>
+    </div>
+</div>
+```
+
+Apesar de estar usando a classe `card` do bootstrap, a logica valeria para qualquer elemento.
+
+## Utilizando vários `Accordion`
+
+![alt](./images/Peek%2004-04-2023%2016-48.gif)
+
+> Todos abrem e fecham manualmente.
+
+Código:
+
+```html
+<div class="card">
+    <div class="card-header">
+        <a href="#resp1" class="card-link" data-bs-toggle="collapse">
+            Pergunta 1
+        </a>
+    </div>
+    <div id="resp1" class="collapse">
+        <div class="card-body">
+            Resposta 1
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        <a href="#resp2" class="card-link" data-bs-toggle="collapse">
+            Pergunta 2
+        </a>
+    </div>
+    <div id="resp2" class="collapse">
+        <div class="card-body">
+            Resposta 2
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        <a href="#resp3" class="card-link" data-bs-toggle="collapse">
+            Pergunta 3
+        </a>
+    </div>
+    <div id="resp3" class="collapse">
+        <div class="card-body">
+            Resposta 3
+        </div>
+    </div>
+</div>
+```
 
 
+![alt](./images/Peek%2004-04-2023%2019-02.gif)
 
+> Todos abrem e fecham individualmente e fecham automaticamente.
+
+Código:
+
+```html
+<div id="accordion">
+    <div class="card">
+        <div class="card-header">
+            <a href="#resp1" class="card-link" data-bs-toggle="collapse">
+                Pergunta 1
+            </a>
+        </div>
+        <div id="resp1" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+                Resposta 1
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <a href="#resp2" class="card-link" data-bs-toggle="collapse">
+                Pergunta 2
+            </a>
+        </div>
+        <div id="resp2" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+                Resposta 2
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <a href="#resp3" class="card-link" data-bs-toggle="collapse">
+                Pergunta 3
+            </a>
+        </div>
+        <div id="resp3" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+                Resposta 3
+            </div>
+        </div>
+    </div>
+```
 
