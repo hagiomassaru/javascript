@@ -1030,3 +1030,105 @@ Código:
     </div>
 ```
 
+# Bootstrap - Progress Bar
+
+![alt](./images/2023-04-05_21-36.png)
+
+Código:
+
+```html
+<div class="progress">
+    <div class="progress-bar" style="width: 30%;">30%</div>
+</div>
+```
+
+## Trocando cor
+
+![alt](./images/2023-04-05_21-39.png)
+
+Código:
+
+```html
+<div class="progress">
+    <div class="progress-bar bg-success" style="width: 30%;">30%</div>
+</div>
+```
+
+## Aumentando de tamanho
+
+![alt](./images/2023-04-05_21-42.png)
+
+Código:
+
+```html
+<div class="progress" style="height: 30px;">
+    <div class="progress-bar bg-success" style="width: 30%;height: 30px;">30%</div>
+</div>
+```
+
+## Barra listrada
+
+![alt](./images/2023-04-05_21-45.png)
+
+Código:
+
+```html
+<div class="progress" style="height: 30px;">
+    <div class="progress-bar bg-success progress-bar-striped" style="width: 30%;height: 30px;">30%</div>
+</div>
+```
+## Barra listrada animada
+
+![alt](./images/Peek%2005-04-2023%2021-48.gif)
+
+Código:
+
+```html
+<div class="progress" style="height: 30px;">
+    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 30%;height: 30px;">30%</div>
+</div>
+```
+## Barra listrada animada com progresso
+
+![alt](./images/Peek%2005-04-2023%2022-06.gif)
+
+Código:
+
+```html
+<div class="progress" style="height: 30px;">
+    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+        style="width: 30%;height: 30px;">30%</div>
+</div>
+
+<script>
+    let progressBar = document.querySelector(".progress-bar");
+    progressBar.innerHTML = "0%";
+    progressBar.style.width = "0%";
+
+    let value = 0;
+
+    setInterval(()=>{
+        if(value > 100){
+            value = 100
+        }
+        progressBar.innerHTML = value + "%";
+        progressBar.style.width = value + "%";
+        value++;
+
+    },200)
+</script>
+```
+## Múltiplos progressos em uma barra
+
+![alt](./images/2023-04-05_22-10.png)
+
+Código:
+
+```html
+<div class="progress" style="height: 30px;">
+    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+        style="width: 30%;height: 30px;">30%</div>
+    <div class="progress-bar bg-info progress-bar-striped progress-bar-animated"
+        style="width: 10%;height: 30px;">10%</div>
+</div>
+```
