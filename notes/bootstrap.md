@@ -1132,3 +1132,56 @@ Código:
         style="width: 10%;height: 30px;">10%</div>
 </div>
 ```
+
+
+# Bootstrap - Spinner
+
+![alt](./images/Peek%2006-04-2023%2019-49.gif)
+
+Código:
+
+```html
+
+<div class="spinner-border"></div>
+
+```
+
+## Mudando cor do Spinner
+
+
+![alt](./images/Peek%2006-04-2023%2019-51.gif)
+
+Código:
+
+```html
+
+<div class="spinner-border text-info"></div>
+
+```
+## Mudando tamanho do Spinner
+
+
+
+- **pequeno**
+
+![alt](./images/Peek%2006-04-2023%2019-55.gif)
+
+Código:
+
+```html
+
+<div class="spinner-border spinner-border-sm"></div>
+
+```
+## Spinner Grow
+
+
+![alt](./images/Peek%2006-04-2023%2019-59.gif)
+
+Código:
+
+```html
+
+<div class="spinner-grow"></div>
+
+```
