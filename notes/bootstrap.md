@@ -1185,3 +1185,184 @@ Código:
 <div class="spinner-grow"></div>
 
 ```
+
+# Bootstrap - Lista agrupada
+
+
+![alt](./images/2023-04-08_22-09.png)
+
+Código:
+
+```html
+
+<ul class="list-group">
+    <li class="list-group-item">Item 1</li>
+    <li class="list-group-item">Item 2</li>
+    <li class="list-group-item">Item 3</li>
+    <li class="list-group-item">Item 4</li>
+</ul>
+
+```
+
+- **Ativada**
+
+![alt](./images/2023-04-08_22-10.png)
+
+Código:
+
+```html
+
+<ul class="list-group">
+    <li class="list-group-item">Item 1</li>
+    <li class="list-group-item active">Item 2</li>
+    <li class="list-group-item">Item 3</li>
+    <li class="list-group-item">Item 4</li>
+</ul>
+
+```
+
+> `List-group` poder ser implementado em qualquer elemento.
+
+## Utilizando `list-group` em outro elemento
+
+![alt](./images/2023-04-08_22-18.png)
+
+Código:
+
+```html
+
+<div class="list-group">
+    <a href="#" class="list-group-item">Item 1</a>
+    <a href="#" class="list-group-item">Item 2</a>
+    <a href="#" class="list-group-item">Item 3</a>
+    <a href="#" class="list-group-item">Item 4</a>
+</div>
+
+```
+
+> Como pode ver temos um resultado muito parecido, apesar de estarmos utilizando links. 
+## Eliminando formatação do link (pode ser aplicado em qualquer elemento)
+
+![alt](./images/2023-04-08_22-26.png)
+
+Código:
+
+```html
+
+<!-- APLICANDO list-group-item-action -->
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action">Item 1</a>
+    <a href="#" class="list-group-item list-group-item-action">Item 2</a>
+    <a href="#" class="list-group-item list-group-item-action">Item 3</a>
+    <a href="#" class="list-group-item list-group-item-action">Item 4</a>
+</div>
+<!-- SEM list-group-item-action -->
+<div class="list-group">
+    <a href="#" class="list-group-item">Item 1</a>
+    <a href="#" class="list-group-item">Item 2</a>
+    <a href="#" class="list-group-item">Item 3</a>
+    <a href="#" class="list-group-item">Item 4</a>
+</div>
+
+```
+
+> Nesse caso os links ja estavam estavam sem formatação. 
+
+- **Desativando**
+
+![alt](./images/2023-04-08_22-40.png)
+
+Código:
+
+```html
+
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action">Item 1</a>
+    <a href="#" class="list-group-item list-group-item-action disabled">Item 2</a>
+    <a href="#" class="list-group-item list-group-item-action">Item 3</a>
+    <a href="#" class="list-group-item list-group-item-action">Item 4</a>
+</div>
+
+```
+
+## Eliminando bordas laterais de uma lista
+
+![alt](./images/2023-04-08_22-44.png)
+
+Código:
+
+```html
+
+<div class="container">
+    <!-- APLICANDO list-group-flush -->
+    <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action">Item 1</a>
+        <a href="#" class="list-group-item list-group-item-action disabled">Item 2</a>
+        <a href="#" class="list-group-item list-group-item-action">Item 3</a>
+        <a href="#" class="list-group-item list-group-item-action">Item 4</a>
+    </div>
+    <!-- SEM list-group-flush -->
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">Item 1</a>
+        <a href="#" class="list-group-item list-group-item-action disabled">Item 2</a>
+        <a href="#" class="list-group-item list-group-item-action">Item 3</a>
+        <a href="#" class="list-group-item list-group-item-action">Item 4</a>
+    </div>
+</div>
+
+```
+## Lista horizontal
+
+![alt](./images/2023-04-08_22-46.png)
+
+Código:
+
+```html
+
+<div class="container">
+    <!-- APLICANDO list-group-horizontal -->
+    <div class="list-group list-group-horizontal">
+        <a href="#" class="list-group-item list-group-item-action">Item 1</a>
+        <a href="#" class="list-group-item list-group-item-action disabled">Item 2</a>
+        <a href="#" class="list-group-item list-group-item-action">Item 3</a>
+        <a href="#" class="list-group-item list-group-item-action">Item 4</a>
+    </div>
+    <!-- SEM list-group-horizontal -->
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">Item 1</a>
+        <a href="#" class="list-group-item list-group-item-action disabled">Item 2</a>
+        <a href="#" class="list-group-item list-group-item-action">Item 3</a>
+        <a href="#" class="list-group-item list-group-item-action">Item 4</a>
+    </div>
+</div>
+
+```
+
+## Aplicando cores
+
+> A logica e a mesma no que ja vimos.
+
+![alt](./images/2023-04-08_22-52.png)
+
+Código:
+
+```html
+
+<div class="container">
+    <!-- APLICANDO CORES -->
+    <div class="list-group list-group-horizontal">
+        <a href="#" class="list-group-item list-group-item-success">Item 1</a>
+        <a href="#" class="list-group-item list-group-item-info">Item 2</a>
+        <a href="#" class="list-group-item list-group-item-danger">Item 3</a>
+        <a href="#" class="list-group-item list-group-item-primary">Item 4</a>
+    </div>
+    <!-- SEM CORES -->
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">Item 1</a>
+        <a href="#" class="list-group-item list-group-item-action">Item 2</a>
+        <a href="#" class="list-group-item list-group-item-action">Item 3</a>
+        <a href="#" class="list-group-item list-group-item-action">Item 4</a>
+    </div>
+</div>
+
+```
