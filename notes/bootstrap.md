@@ -1471,3 +1471,131 @@ Código:
     </ul>
 </nav>
 ```
+
+
+# Bootstrap - Nav
+
+![alt](./images/2023-04-10_22-53.png)
+
+Código:
+
+```html
+<ul class="nav">
+    <li class="nav-item">Home</li>
+    <li class="nav-item">Sobre</li>
+    <li class="nav-item">Contato</li>
+</ul>
+```
+
+> esta sem formatação (e normal)
+
+![alt](./images/2023-04-10_22-57.png)
+
+Código:
+
+```html
+<ul class="nav">
+    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+</ul>
+```
+
+> agora sim!
+
+## `nav-tabs`
+
+
+![alt](./images/2023-04-10_23-01.png)
+
+Código:
+
+```html
+<ul class="nav nav-tabs">
+    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+</ul>
+```
+
+- **ativo e desativo**
+
+![alt](./images/2023-04-10_23-04.png)
+
+Código:
+
+```html
+<ul class="nav nav-tabs">
+    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+    <li class="nav-item"><a href="#" class="nav-link active">Sobre</a></li>
+    <li class="nav-item"><a href="#" class="nav-link disabled">Contato</a></li>
+</ul>
+```
+
+## `nav-pills`
+
+![alt](./images/2023-04-10_23-06.png)
+
+Código:
+
+```html
+<ul class="nav nav-pills">
+    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+    <li class="nav-item"><a href="#" class="nav-link active">Sobre</a></li>
+    <li class="nav-item"><a href="#" class="nav-link disabled">Contato</a></li>
+</ul>
+```
+
+## `nav-justified`
+
+![alt](./images/2023-04-10_23-08.png)
+
+Código:
+
+```html
+<ul class="nav nav-pills nav-justified">
+    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+    <li class="nav-item"><a href="#" class="nav-link active">Sobre</a></li>
+    <li class="nav-item"><a href="#" class="nav-link disabled">Contato</a></li>
+</ul>
+```
+## `tab-content`
+
+
+- **nav-tabs**
+
+![alt](./images/Peek%2010-04-2023%2023-25.gif)
+
+Código:
+
+```html
+<ul class="nav nav-tabs nav-justified">
+    <li class="nav-item"><a href="#home" class="nav-link active" data-bs-toggle="tab">Home</a></li>
+    <li class="nav-item"><a href="#sobre" class="nav-link" data-bs-toggle="tab">Sobre</a></li>
+    <li class="nav-item"><a href="#contato" class="nav-link" data-bs-toggle="tab">Contato</a></li>
+</ul>
+<div class="tab-content">
+    <div id="home" class="tab-pane active"><h1>Home</h1></div>
+    <div id="sobre" class="tab-pane fade"><h1>Sobre</h1></div>
+    <div id="contato" class="tab-pane fade"><h1>Contato</h1></div>
+</div>
+```
+
+- **nav-pills**
+
+![alt](./images/Peek%2010-04-2023%2023-28.gif)
+
+Código:
+
+```html
+<ul class="nav nav-pills nav-justified">
+    <li class="nav-item"><a href="#home" class="nav-link active" data-bs-toggle="tab">Home</a></li>
+    <li class="nav-item"><a href="#sobre" class="nav-link" data-bs-toggle="tab">Sobre</a></li>
+    <li class="nav-item"><a href="#contato" class="nav-link" data-bs-toggle="tab">Contato</a></li>
+</ul>
+<div class="tab-content">
+    <div id="home" class="tab-pane active"><h1>Home</h1></div>
+    <div id="sobre" class="tab-pane fade"><h1>Sobre</h1></div>
+    <div id="contato" class="tab-pane fade"><h1>Contato</h1></div>
+</div>
+```
