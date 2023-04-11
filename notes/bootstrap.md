@@ -1599,3 +1599,84 @@ Código:
     <div id="contato" class="tab-pane fade"><h1>Contato</h1></div>
 </div>
 ```
+
+# Barra de navegação - `navbar`
+
+## Padrão
+
+![alt](./images/2023-04-11_19-28.png)
+
+Código:
+
+```html
+<nav class="navbar">
+    <ul class="navbar-nav">
+        <li class="nav-item"><a href="#home" class="nav-link active" data-bs-toggle="tab">Home</a></li>
+        <li class="nav-item"><a href="#sobre" class="nav-link" data-bs-toggle="tab">Sobre</a></li>
+        <li class="nav-item"><a href="#contato" class="nav-link" data-bs-toggle="tab">Contato</a></li>
+    </ul>
+</nav>
+```
+
+## Deixando barra na horizontal - `navbar-expand`
+
+![alt](./images/Peek%2011-04-2023%2019-34.gif)
+
+Código:
+
+```html
+<nav class="navbar navbar-expand-md">
+    <ul class="navbar-nav">
+        <li class="nav-item"><a href="#home" class="nav-link active" data-bs-toggle="tab">Home</a></li>
+        <li class="nav-item"><a href="#sobre" class="nav-link" data-bs-toggle="tab">Sobre</a></li>
+        <li class="nav-item"><a href="#contato" class="nav-link" data-bs-toggle="tab">Contato</a></li>
+    </ul>
+</nav>
+```
+
+* **Tamanho que realizara a quebra de texto**
+    - `navbar-expand-sm`
+    - `navbar-expand-md`
+    - `navbar-expand-lg`
+
+> podemos alterar cor das letras usando classe do bootstrap (`navbar-dark`) e aplicar posicionamento dos elementos com flex. Caso queira alterar cor de fundo pode ser usado o `bg` do bootstrap.
+
+
+## Logo - `navbar-brand`
+
+![alt](./images/2023-04-11_19-47.png)
+
+Código:
+
+```html
+<nav class="navbar bg-dark navbar-expand-md navbar-dark">
+    <div class="navbar-brand">Logo</div>
+    <ul class="navbar-nav">
+        <li class="nav-item"><a href="#home" class="nav-link active" data-bs-toggle="tab">Home</a></li>
+        <li class="nav-item"><a href="#sobre" class="nav-link" data-bs-toggle="tab">Sobre</a></li>
+        <li class="nav-item"><a href="#contato" class="nav-link" data-bs-toggle="tab">Contato</a></li>
+    </ul>
+</nav>
+```
+## Barra de navegação para mobile - barra expansiva
+
+![alt](./images/Peek%2011-04-2023%2019-59.gif)
+
+Código:
+
+```html
+<nav class="navbar bg-dark navbar-expand-md navbar-dark">
+    <div class="navbar-brand">Logo</div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="myNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="#home" class="nav-link active" data-bs-toggle="tab">Home</a></li>
+            <li class="nav-item"><a href="#sobre" class="nav-link" data-bs-toggle="tab">Sobre</a></li>
+            <li class="nav-item"><a href="#contato" class="nav-link" data-bs-toggle="tab">Contato</a></li>
+        </ul>
+    </div>
+</nav>
+```
