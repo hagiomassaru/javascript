@@ -1680,3 +1680,111 @@ Código:
     </div>
 </nav>
 ```
+# Bootstrap - carrossel
+
+## Carousel autoplay
+
+![alt](./images/Peek%2012-04-2023%2014-50.gif)
+
+Código:
+
+```html
+<div id="meuCarrocel" class="carousel slide" data-bs-ride="carousel">
+    <!-- dentro da div abaixo, e onde fica nosso conteúdo -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="bg-secondary text-bg-dark d-flex justify-content-center align-items-center mmh-h300">
+                Conteúdo 1
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="bg-warning text-bg-light d-flex justify-content-center align-items-center mmh-h300">
+                Conteúdo 2
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="bg-danger text-bg-dark d-flex justify-content-center align-items-center mmh-h300">
+                Conteúdo 3
+            </div>
+        </div>
+    </div>
+
+</div>
+```
+
+## Indicadores do carrossel - `carousel-indicators`
+
+
+![alt](./images/Peek%2012-04-2023%2015-08.gif)
+
+Código:
+
+```html
+<div id="meuCarrocel" class="carousel slide" data-bs-ride="carousel">
+    <!-- dentro da ul abaixo, e onde fica nosso indicators -->
+    <ul class="carousel-indicators">
+        <li data-bs-target="#meuCarrocel" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#meuCarrocel" data-bs-slide-to="1"></li>
+        <li data-bs-target="#meuCarrocel" data-bs-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="bg-secondary text-bg-dark d-flex justify-content-center align-items-center mmh-h300">
+                Conteúdo 1
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="bg-warning text-bg-light d-flex justify-content-center align-items-center mmh-h300">
+                Conteúdo 2
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="bg-danger text-bg-dark d-flex justify-content-center align-items-center mmh-h300">
+                Conteúdo 3
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+```
+## Controladores do carrossel - `carousel-control`
+
+
+![alt](./images/Peek%2012-04-2023%2015-22.gif)
+
+Código:
+
+```html
+<div id="meuCarrocel" class="carousel slide" data-bs-ride="carousel">
+    <ul class="carousel-indicators">
+        <li data-bs-target="#meuCarrocel" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#meuCarrocel" data-bs-slide-to="1"></li>
+        <li data-bs-target="#meuCarrocel" data-bs-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="bg-secondary text-bg-dark d-flex justify-content-center align-items-center mmh-h300">
+                Conteúdo 1
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="bg-warning text-bg-light d-flex justify-content-center align-items-center mmh-h300">
+                Conteúdo 2
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="bg-danger text-bg-dark d-flex justify-content-center align-items-center mmh-h300">
+                Conteúdo 3
+            </div>
+        </div>
+    </div>
+    <!-- As tags `a` abaixo sao nossos controladores -->
+    <a class="carousel-control-prev" href="#meuCarrocel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#meuCarrocel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+```
