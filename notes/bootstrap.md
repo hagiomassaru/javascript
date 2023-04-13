@@ -2024,3 +2024,129 @@ Código:
     </div>
 </div>
 ```
+
+## Tamanhos de `modal`
+
+- Exemplo
+
+![alt](./images/2023-04-13_21-52.png)
+
+Código:
+
+```html
+<button data-bs-toggle="modal" data-bs-target="#meuModal">Mostrar Modal</button>
+<div class="container">
+    <h1>titulo</h1>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
+        repellendus natus inventore! Tempore, iusto temporibus dicta odit
+        explicabo pariatur consectetur animi ab quasi et accusantium consequatur
+        atque aliquid! Asperiores distinctio optio aut odit minus voluptatibus
+        magnam expedita voluptas accusantium? Voluptas quam soluta recusandae
+        consequuntur delectus facilis suscipit placeat perspiciatis quas!
+    </p>
+</div>
+<div class="modal fade"  id="meuModal">
+    <!-- adicionando tamanho `modal-sm` -->
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                Titulo
+            </div>
+            <div class="modal-body">
+                Esse e o texto do meu modal
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary">teste</button>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+* `modal-sm`
+
+![alt](./images/2023-04-13_21-52.png)
+
+* `modal-md`
+
+![alt](./images/2023-04-13_21-53.png)
+
+* `modal-lg`
+
+![alt](./images/2023-04-13_21-54.png)
+
+## Usando `modal-dialog-centered`
+
+![alt](./images/2023-04-13_22-02.png)
+
+Código:
+
+```html
+<button data-bs-toggle="modal" data-bs-target="#meuModal">Mostrar Modal</button>
+<div class="container">
+    <h1>titulo</h1>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
+        repellendus natus inventore! Tempore, iusto temporibus dicta odit
+        explicabo pariatur consectetur animi ab quasi et accusantium consequatur
+        atque aliquid! Asperiores distinctio optio aut odit minus voluptatibus
+        magnam expedita voluptas accusantium? Voluptas quam soluta recusandae
+        consequuntur delectus facilis suscipit placeat perspiciatis quas!
+    </p>
+</div>
+<div class="modal fade"  id="meuModal">
+    <!-- centraliza elemento modal com modal-dialog-centered -->
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                Titulo
+            </div>
+            <div class="modal-body">
+                Esse e o texto do meu modal
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary">teste</button>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+## Usando `modal-dialog-scrollable`
+
+![alt](./images/Peek%2013-04-2023%2022-05.gif)
+
+Código:
+
+```html
+<button data-bs-toggle="modal" data-bs-target="#meuModal">Mostrar Modal</button>
+<div class="container">
+    <h1>titulo</h1>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
+        repellendus natus inventore! Tempore, iusto temporibus dicta odit
+        explicabo pariatur consectetur animi ab quasi et accusantium consequatur
+        atque aliquid! Asperiores distinctio optio aut odit minus voluptatibus
+        magnam expedita voluptas accusantium? Voluptas quam soluta recusandae
+        consequuntur delectus facilis suscipit placeat perspiciatis quas!
+    </p>
+</div>
+<div class="modal fade"  id="meuModal">
+    <!-- modal-dialog-scrollable aplicado -->
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                Titulo
+            </div>
+            <div class="modal-body">
+                <!-- Lorem esta resumido, mas na tela esta enorme -->
+                <p>Lorem [...] expedita.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary">teste</button>
+            </div>
+        </div>
+    </div>
+</div>
+```
