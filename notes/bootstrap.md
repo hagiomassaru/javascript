@@ -1809,3 +1809,25 @@ Código:
     Esse e o texto do meu modal
 </div>
 ```
+
+## modal-dialog
+
+![alt](./images/Peek%2013-04-2023%2021-18.gif)
+
+Código:
+
+```html
+<button data-bs-toggle="modal" data-bs-target="#meuModal">Mostrar Modal</button>
+<div class="container">
+    <h1>titulo</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis repellendus natus inventore! Tempore, iusto temporibus dicta odit explicabo pariatur consectetur animi ab quasi et accusantium consequatur atque aliquid! Asperiores distinctio optio aut odit minus voluptatibus magnam expedita voluptas accusantium? Voluptas quam soluta recusandae consequuntur delectus facilis suscipit placeat perspiciatis quas!</p>
+
+</div>
+
+<div class="modal" id="meuModal">
+    <!-- adicionamos modal-dialog -->
+    <div class="modal-dialog">
+        Esse e o texto do meu modal
+    </div>
+</div>
+```
