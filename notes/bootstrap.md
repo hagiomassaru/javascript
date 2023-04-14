@@ -2150,3 +2150,35 @@ Código:
     </div>
 </div>
 ```
+
+# Bootstrap - Tooltip
+
+![alt](./images/Peek%2014-04-2023%2022-49.gif)
+
+Código:
+
+```html
+<a href="https://hagiomassaru.github.io/portifolio_massaru/#sobre" data-bs-toggle="tooltip"
+    title="Meu portfólio">Mezaki Massaru Hagio</a>
+
+    
+<!-- Linkamos tambem o Jquery pois o bootstrap utiliza ele amplamente -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<!-- Abaixo o link web para o JS do bootstrap junto com o popper (utilizado para fazer pop ups) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
+</script>
+
+
+<!-- O scrip jquery deve ser declarado depois da importação da biblioteca  -->
+<script>
+    // Utilizaremos o Jquery para fazermos uns ajustes o tooltip.
+    $(document).ready(function () {
+        // iremos utilizar o [] (seletor) para pegarmos todos os `data-bs-toggle="tooltip"`
+        $('[data-bs-toggle="tooltip"]').tooltip();
+    })
+</script>
+```
