@@ -2240,3 +2240,5 @@ Código:
 </script>
 
 ```
+
+> [data-bs-placement](#data-bs-placement-posicao-do-tooltip) funciona nesse elemento
