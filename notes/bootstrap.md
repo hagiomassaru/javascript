@@ -2204,3 +2204,41 @@ Código:
 </button>
 
 ```
+
+# Bootstrap - Popover
+
+![alt](./images/Peek%2016-04-2023%2022-08.gif)
+
+> Diferenca entre `tooltip` e `popover` e que `tooltip` aparece um balao de texte com a proximacao do mouse, e o `popover` e depois de ser clicado.
+
+Código:
+
+```html
+<div class="container d-flex justify-content-center m-5">
+    <a href="#" data-bs-toggle="popover"
+    title="Meu portfólio" data-bs-content="conteudo">Mezaki Massaru Hagio</a>
+</div>
+
+
+
+
+<!-- Linkamos tambem o Jquery pois o bootstrap utiliza ele amplamente -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<!-- Abaixo o link web para o JS do bootstrap junto com o popper (utilizado para fazer pop ups) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        $('[data-bs-toggle="popover"]').popover();
+    })
+</script>
+
+```
+
+> [data-bs-placement](#data-bs-placement-posicao-do-tooltip) funciona nesse elemento
