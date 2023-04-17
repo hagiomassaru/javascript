@@ -2251,41 +2251,41 @@ Código:
 Código:
 
 ```html
-    <div class="container m-5">
+<div class="container m-5">
 
-        <button class="btn btn-primary" id="meubotao">Mostrar Toast</button>
-        <!-- Estrutura de um toast -->
-        <div class="toast">
-            <div class="toast-header">
-                <h1>Titulo toast</h1>
-            </div>
-            <div class="toast-body">
-                <p>paragrafo toast</p>
-            </div>
-
+    <button class="btn btn-primary" id="meubotao">Mostrar Toast</button>
+    <!-- Estrutura de um toast -->
+    <div class="toast">
+        <div class="toast-header">
+            <h1>Titulo toast</h1>
+        </div>
+        <div class="toast-body">
+            <p>paragrafo toast</p>
         </div>
 
     </div>
 
-    <!-- Linkamos tambem o Jquery pois o bootstrap utiliza ele amplamente -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <!-- Abaixo o link web para o JS do bootstrap junto com o popper (utilizado para fazer pop ups) -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
-        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
-    </script>
+</div>
 
-  
-    <script>
-        $(document).ready(()=>{
-            $('#meubotao').click(()=>{
-                $(".toast").toast('show')
-            })
+<!-- Linkamos tambem o Jquery pois o bootstrap utiliza ele amplamente -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<!-- Abaixo o link web para o JS do bootstrap junto com o popper (utilizado para fazer pop ups) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
+</script>
+
+
+<script>
+    $(document).ready(()=>{
+        $('#meubotao').click(()=>{
+            $(".toast").toast('show')
         })
+    })
 
-    </script>
+</script>
 ```
 
 # Mostrar e esconder
@@ -2297,39 +2297,42 @@ Código:
 Código:
 
 ```html
-    <div class="container m-5">
+<div class="container m-5">
 
-        <button class="btn btn-primary" id="meubotao">Mostrar Toast</button>
-        <!-- Estrutura de um toast -->
-        <div class="toast">
-            <div class="toast-header">
-                <h1>Titulo toast</h1>
-            </div>
-            <div class="toast-body">
-                <p>paragrafo toast</p>
-            </div>
-
+    <button class="btn btn-primary" id="meubotao">Mostrar Toast</button>
+    <button class="btn btn-danger" id="meubotaoEsconder">Esconder Toast</button>
+    <!-- Estrutura de um toast -->
+    <div class="toast" data-bs-autohide="false">
+        <div class="toast-header">
+            <h1>Titulo toast</h1>
+        </div>
+        <div class="toast-body">
+            <p>paragrafo toast</p>
         </div>
 
     </div>
 
-    <!-- Linkamos tambem o Jquery pois o bootstrap utiliza ele amplamente -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <!-- Abaixo o link web para o JS do bootstrap junto com o popper (utilizado para fazer pop ups) -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
-        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
-    </script>
+</div>
 
-  
-    <script>
-        $(document).ready(()=>{
-            $('#meubotao').click(()=>{
-                $(".toast").toast('show')
-            })
+<!-- Linkamos tambem o Jquery pois o bootstrap utiliza ele amplamente -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<!-- Abaixo o link web para o JS do bootstrap junto com o popper (utilizado para fazer pop ups) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
+</script>
+
+<script>
+    $(document).ready(()=>{
+        $('#meubotao').click(()=>{
+            $(".toast").toast('show')
         })
+        $('#meubotaoEsconder').click(()=>{
+            $(".toast").toast('hide')
+        })
+    })
 
-    </script>
+</script>
 ```
