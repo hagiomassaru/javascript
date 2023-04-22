@@ -2336,3 +2336,22 @@ Código:
 
 </script>
 ```
+
+# Prioridade Booststrap x CSS
+
+```css
+h2{
+    prioridade:1; !important
+
+}
+#text{
+    prioridade:2;
+}
+.text{
+    prioridade:3;
+}
+h1{
+    prioridade:4;
+}
+
+```
