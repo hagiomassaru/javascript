@@ -238,6 +238,23 @@ Resultado:
     <p class="bg-info mx-auto">Tamanho Horizontal do Margin</p>
     ```
 
+# Bootstrap - Tamanhos
+
+**Medidas em porcentagem**
+
+- `{medida}-25` 25% 
+- `{medida}-50` 50%
+- `{medida}-75` 75%
+- `{medida}-100` 100%
+
+**Medidas**
+
+`h` -> heath
+`w` -> width
+`vh` -> viewport heath
+`vw` -> viewport width
+
+
 # Bootstrap - Container
 
 Containers servem para separarmos em blocos que de auto ajustam melhoram a responsividade da pagina
@@ -288,7 +305,7 @@ Containers servem para separarmos em blocos que de auto ajustam melhoram a respo
     <p class="bg-info float-end">float end/right</p>
     ```
 
-# Bootstrap - Responsividade
+# Bootstrap - Responsividade/Breakpoint
 
 No bootstrap podemos adicionar um delimitador que faz que a classe so tenha um efeito caso tenha um determinado tamanho de tela. Esses delimitadores sao:
 
@@ -296,6 +313,7 @@ No bootstrap podemos adicionar um delimitador que faz que a classe so tenha um e
 -   `md` -> medium/768px
 -   `lg` -> large/992px
 -   `xl` -> xlarge/1200px
+-   `xxl` -> xxlarge/1400px
 
 Nao sao todas classes que aceitam esse delimitadores, por esse motivo e bom consultar documentação.
 
