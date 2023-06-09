@@ -280,6 +280,25 @@ Resultado:
     <p class="bg-info border border-opacity-100"> Opacidade de borda em 100% </p>
     ```
 
+*** Definindo arredondamento da borda ***
+
+-   Border = `rounded`
+
+-  
+    ```html
+    <p class="bg-info rounded-1"> Arrendondamento de borda nível 1 </p>
+    <p class="bg-info rounded-2"> Arrendondamento de borda nível 2 </p>
+    <p class="bg-info rounded-3"> Arrendondamento de borda nível 3 </p>
+    <p class="bg-info rounded-4"> Arrendondamento de borda nível 4 </p>
+    <p class="bg-info rounded-5"> Arrendondamento de borda nível 5 </p>
+    <p class="bg-info rounded-top-2"> Arrendondamento de borda nível 2 no topo </p>
+    <p class="bg-info rounded-bottom-2"> Arrendondamento de borda nível 2 em baixo </p>
+    <p class="bg-info rounded-start-2"> Arrendondamento de borda nível 2 na esquerda </p>
+    <p class="bg-info rounded-end-2"> Arrendondamento de borda nível 2 na direita </p>
+    <p class="bg-info rounded-circle"> Arrendondamento de borda nível 100% (circulo perfeito) </p>
+
+    ```
+
 
 
 # Bootstrap - Tamanhos
