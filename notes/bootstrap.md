@@ -238,6 +238,39 @@ Resultado:
     <p class="bg-info mx-auto">Tamanho Horizontal do Margin</p>
     ```
 
+
+# Bootstrap - Border
+
+*** Definindo border ***
+
+- `border`
+
+*** Definindo tamanho da borda ***
+
+-   Border = `border-X` / _X pode ser de 0 ate 5_
+
+    ```html
+    <p class="bg-info border-1">Tamanho do borda 1</p>
+    <p class="bg-info border-2">Tamanho do borda 2</p>
+    <p class="bg-info border-3">Tamanho do borda 3</p>
+    <p class="bg-info border-4">Tamanho do borda 4</p>
+    <p class="bg-info border-5">Tamanho do borda 5</p>
+    <!-- Sendo o border-0 sem margin -->
+    ```
+
+*** Definindo posição da borda ***
+
+-  
+    ```html
+    <p class="bg-info border-top">Tamanho do borda no top</p>
+    <p class="bg-info border-botton">Tamanho do borda em baixo</p>
+    <p class="bg-info border-start">Tamanho do borda esquerda</p>
+    <p class="bg-info border-end">Tamanho do borda direita</p>
+    ```
+
+
+
+
 # Bootstrap - Tamanhos
 
 **Medidas em porcentagem**
