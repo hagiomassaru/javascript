@@ -250,11 +250,11 @@ Resultado:
 -   Border = `border-X` / _X pode ser de 0 ate 5_
 
     ```html
-    <p class="bg-info border-1">Tamanho do borda 1</p>
-    <p class="bg-info border-2">Tamanho do borda 2</p>
-    <p class="bg-info border-3">Tamanho do borda 3</p>
-    <p class="bg-info border-4">Tamanho do borda 4</p>
-    <p class="bg-info border-5">Tamanho do borda 5</p>
+    <p class="bg-info border border-1">Tamanho do borda 1</p>
+    <p class="bg-info border border-2">Tamanho do borda 2</p>
+    <p class="bg-info border border-3">Tamanho do borda 3</p>
+    <p class="bg-info border border-4">Tamanho do borda 4</p>
+    <p class="bg-info border border-5">Tamanho do borda 5</p>
     <!-- Sendo o border-0 sem margin -->
     ```
 
@@ -262,12 +262,23 @@ Resultado:
 
 -  
     ```html
-    <p class="bg-info border-top">Tamanho do borda no top</p>
-    <p class="bg-info border-botton">Tamanho do borda em baixo</p>
-    <p class="bg-info border-start">Tamanho do borda esquerda</p>
-    <p class="bg-info border-end">Tamanho do borda direita</p>
+    <p class="bg-info border border-top">Tamanho do borda no top</p>
+    <p class="bg-info border border-botton">Tamanho do borda em baixo</p>
+    <p class="bg-info border border-start">Tamanho do borda esquerda</p>
+    <p class="bg-info border border-end">Tamanho do borda direita</p>
     ```
 
+*** Definindo opacidade da borda ***
+
+-   Border = `border-opacity-x` / _X e definido como porcentagem
+
+-  
+    ```html
+    <p class="bg-info border border-opacity-25"> Opacidade de borda em 25% </p>
+    <p class="bg-info border border-opacity-50"> Opacidade de borda em 50% </p>
+    <p class="bg-info border border-opacity-75"> Opacidade de borda em 75% </p>
+    <p class="bg-info border border-opacity-100"> Opacidade de borda em 100% </p>
+    ```
 
 
 
