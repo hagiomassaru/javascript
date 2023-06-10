@@ -296,6 +296,7 @@ Resultado:
     <p class="bg-info rounded-start-2"> Arrendondamento de borda nível 2 na esquerda </p>
     <p class="bg-info rounded-end-2"> Arrendondamento de borda nível 2 na direita </p>
     <p class="bg-info rounded-circle"> Arrendondamento de borda nível 100% (circulo perfeito) </p>
+    <p class="bg-info rounded-pill"> Arrendondamento de borda nível 100% (circulo perfeito) mantendo proporção de pilula </p>
 
     ```
 
