@@ -68,6 +68,29 @@ Obs: `<extag>meu titulo</extag>` -> os dois juntos formam um elemento html compl
 
 </html>
 ```
+## Propriedade target
+
+```html
+<!-- abre o link em uma nova aba no navegador -->
+<a href="https://www.w3schools.com" target="_blank">Visit W3Schools</a>
+```
+
+**Tipos**
+
+```html
+<a target="_blank|_self|_parent|_top|framename">
+
+```
+
+| Descrição | valor |
+| --------- | ----- |
+| `_blank` | Abre o documento vinculado em uma nova janela ou guia |
+| `_self` | Abre o documento vinculado no mesmo quadro em que foi clicado (isso é padrão) |
+| `_parent` | Abre o documento vinculado no quadro pai |
+| `_top` | Abre o documento vinculado no corpo inteiro da janela |
+| `framename` | Abre o documento vinculado no iframe nomeado |
+
+
 ## Span
 
 O elemento HTML `<span>` é um conteiner generico em linha para conteúdo fraseado , que não representa nada por natureza. Ele pode ser usado para agrupar elementos para fins de estilo (usando os atributos class ou id ), ou para compartilhar valores de atributos como lang. Ele deve ser usado somente quando nenhum outro elemento semântico for apropriado. `<span>` é muito parecido com o elemento `<div>` , entretando  `<div>` é um elemento de nível de bloco enquanto `<span>` é um elemento em linha. Ex: 
