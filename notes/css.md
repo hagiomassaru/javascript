@@ -180,6 +180,17 @@ link:visited{
 
 ### Cor de fonte
 - `color: color|initial|inherit;`
+
+### Grossura da fonte
+
+- `font-weight: normal|bold|bolder|lighter|number|initial|inherit;`
+
+    * `normal` -> Peso normal. O mesmo que 400.
+    * `bold` -> Peso negrito. O mesmo que 700.
+    * `lighter` -> Um peso de fonte mais claro que o elemento pai (dentre os pesos disponíveis da fonte).
+    * `bolder` -> Um peso de fonte mais escuro que o elemento pai (dentre os pesos disponíveis da fonte).
+    * `100, 200, 300, 400, 500, 600, 700, 800, 900` -> Pesos numéricos para fontes que oferecem mais que normal e negrito.
+
 #### Tipos de cores
 - Hexadecimal Colors
     * Uma cor hexadecimal é especificada com: #RRGGBB, onde os números inteiros hexadecimais RR (vermelho), GG (verde) e BB (azul) especificam os componentes da cor. Todos os valores devem estar entre 00 e FF
@@ -263,6 +274,8 @@ link:visited{
     * `normal` -> Não há espaço extra entre os personagens. Este é o padrão
     * `number` -> Um número que será multiplicado pelo tamanho da fonte atual para definir a altura da linha
     * `length` -> Define um espaço extra entre os caracteres (valores negativos são permitidos).
+
+
 ### Sombra do texto/elemento
 - `text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;` 
     * `h-shadow` -> necessária. A posição da sombra horizontal. Valores negativos são permitidos
